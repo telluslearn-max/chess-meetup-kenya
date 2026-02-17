@@ -119,6 +119,19 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
                             )}
                         </Link>
 
+                        {/* Host Action Button */}
+                        <Link
+                            to="/host"
+                            className="flex flex-col items-center group -mt-10 transition-all active:scale-75 min-w-[60px]"
+                        >
+                            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-2xl shadow-primary/40 border-4 border-white dark:border-slate-900 group-active:shadow-primary/60 transition-all rotate-45 mb-2 overflow-hidden">
+                                <div className="-rotate-45 flex items-center justify-center">
+                                    <span className="material-icons-round text-white text-3xl">add</span>
+                                </div>
+                            </div>
+                            <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest scale-90">Host</span>
+                        </Link>
+
                         {/* Events */}
                         <Link
                             to="/tournaments"
@@ -134,19 +147,6 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
                             {location.pathname.startsWith("/tournament") && (
                                 <div className="absolute -bottom-1 w-1.5 h-1.5 bg-primary rounded-full"></div>
                             )}
-                        </Link>
-
-                        {/* Host Action Button */}
-                        <Link
-                            to="/host"
-                            className="flex flex-col items-center group -mt-10 transition-all active:scale-75 min-w-[60px]"
-                        >
-                            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-2xl shadow-primary/40 border-4 border-white dark:border-slate-900 group-active:shadow-primary/60 transition-all rotate-45 mb-2 overflow-hidden">
-                                <div className="-rotate-45 flex items-center justify-center">
-                                    <span className="material-icons-round text-white text-3xl">add</span>
-                                </div>
-                            </div>
-                            <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest scale-90">Host</span>
                         </Link>
 
 

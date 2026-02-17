@@ -121,35 +121,7 @@ export const HomeMapView: React.FC = () => {
                     </button>
                 </form>
 
-                {/* Live Tournament Spotlight (Phase 26) */}
-                <div
-                    onClick={() => navigate('/tournament/t-live?tab=rankings')}
-                    className="w-full max-w-xl bg-primary/10 backdrop-blur-md rounded-[2rem] p-4 border border-primary/20 shadow-lg group cursor-pointer active:scale-[0.98] transition-all duration-300 animate-in fade-in slide-in-from-top-4"
-                >
-                    <div className="flex items-center justify-between gap-4">
-                        <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 rounded-2xl overflow-hidden relative border border-primary/30">
-                                <img
-                                    src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=200"
-                                    className="w-full h-full object-cover transition-transform group-hover:scale-110"
-                                    alt="Live"
-                                />
-                                <div className="absolute inset-0 bg-primary/20"></div>
-                            </div>
-                            <div>
-                                <div className="flex items-center gap-1.5 mb-0.5">
-                                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span>
-                                    <span className="text-[9px] font-black text-red-500 uppercase tracking-widest">Live Now</span>
-                                </div>
-                                <h4 className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-tight line-clamp-1">Grandmaster Blitz Open</h4>
-                                <p className="text-[9px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Round 4 of 12 • Watch Live</p>
-                            </div>
-                        </div>
-                        <div className="w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
-                            <ChevronRight size={18} />
-                        </div>
-                    </div>
-                </div>
+
 
                 {/* Casual Matchmaking HUD */}
                 <div className="w-full max-w-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-full p-2 pr-6 shadow-2xl border border-white/20 flex items-center justify-between group transition-all duration-500">
@@ -189,89 +161,9 @@ export const HomeMapView: React.FC = () => {
                 </div>
             </div>
 
-            {/* Tournaments Section - Minimal */}
-            <div className={cn(
-                "absolute left-0 right-0 px-4 transition-all duration-700 z-30",
-                showNearbyTray ? "bottom-[calc(65vh+1rem)]" : "bottom-28"
-            )}>
-                <div className="space-y-3 max-w-xl mx-auto">
-                    {/* Competitive Tournament */}
-                    <div
-                        onClick={() => navigate('/tournament/123')}
-                        className="w-full bg-primary/10 backdrop-blur-md rounded-[2rem] p-4 border border-primary/20 shadow-lg group cursor-pointer active:scale-[0.98] transition-all duration-300 animate-in fade-in slide-in-from-top-4"
-                    >
-                        <div className="flex items-center justify-between gap-4">
-                            <div className="flex items-center gap-3">
-                                <div className="w-12 h-12 rounded-2xl overflow-hidden relative border border-primary/30">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=200"
-                                        className="w-full h-full object-cover transition-transform group-hover:scale-110"
-                                        alt="Tournament"
-                                    />
-                                    <div className="absolute inset-0 bg-primary/20"></div>
-                                </div>
-                                <div>
-                                    <div className="flex items-center gap-1.5 mb-0.5">
-                                        <span className="text-[9px] font-black text-primary uppercase tracking-widest">Competitive</span>
-                                        <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
-                                        <span className="text-[9px] font-black text-yellow-600 uppercase tracking-widest">KSh 50k</span>
-                                    </div>
-                                    <h4 className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-tight line-clamp-1">Nairobi Masters</h4>
-                                    <p className="text-[9px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Oct 20-22 • 48/64 Players</p>
-                                </div>
-                            </div>
-                            <div className="w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-all">
-                                <ChevronRight size={18} />
-                            </div>
-                        </div>
-                    </div>
 
-                    {/* Casual Tournament */}
-                    <div
-                        onClick={() => navigate('/tournament/125')}
-                        className="w-full bg-green-500/10 backdrop-blur-md rounded-[2rem] p-4 border border-green-500/20 shadow-lg group cursor-pointer active:scale-[0.98] transition-all duration-300 animate-in fade-in slide-in-from-top-4"
-                        style={{ animationDelay: '100ms' }}
-                    >
-                        <div className="flex items-center justify-between gap-4">
-                            <div className="flex items-center gap-3">
-                                <div className="w-12 h-12 rounded-2xl bg-green-500/20 flex items-center justify-center border border-green-500/30">
-                                    <span className="material-icons-round text-green-600 text-xl">coffee</span>
-                                </div>
-                                <div>
-                                    <div className="flex items-center gap-1.5 mb-0.5">
-                                        <span className="text-[9px] font-black text-green-600 uppercase tracking-widest">Casual</span>
-                                        <span className="w-1 h-1 bg-slate-300 rounded-full"></span>
-                                        <span className="text-[9px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">Free Entry</span>
-                                    </div>
-                                    <h4 className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-tight line-clamp-1">Friday Chess Meetup</h4>
-                                    <p className="text-[9px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Every Friday • Java House</p>
-                                </div>
-                            </div>
-                            <div className="w-10 h-10 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center text-green-600 shadow-sm group-hover:bg-green-600 group-hover:text-white transition-all">
-                                <ChevronRight size={18} />
-                            </div>
-                        </div>
-                    </div>
 
-                    {/* View All Link */}
-                    <Link
-                        to="/tournaments"
-                        className="block text-center text-xs font-black text-slate-400 hover:text-primary uppercase tracking-wider transition-colors"
-                    >
-                        View All Tournaments →
-                    </Link>
-                </div>
-            </div>
 
-            {/* Floating Tournaments Button */}
-            {!showNearbyTray && (
-                <div className="absolute bottom-[calc(28rem)] left-1/2 -translate-x-1/2 z-40 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                    <Link to="/tournaments" className="bg-[#1a1a1a] dark:bg-primary text-white px-10 py-5 rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.3)] flex items-center gap-3 hover:scale-105 transition-all duration-300 active:scale-95 border-2 border-white/10">
-                        <span className="text-sm font-black tracking-widest uppercase">Tournaments</span>
-                        <span className="material-icons-round text-xl">emoji_events</span>
-                    </Link>
-                </div>
-            )}
 
             {/* Nearby Players Peek Tray */}
             <div className={cn(
