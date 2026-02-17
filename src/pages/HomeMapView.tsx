@@ -120,8 +120,34 @@ export const HomeMapView: React.FC = () => {
                         <span className="material-icons-round text-2xl">tune</span>
                     </button>
                 </form>
-
-
+                {/* Live Tournament Status Pill */}
+                <div
+                    onClick={() => navigate('/tournament/t-live?tab=rankings')}
+                    className="w-full max-w-xl group cursor-pointer active:scale-95 transition-all duration-300 animate-in fade-in slide-in-from-top-4"
+                >
+                    <div className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-3xl border border-white/20 dark:border-slate-800 rounded-full px-5 py-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.1)] flex items-center justify-between gap-4 group-hover:shadow-primary/20 group-hover:border-primary/30 transition-all">
+                        <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-1.5 bg-red-500/10 px-2 py-1 rounded-full border border-red-500/20">
+                                <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span>
+                                <span className="text-[9px] font-black text-red-500 uppercase tracking-widest leading-none">Live</span>
+                            </div>
+                            <div className="h-4 w-[1px] bg-slate-200 dark:bg-slate-700"></div>
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-black text-slate-800 dark:text-white uppercase tracking-tight">Round 4</span>
+                                <span className="w-1 h-1 bg-slate-300 dark:bg-slate-600 rounded-full"></span>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400">Carlsen</span>
+                                    <span className="text-[10px] font-black text-primary">1.5 - 0.5</span>
+                                    <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400">Firouzja</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-1 text-primary group-hover:translate-x-1 transition-transform">
+                            <span className="text-[9px] font-black uppercase tracking-widest">Bracket</span>
+                            <span className="material-icons-round text-sm">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
 
                 {/* Casual Matchmaking HUD */}
                 <div className="w-full max-w-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl rounded-full p-2 pr-6 shadow-2xl border border-white/20 flex items-center justify-between group transition-all duration-500">

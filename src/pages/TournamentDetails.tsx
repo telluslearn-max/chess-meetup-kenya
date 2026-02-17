@@ -190,10 +190,10 @@ export const TournamentDetails: React.FC = () => {
                         <div className="bg-white dark:bg-slate-900 p-8 rounded-[3rem] border border-slate-100 dark:border-slate-800">
                             <div className="flex items-center justify-between mb-6">
                                 <h3 className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-widest">Event Flow</h3>
-                                <span className="flex items-center gap-1.5 bg-green-500/10 text-green-500 px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-wider">
+                                <div className="flex items-center gap-1.5 bg-green-500/5 dark:bg-green-500/10 backdrop-blur-md px-3 py-1.5 rounded-full border border-green-500/20">
                                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                                    In Progress
-                                </span>
+                                    <span className="text-[9px] font-black text-green-600 dark:text-green-400 uppercase tracking-widest leading-none">In Progress</span>
+                                </div>
                             </div>
                             <div className="space-y-6">
                                 {[
@@ -259,12 +259,23 @@ export const TournamentDetails: React.FC = () => {
                         </section>
 
                         {/* Stream Action Card */}
-                        <div className="bg-slate-900 rounded-[2.5rem] p-8 relative overflow-hidden shadow-2xl mt-8">
-                            <div className="absolute top-0 right-0 w-40 h-40 bg-primary/20 blur-[80px] -mr-16 -mt-16"></div>
-                            <div className="relative z-10 text-center space-y-4">
-                                <span className="bg-red-500 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">Live Stream</span>
-                                <h4 className="text-lg font-black text-white uppercase tracking-tight">Main Stage: Carlsen vs Nepo</h4>
-                                <button className="w-full bg-primary text-white font-black py-4 rounded-2xl shadow-xl shadow-primary/20 active:scale-95 transition-all text-[10px] uppercase tracking-[0.2em]">
+                        <div className="bg-slate-900 dark:bg-slate-950 rounded-[2.5rem] p-8 relative overflow-hidden shadow-2xl mt-8 border border-white/5">
+                            <div className="absolute top-0 right-0 w-48 h-48 bg-primary/20 blur-[80px] -mr-20 -mt-20"></div>
+                            <div className="relative z-10 space-y-6">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2 bg-red-500/10 px-3 py-1.5 rounded-full border border-red-500/20">
+                                        <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span>
+                                        <span className="text-[9px] font-black text-red-500 uppercase tracking-widest leading-none">Live Stream</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5 text-white/40 text-[9px] font-black uppercase tracking-widest">
+                                        4.2k Watching
+                                    </div>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-1">Featured Match</p>
+                                    <h4 className="text-xl font-black text-white uppercase tracking-tight leading-tight">Carlsen <span className="text-white/30 italic px-2">vs</span> Nepo</h4>
+                                </div>
+                                <button className="w-full bg-primary hover:bg-primary-light text-white font-black py-4 rounded-2xl shadow-xl shadow-primary/20 active:scale-[0.98] transition-all text-[10px] uppercase tracking-[0.2em] border border-white/10">
                                     Watch Board 1
                                 </button>
                             </div>
