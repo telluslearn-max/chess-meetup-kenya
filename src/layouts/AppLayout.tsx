@@ -83,96 +83,99 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
                 </main>
 
                 {/* Mobile Bottom Navigation Bar */}
-                <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl border-t border-slate-200 dark:border-slate-800 z-[100]">
-                    <div className="px-2 pt-2 pb-6 flex justify-between items-center max-w-md mx-auto">
-                        {/* Home */}
+                <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-3xl border-t border-slate-100 dark:border-slate-800 z-[100] rounded-t-[2.5rem] shadow-[0_-15px_50px_rgba(0,0,0,0.06)]">
+                    <div className="px-6 pt-3 pb-8 flex justify-between items-end max-w-md mx-auto relative">
+                        {/* Explore */}
                         <Link
                             to="/"
                             className={cn(
-                                "flex flex-col items-center gap-1 transition-all active:scale-95 min-w-[50px]",
+                                "flex flex-col items-center gap-1.5 transition-all active:scale-90 relative py-1 min-w-[50px]",
                                 location.pathname === "/" ? "text-primary" : "text-slate-400 dark:text-slate-500"
                             )}
                         >
-                            <span className="material-icons-round text-[24px]">explore</span>
-                            <span className={cn("text-[9px] uppercase tracking-wider", location.pathname === "/" ? "font-black" : "font-bold")}>
-                                Home
+                            <span className="material-icons-round text-[26px]">explore</span>
+                            <span className={cn("text-[10px] tracking-tight uppercase tracking-widest", location.pathname === "/" ? "font-black" : "font-bold")}>
+                                Explore
                             </span>
+                            {location.pathname === "/" && (
+                                <div className="absolute -bottom-1 w-1.5 h-1.5 bg-primary rounded-full"></div>
+                            )}
                         </Link>
 
                         {/* Clubs */}
                         <Link
                             to="/clubs"
                             className={cn(
-                                "flex flex-col items-center gap-1 transition-all active:scale-95 min-w-[50px]",
-                                location.pathname.startsWith("/club") ? "text-primary" : "text-slate-400 dark:text-slate-500"
+                                "flex flex-col items-center gap-1.5 transition-all active:scale-90 relative py-1 min-w-[50px]",
+                                (location.pathname.startsWith("/clubs") || location.pathname.startsWith("/club/")) ? "text-primary" : "text-slate-400 dark:text-slate-500"
                             )}
                         >
-                            <span className="material-icons-round text-[24px]">groups</span>
-                            <span className={cn("text-[9px] uppercase tracking-wider", location.pathname.startsWith("/club") ? "font-black" : "font-bold")}>
+                            <span className="material-icons-round text-[26px]">groups</span>
+                            <span className={cn("text-[10px] tracking-tight uppercase tracking-widest", (location.pathname.startsWith("/clubs") || location.pathname.startsWith("/club/")) ? "font-black" : "font-bold")}>
                                 Clubs
                             </span>
+                            {(location.pathname.startsWith("/clubs") || location.pathname.startsWith("/club/")) && (
+                                <div className="absolute -bottom-1 w-1.5 h-1.5 bg-primary rounded-full"></div>
+                            )}
                         </Link>
 
-                        {/* Tournaments */}
+                        {/* Events */}
                         <Link
                             to="/tournaments"
                             className={cn(
-                                "flex flex-col items-center gap-1 transition-all active:scale-95 min-w-[50px]",
+                                "flex flex-col items-center gap-1.5 transition-all active:scale-90 relative py-1 min-w-[50px]",
                                 location.pathname.startsWith("/tournament") ? "text-primary" : "text-slate-400 dark:text-slate-500"
                             )}
                         >
-                            <span className="material-icons-round text-[24px]">emoji_events</span>
-                            <span className={cn("text-[9px] uppercase tracking-wider", location.pathname.startsWith("/tournament") ? "font-black" : "font-bold")}>
+                            <span className="material-icons-round text-[26px]">emoji_events</span>
+                            <span className={cn("text-[10px] tracking-tight uppercase tracking-widest", location.pathname.startsWith("/tournament") ? "font-black" : "font-bold")}>
                                 Events
                             </span>
+                            {location.pathname.startsWith("/tournament") && (
+                                <div className="absolute -bottom-1 w-1.5 h-1.5 bg-primary rounded-full"></div>
+                            )}
                         </Link>
 
                         {/* Host Action Button */}
                         <Link
                             to="/host"
-                            className="flex flex-col items-center gap-1 group -mt-8 transition-all active:scale-90 min-w-[50px]"
+                            className="flex flex-col items-center group -mt-10 transition-all active:scale-75 min-w-[60px]"
                         >
-                            <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-xl shadow-primary/30 border-4 border-white dark:border-slate-900 group-active:shadow-primary/50 transition-all">
-                                <span className="material-icons-round text-white text-2xl">add</span>
+                            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-2xl shadow-primary/40 border-4 border-white dark:border-slate-900 group-active:shadow-primary/60 transition-all rotate-45 mb-2 overflow-hidden">
+                                <div className="-rotate-45 flex items-center justify-center">
+                                    <span className="material-icons-round text-white text-3xl">add</span>
+                                </div>
                             </div>
-                            <span className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-wider">Host</span>
+                            <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest scale-90">Host</span>
                         </Link>
 
-                        {/* Leagues */}
-                        <Link
-                            to="/leagues"
-                            className={cn(
-                                "flex flex-col items-center gap-1 transition-all active:scale-95 min-w-[50px]",
-                                location.pathname.startsWith("/leagues") ? "text-primary" : "text-slate-400 dark:text-slate-500"
-                            )}
-                        >
-                            <span className="material-icons-round text-[24px]">military_tech</span>
-                            <span className={cn("text-[9px] uppercase tracking-wider", location.pathname.startsWith("/leagues") ? "font-black" : "font-bold")}>
-                                Leagues
-                            </span>
-                        </Link>
 
-                        {/* Profile/More */}
+
+                        {/* Profile */}
                         <Link
                             to="/profile"
                             className={cn(
-                                "flex flex-col items-center gap-1 transition-all active:scale-95 min-w-[50px] relative",
-                                location.pathname === "/profile" || location.pathname === "/settings" || location.pathname === "/activity" ? "text-primary" : "text-slate-400 dark:text-slate-500"
+                                "flex flex-col items-center gap-1.5 transition-all active:scale-90 relative py-1 min-w-[50px]",
+                                (location.pathname === "/profile" || location.pathname === "/settings" || location.pathname === "/activity") ? "text-primary" : "text-slate-400 dark:text-slate-500"
                             )}
                         >
                             <div className="relative">
-                                <span className="material-icons-round text-[24px]">person</span>
-                                {/* Notification badge */}
-                                <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></div>
+                                <span className="material-icons-round text-[26px]">person</span>
+                                {(location.pathname === "/activity" || navItems.find(i => i.label === 'Alerts')?.badge) && (
+                                    <div className="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white dark:border-slate-900 animate-pulse"></div>
+                                )}
                             </div>
-                            <span className={cn("text-[9px] uppercase tracking-wider", (location.pathname === "/profile" || location.pathname === "/settings") ? "font-black" : "font-bold")}>
+                            <span className={cn("text-[10px] tracking-tight uppercase tracking-widest", (location.pathname === "/profile" || location.pathname === "/settings") ? "font-black" : "font-bold")}>
                                 Profile
                             </span>
+                            {(location.pathname === "/profile" || location.pathname === "/settings") && (
+                                <div className="absolute -bottom-1 w-1.5 h-1.5 bg-primary rounded-full"></div>
+                            )}
                         </Link>
                     </div>
 
-                    {/* iOS Home Indicator */}
-                    <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-900/10 dark:bg-white/10 rounded-full pointer-events-none"></div>
+                    {/* iOS Home Indicator Placeholder */}
+                    <div className="h-1 w-24 bg-slate-900/10 dark:bg-white/10 rounded-full mx-auto mb-3 pointer-events-none"></div>
                 </nav>
             </div>
         </div>
