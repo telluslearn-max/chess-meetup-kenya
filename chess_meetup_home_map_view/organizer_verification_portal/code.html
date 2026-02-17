@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Organizer Verification Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0aaab8",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#102122",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen font-display">
+<!-- iOS Status Bar Placeholder -->
+<div class="h-12 w-full"></div>
+<!-- Header -->
+<header class="sticky top-0 z-50 px-6 py-4 bg-background-light/80 dark:bg-background-dark/80 ios-blur flex items-center justify-between">
+<div>
+<h1 class="text-2xl font-bold tracking-tight">Verify Results</h1>
+<p class="text-sm text-primary font-medium">Summer Chess Meetup • Round 4</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-icons">filter_list</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="px-5 pb-32">
+<!-- Stats Summary -->
+<div class="mt-4 grid grid-cols-2 gap-4 mb-8">
+<div class="bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/10">
+<p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Pending</p>
+<p class="text-2xl font-bold">12</p>
+</div>
+<div class="bg-white dark:bg-primary/5 p-4 rounded-xl border border-primary/10">
+<p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Verified</p>
+<p class="text-2xl font-bold text-primary">28</p>
+</div>
+</div>
+<h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 px-1">Reported Matches</h2>
+<!-- Match List -->
+<div class="space-y-4">
+<!-- Match Card 1 -->
+<div class="bg-white dark:bg-white/5 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-white/10">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover border-2 border-primary/20" data-alt="Portrait of a male chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpwdxqfijHRIOj8p4hxEpbLg4cZnTUI5VHPbWF7DV5ntCesaXsN6Oqm26C7TV-lUFVUSHl-piHe0DdG7IZEteybBu0PwypHfupq5ILNz9RAoJwNVV9OEGG9Z5P2wtfQeosc97ng44603ybxTF0CgBGq7vvaRyEZLprUJ1xPo2eCgEatMlcyxh0evXpAENzQd963rey1IrOMUIOp6zX746-_I6sGXMOHkolPoLATlNpIipe6PUPlsM2JHnaxgcPbnFrzdSjYmUUogI"/>
+<span class="absolute -bottom-1 -right-1 bg-green-500 w-3 h-3 rounded-full border-2 border-white dark:border-background-dark"></span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Peter J.</span>
+<span class="text-[10px] text-slate-400">Rank #12</span>
+</div>
+<span class="text-xs font-bold text-slate-300 italic">vs</span>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-end">
+<span class="text-sm font-bold">Ray M.</span>
+<span class="text-[10px] text-slate-400">Rank #15</span>
+</div>
+<img class="w-10 h-10 rounded-full object-cover border-2 border-slate-200 dark:border-white/10" data-alt="Portrait of a female chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmHxZL375MpQ7S8xRBNJT9RHRpf2Ej8eXgtVOPMF8VjJWC64hWOge8KmWe4T-4WpKZm86pljpNP4LzHFF4F1PFuRGHTDykZWfuaOjZJr5AmPBFMvJuiM9BmSN9thDabW7ATHltpiqt-lXXwZSYmnXkVCGcLupYVA2_PiDiDQEhnnwCAEjNtFc8emAu2vXd8EGgbbPrGFRO5-6xKBRCQcxIhPudJoPaT7ROIVthU_5dZcObMAZxNE_y-BtLnO9mRbjdIH6CKxsopro"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-50 dark:border-white/5">
+<div class="flex items-center gap-2">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tight">
+                            +15 pts allocated
+                        </span>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-lg text-xs font-bold text-slate-500 hover:bg-red-50 hover:text-red-500 transition-colors">
+                            Dispute
+                        </button>
+<button class="px-6 py-2 rounded-lg bg-primary text-white text-xs font-bold shadow-lg shadow-primary/20">
+                            Verify
+                        </button>
+</div>
+</div>
+</div>
+<!-- Match Card 2 -->
+<div class="bg-white dark:bg-white/5 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-white/10">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover border-2 border-primary/20" data-alt="Close up of a chess competitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi39uBjfi5tBBopvwNqm3cxzc39Tg-DSzstbDMeGAPJ2mkOoaLcSwLDwmXse3Q7JHR_7UgPB72sD2_051vcK1GVVeHo8odqnxw2NYK_7EMtoMGgEZuq4aLN4PNiIaHsNZ1IUf_qLitzNXJeG4FzjU5qTbHW70SnEvnQI-4m1I3MpaSKPBuLIgU7-TEpw-eFz6JducxV7zVnjuEIPZi8OaF1gKwtPWfG3liWBGV6u0nAtxHhD-atU4pTk9WiTMMsFD_vydp7DHawLU"/>
+<span class="absolute -bottom-1 -right-1 bg-green-500 w-3 h-3 rounded-full border-2 border-white dark:border-background-dark"></span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Sarah K.</span>
+<span class="text-[10px] text-slate-400">Rank #04</span>
+</div>
+<span class="text-xs font-bold text-slate-300 italic">vs</span>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-end">
+<span class="text-sm font-bold">Leo V.</span>
+<span class="text-[10px] text-slate-400">Rank #08</span>
+</div>
+<img class="w-10 h-10 rounded-full object-cover border-2 border-slate-200 dark:border-white/10" data-alt="Portrait of a grandmaster competitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmpKKO1oqyFQUk_ynPsJQNZwhCo5LRulg1BqwtDeA8_cZ7ruOotHOgUOFLpzJaTGAXg7F591QkFr0jKmaaxRaxFuvZAgjmHc-x4dn0coxkLlWm5sW698dfZb0ELQuqrSrTTkvsOKSIXkdmHwlNEUPg5Y0EvKo-5oYRITfeyi4jJJWJ4Y4OOt0rIv0k29nKvCEGsmm92HNZG2QxCeBHcJ9cTer3xRHGY5grwBF5QOZlb6DI1sLwnPqvX-8IwEqlmyVn7c9oJluidws"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-50 dark:border-white/5">
+<div class="flex items-center gap-2">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tight">
+                            +12 pts allocated
+                        </span>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-lg text-xs font-bold text-slate-500 hover:bg-red-50 hover:text-red-500 transition-colors">
+                            Dispute
+                        </button>
+<button class="px-6 py-2 rounded-lg bg-primary text-white text-xs font-bold shadow-lg shadow-primary/20">
+                            Verify
+                        </button>
+</div>
+</div>
+</div>
+<!-- Match Card 3 -->
+<div class="bg-white dark:bg-white/5 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-white/10">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover border-2 border-primary/20" data-alt="Portrait of a young chess talent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhyvW5IfBe7v_XzOXzfaNxVroP-x4Ekgpm-vpUIg8UkdMEQ7qZMkOdkTUAQLvWSs4Y4H19WPArGx-tcG8kxoO8AH0Lxz5TbQBjA2gbUVqc_DvR9ZBrEF64S9ibNK3OWXHKjlSSSib3lfdvu2-y48R-qDOu9DI5RhpfEdC6ZxYwd7au1Yag8cM5C4t3azrxwWaC_LnRSnP2Cf1uNZ64ke-1J03-kxOOo1msyJJKCRaBFjDWo_Y_11gTqggLWSbK5sloNOBdLcV-gs4"/>
+<span class="absolute -bottom-1 -right-1 bg-yellow-500 w-3 h-3 rounded-full border-2 border-white dark:border-background-dark"></span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Emma W.</span>
+<span class="text-[10px] text-slate-400">Rank #22</span>
+</div>
+<span class="text-xs font-bold text-slate-300 italic">vs</span>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-end">
+<span class="text-sm font-bold">Chris T.</span>
+<span class="text-[10px] text-slate-400">Rank #21</span>
+</div>
+<img class="w-10 h-10 rounded-full object-cover border-2 border-slate-200 dark:border-white/10" data-alt="Portrait of an experienced player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoIQYIVJVSgdqo009u3u_rPjLsk86iVY6rQJQ6LYjScqAFWVdexqKKkWTYviuiEHnnzUjsXgNQ1PjTen-jsNJyvRbWZ4qXzksQ58jCEf7wKmgaFJ0MFg6i53VE72rDsIDgS2Ezf7Mgw3OyeW3r9wXOrWs4w3vD5FezWChJyf3QpZy8XqjWCfNWPgKoAEqtJRB9xZ0TxvHwtIBewFX4s7_fhSmU7AGSZlzLyVPJjg08IuGA4kiE3FAwCgfeeQhLiqaJWUjJdqPOir4"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-50 dark:border-white/5">
+<div class="flex items-center gap-2">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-tight">
+                            +8 pts allocated
+                        </span>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 rounded-lg text-xs font-bold text-slate-500 hover:bg-red-50 hover:text-red-500 transition-colors">
+                            Dispute
+                        </button>
+<button class="px-6 py-2 rounded-lg bg-primary text-white text-xs font-bold shadow-lg shadow-primary/20">
+                            Verify
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Info -->
+<div class="mt-8 p-4 bg-primary/5 rounded-xl border border-primary/10">
+<div class="flex items-center gap-3">
+<span class="material-icons text-primary text-xl">info</span>
+<p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+                    Matches verified here will be immediately updated on the public leaderboard. Scan player QR codes for instant outcome recording.
+                </p>
+</div>
+</div>
+</main>
+<!-- Bottom Actions Container -->
+<div class="fixed bottom-0 inset-x-0 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/95 dark:via-background-dark/95 to-transparent pt-10 pb-8 px-6 pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<button class="w-full h-14 bg-primary text-white rounded-2xl flex items-center justify-center gap-3 font-bold text-lg shadow-xl shadow-primary/30 active:scale-95 transition-transform">
+<span class="material-icons">qr_code_scanner</span>
+                Scan Player QR
+            </button>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-2"></div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 min-h-screen flex items-center justify-center p-4">
+<!-- iOS Phone Container -->
+<div class="w-full max-w-[390px] h-[844px] bg-white dark:bg-slate-900 shadow-2xl rounded-[3rem] overflow-hidden flex flex-col relative border-[8px] border-slate-800 dark:border-slate-700">
+<!-- Status Bar Space -->
+<div class="h-12 w-full flex justify-between items-center px-8">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons text-sm">signal_cellular_alt</span>
+<span class="material-icons text-sm">wifi</span>
+<span class="material-icons text-sm">battery_full</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="px-6 pt-2 pb-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-semibold uppercase tracking-wider text-primary">Step 4 of 4</span>
+<span class="text-xs font-semibold text-primary">100%</span>
+</div>
+<div class="w-full h-1.5 bg-primary/10 rounded-full overflow-hidden">
+<div class="w-full h-full bg-primary"></div>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex-1 overflow-y-auto px-6 pb-32">
+<header class="mb-8">
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Set your location</h1>
+<p class="text-slate-500 dark:text-slate-400">Help us find chess matches and meetups in your area.</p>
+</header>
+<!-- Map Illustration Section -->
+<div class="mb-8 relative rounded-2xl overflow-hidden h-40 group">
+<img alt="City Map" class="w-full h-full object-cover" data-alt="Modern stylized city map visualization" data-location="Nairobi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxpLAXOdw-j01Ib6MD6Paln7wwBoDWRb0QcpAk9ikMhp6teQGe_7Z839_5BThWgkYMyb-GOWj_7btE_f8VJmQPEnytYzFXfMgXNSlcDdFu7w6ZpUP-U_0m4IZMrb8h7G_7QkdOuRymfsk7AKRq0UEZ05SL611Cl4RCdnb24_2XhPUagPv-ARjJP6s1sdkfFH5lL239fKO4rOUXv9glvB5fy7qsZahH8yDqTkFAVXN-UMNCiuasJDHSyPs2nr2x9rsrJpORXF2a_Sw"/>
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+<div class="bg-white/90 dark:bg-slate-800/90 p-3 rounded-full shadow-lg">
+<span class="material-icons text-primary text-3xl">location_on</span>
+</div>
+</div>
+</div>
+<!-- Location Controls -->
+<div class="space-y-4 mb-10">
+<button class="w-full py-4 px-6 bg-primary/10 hover:bg-primary/20 text-primary font-bold rounded-full transition-all flex items-center justify-center gap-2">
+<span class="material-icons text-xl">my_location</span>
+                    Use current location
+                </button>
+<div class="relative">
+<span class="absolute left-5 top-1/2 -translate-y-1/2 material-icons text-slate-400">search</span>
+<input class="w-full py-4 pl-12 pr-6 bg-slate-50 dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 rounded-full focus:border-primary focus:ring-0 outline-none transition-all text-slate-900 dark:text-white" placeholder="Search for your city..." type="text" value="Nairobi"/>
+</div>
+</div>
+<!-- Privacy Section -->
+<div class="space-y-6">
+<h2 class="text-sm font-bold uppercase tracking-widest text-slate-400">Privacy Settings</h2>
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
+<div class="flex-1 pr-4">
+<h3 class="font-semibold text-slate-900 dark:text-white">Show my Elo on profile</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Allow others to see your skill level</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-800 rounded-xl">
+<div class="flex-1 pr-4">
+<h3 class="font-semibold text-slate-900 dark:text-white">Hide my precise location</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Only show my general neighborhood</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+<button class="w-full py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-full shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2">
+                Start Exploring
+                <span class="material-icons">arrow_forward</span>
+</button>
+<div class="h-6 w-1/3 mx-auto mt-4 bg-slate-200 dark:bg-slate-700 rounded-full"></div> <!-- iOS Home Indicator -->
+</div>
+</div>
+</body></html>

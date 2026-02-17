@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chess Leaderboard &amp; Prize Pool</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0aaab8",
+                "background-light": "#f5f8f8",
+                "background-dark": "#102122",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- iOS Status Bar Spacer (Simulated) -->
+<div class="h-12 w-full"></div>
+<div class="max-w-md mx-auto px-4 pb-20">
+<!-- Prize Pool Banner -->
+<div class="bg-primary rounded-xl p-4 mb-6 shadow-lg shadow-primary/20 flex items-center justify-between text-white">
+<div class="flex items-center gap-3">
+<div class="bg-white/20 p-2 rounded-lg">
+<span class="material-icons text-white">payments</span>
+</div>
+<div>
+<p class="text-xs font-semibold uppercase tracking-wider opacity-80">December Pool</p>
+<h3 class="text-lg font-extrabold">KSh 25,000</h3>
+</div>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold uppercase opacity-80">Time Left</p>
+<div class="flex items-center gap-1 font-bold">
+<span class="material-icons text-sm">schedule</span>
+<span>12 Days</span>
+</div>
+</div>
+</div>
+<!-- Header -->
+<header class="mb-6 flex justify-between items-end">
+<div>
+<h1 class="text-2xl font-800 tracking-tight text-slate-900 dark:text-white">Monthly Leaderboard</h1>
+<p class="text-sm text-slate-500 dark:text-slate-400">Kenya Chess Federation Official</p>
+</div>
+<button class="p-2 bg-white dark:bg-slate-800 rounded-full shadow-sm">
+<span class="material-icons text-primary">info</span>
+</button>
+</header>
+<!-- Segmented Control Tabs -->
+<div class="bg-slate-200/50 dark:bg-slate-800/50 p-1 rounded-xl mb-8 flex">
+<button class="flex-1 py-2 text-sm font-bold rounded-lg bg-white dark:bg-slate-700 shadow-sm text-primary transition-all">
+                Casual
+            </button>
+<button class="flex-1 py-2 text-sm font-bold text-slate-500 dark:text-slate-400 transition-all">
+                Pro
+            </button>
+</div>
+<!-- Podium Section -->
+<div class="flex items-end justify-center gap-2 mb-10 mt-12">
+<!-- 2nd Place -->
+<div class="flex flex-col items-center flex-1">
+<div class="relative mb-3">
+<div class="w-16 h-16 rounded-full border-4 border-slate-300 overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Profile photo of the second place chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBftLxTEi5AKxMpSD326PRCeXM5lLEXq_Ftu-JRfb67pepHFFCDyI_2Zns2Ob4ChxutPlVI7z5JenshiD9wwiTEt6ZHcs-1nOvR045ylhSfglFiqVcTtKWzNhQPwWP6BUl3tFldXr9QnSOj0MvHjvw81XxOuHIw2_e-XqIUqzCafPIbT5N4AH2ETcJVRrr_G9prBL8LW4fyB3jWUHhP7rxUwzHi8nZaw2hO5N-sFKbyTPsvT04k6uYEuLfiAvWY33VPNWe3gnmhxC0"/>
+</div>
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-slate-300 text-white rounded-full w-6 h-6 flex items-center justify-center text-[10px] font-bold border-2 border-background-light">2</div>
+</div>
+<div class="text-center">
+<p class="font-bold text-sm truncate w-24">Otieno J.</p>
+<div class="mt-1 bg-white dark:bg-slate-800 py-1 px-2 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+<p class="text-[10px] font-bold text-slate-500 uppercase">Artcaffe Voucher</p>
+</div>
+</div>
+</div>
+<!-- 1st Place -->
+<div class="flex flex-col items-center flex-1 -mt-8 scale-110">
+<div class="relative mb-3">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 text-yellow-500 animate-bounce">
+<span class="material-icons text-4xl">workspace_premium</span>
+</div>
+<div class="w-20 h-20 rounded-full border-4 border-yellow-400 overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Profile photo of the first place chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYdRDsSyR45KyEXGFk17oNNqTJRkZLSSqyZE3tK0lU4drCdSbk_9-sOSMvWbYSHgEOqRLVX-9xrM3H89EDb8VwPhiK7TRk8oLOvuJIH4LhlB9QVCQwhjmDZm_DDSrP3SNWL5qJZeV7bFh0AxN-nGyrTylMZ4jv7Sy-1WVpyt1MO4Q0x3wQPRS06Ha9bOQOSdW07po9MBk4sxHfWZ19FrHt0SYwk163XwrUPTUbfkjhGcdgegAaajJwhuaWV0nd2O-fCC484gzN82Y"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-yellow-400 text-white rounded-full px-2 py-0.5 text-[10px] font-black border-2 border-background-light">WINNER</div>
+</div>
+<div class="text-center">
+<p class="font-bold text-base truncate w-28">Kamau W.</p>
+<div class="mt-1 bg-primary py-1.5 px-3 rounded-lg shadow-lg">
+<p class="text-[10px] font-black text-white uppercase">KSh 5,000 Gift Card</p>
+</div>
+</div>
+</div>
+<!-- 3rd Place -->
+<div class="flex flex-col items-center flex-1">
+<div class="relative mb-3">
+<div class="w-16 h-16 rounded-full border-4 border-amber-600/50 overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Profile photo of the third place chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCplt1TAfXYw4yWJkfKO9wDKDyG8zQvLLwYUSRdQxknS8JoqBoh-ls05QLPdN41oBt7spisJ1R3jqAH9QWcJ5qsex1hI-Qcmfv6H7FHx0bJFKacaSL39Arv0v44MKTV2CnBA35WRHjmloYe3fuk2tljZk41EwZAPcSPOm-fk4QC2zKJ6w1Nad6rW9qP9yxjPUnQ1w5KQIYoGqTnxXSg8loYcO6tqu59zIVMfdJM-vn5OeZgO22cRnb5JQ_GL3Udu29PWx22PMicfxg"/>
+</div>
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-[10px] font-bold border-2 border-background-light">3</div>
+</div>
+<div class="text-center">
+<p class="font-bold text-sm truncate w-24">Sarah L.</p>
+<div class="mt-1 bg-white dark:bg-slate-800 py-1 px-2 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+<p class="text-[10px] font-bold text-slate-500 uppercase">KSh 2,000 Card</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Ranking List -->
+<div class="space-y-3">
+<div class="flex justify-between items-center px-4 py-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+<span>Rank &amp; Player</span>
+<span>Points</span>
+</div>
+<!-- List Item 4 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl flex items-center justify-between shadow-sm border border-slate-100 dark:border-slate-700/50">
+<div class="flex items-center gap-4">
+<span class="text-sm font-bold text-slate-400 w-4">4</span>
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Avatar of chess player ranked fourth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAjE8_mSxTNSYpPIY20c8nSlpgB-rL6yx-QvP-Lja8m__PXL6g9Zui4dQu5iAsGLUz_x4wa98x--e-VrdZlwLfT8hXBU5DgiiMlOPq50VFOzNOsRjxZrsZrGbOzBEMdbABwXCuXv-OLvJ7KBsJkGaKiHWdlYp7mvNem9Ywt-5ZFsu0gS9qfJQOwy1rKpGn9VTqDMj_o162t8sDsE4l8GO3KulAIASuqDNp_qi6IVK5ujptfjEkqba6SUm2rCigqQm6Omv02QsiE9I"/>
+<div class="absolute -right-1 -bottom-1 bg-primary p-0.5 rounded-full border-2 border-white dark:border-slate-800">
+<span class="material-icons text-[10px] text-white">verified</span>
+</div>
+</div>
+<div>
+<p class="font-bold text-slate-800 dark:text-white text-sm">Nairobi Knights</p>
+<p class="text-xs text-slate-500">M. Amina</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold">1,420</p>
+</div>
+</div>
+<!-- List Item 5 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl flex items-center justify-between shadow-sm border border-slate-100 dark:border-slate-700/50">
+<div class="flex items-center gap-4">
+<span class="text-sm font-bold text-slate-400 w-4">5</span>
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Avatar of chess player ranked fifth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ4hb3LrGnvklCYG80my2i5-TtZKBW7FHtlaLiRUOffaQWLz1PSyzfrLCyieUPfG_o9duzCuMPKrGEWk-tfhZP7MvyHj1RYGwpEAUTlKf3fStxbREUanVw7yv4OEskpOzzM3g7Y8wEruDU77iKpqzH5GWyQoLrtq0j3tzKvuFNlS3q-gcCxrFodf6eyMg0jnjh5Z3DICmr1cEXHsXbpHjWLlRmXeCeiVcL30plnIjym9p1Sz7Owe6WLR65pNsqDdiqcS8NaG7GY1g"/>
+</div>
+<div>
+<p class="font-bold text-slate-800 dark:text-white text-sm">Lakeside Kings</p>
+<p class="text-xs text-slate-500">D. Omondi</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold">1,385</p>
+</div>
+</div>
+<!-- List Item 6 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl flex items-center justify-between shadow-sm border border-slate-100 dark:border-slate-700/50 opacity-90">
+<div class="flex items-center gap-4">
+<span class="text-sm font-bold text-slate-400 w-4">6</span>
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Avatar of chess player ranked sixth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCui_CbNOL8BV-b6jVG47gtB31JZ0jkNIjr-ShWAxMIfN7825Hxdp0EbT8Gmudm9qscmaqMxaY7t7c7udnw5xnPaaGYYOFGR9RWER-BLj4Ylw4POmFdttqnNhrY0WxG7YB6WqlZTPyiUC-Z95mq4RvRqIGC0jERFH1kNtnRs_21aUBzoMtE7valtoKREC0RHmobt9O96oYJu_POzlkDgNeX1SHiA8-X4RscSCE0bPBuQZ3QQc45HsJRiqiXY2GINP7xY6jdZiXi7so"/>
+</div>
+<div>
+<p class="font-bold text-slate-800 dark:text-white text-sm">Coast Grandmasters</p>
+<p class="text-xs text-slate-500">Z. Hassan</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold">1,210</p>
+</div>
+</div>
+<!-- List Item 7 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl flex items-center justify-between shadow-sm border border-slate-100 dark:border-slate-700/50 opacity-80">
+<div class="flex items-center gap-4">
+<span class="text-sm font-bold text-slate-400 w-4">7</span>
+<div class="relative">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Avatar of chess player ranked seventh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ4_Y-4-svMk9hsn1VREojzcv6uyCTVVJSYqONADhXEPT3zaATqMdM_0yMtqtYlyn_eGit3j1v9ZKn7zSbbKvOp9FM_4SQOrNhQfFts9DNAjmkAQLK0vEn2frMCiCi_vNIPyoPsrQo1y-W72r3Yh8biVXq4JS2nRTwxSeuw-Xtr2TGGsfJGBwXNHQSLxdlXGoqYXjZpNTGJTfTs9qlwLzsYL9OJiaLsEof8nCbRFEIOIAk8qUz9jIQCzRDwjI0WSJcpZvuDffZ1sU"/>
+</div>
+<div>
+<p class="font-bold text-slate-800 dark:text-white text-sm">Rift Rookies</p>
+<p class="text-xs text-slate-500">K. Ruto</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold">1,150</p>
+</div>
+</div>
+</div>
+<!-- Footer Info -->
+<footer class="mt-8 text-center px-6">
+<div class="flex justify-center items-center gap-1 mb-2 text-slate-400">
+<span class="material-icons text-sm">verified</span>
+<p class="text-[10px] font-bold uppercase tracking-tighter">Verified Matches Only</p>
+</div>
+<p class="text-[10px] text-slate-400 leading-relaxed">
+                Points aggregated from matches verified by authorized Kenyan chess event organizers. Prize pools are distributed at the end of each calendar month.
+            </p>
+</footer>
+</div>
+<!-- Bottom Navigation (Simulated) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-8 py-3 flex justify-between items-center max-w-md mx-auto">
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">grid_view</span>
+<span class="text-[10px] font-bold mt-1">Play</span>
+</div>
+<div class="flex flex-col items-center text-primary">
+<span class="material-icons">leaderboard</span>
+<span class="text-[10px] font-bold mt-1">Ranks</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">emoji_events</span>
+<span class="text-[10px] font-bold mt-1">Prizes</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">person</span>
+<span class="text-[10px] font-bold mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payout Step 1: Method Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0faebd",
+                "background-light": "#f6f8f8",
+                "background-dark": "#102022",
+              },
+              fontFamily: {
+                "display": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-safe-area {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Progress Header -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md pt-4 pb-2 px-6">
+<div class="flex items-center justify-between mb-4">
+<button class="w-10 h-10 flex items-center justify-start text-slate-600 dark:text-slate-400">
+<span class="material-icons">arrow_back_ios</span>
+</button>
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Step 1 of 4</span>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</div>
+<div class="w-full h-1.5 bg-primary/10 dark:bg-primary/5 rounded-full overflow-hidden">
+<div class="w-1/4 h-full bg-primary rounded-full"></div>
+</div>
+</header>
+<main class="flex-1 px-6 pt-8 pb-32">
+<!-- Title Block -->
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold mb-3 leading-tight">How should we pay you?</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Select your preferred method to receive club dues and tournament payouts.</p>
+</div>
+<!-- Selection Cards -->
+<div class="space-y-4">
+<!-- Option: M-Pesa -->
+<label class="relative block group cursor-pointer">
+<input checked="" class="peer hidden" name="payout_method" type="radio"/>
+<div class="p-5 bg-white dark:bg-slate-800/50 border-2 border-primary rounded-xl transition-all peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 dark:bg-primary/20 rounded-lg text-primary">
+<span class="material-icons text-3xl">account_balance_wallet</span>
+</div>
+<div class="flex-1 pr-8">
+<h3 class="font-bold text-lg mb-1">M-Pesa Business/Till</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Instant settlement to your Till or Paybill number.</p>
+<div class="mt-2 inline-flex items-center text-xs font-semibold px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full">
+<span class="material-icons text-xs mr-1">bolt</span>
+                                FASTEST
+                            </div>
+</div>
+<div class="absolute top-5 right-5 w-6 h-6 border-2 border-primary rounded-full flex items-center justify-center bg-primary">
+<div class="w-2.5 h-2.5 bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+</label>
+<!-- Option: Bank Transfer -->
+<label class="relative block group cursor-pointer">
+<input class="peer hidden" name="payout_method" type="radio"/>
+<div class="p-5 bg-white dark:bg-slate-800/50 border-2 border-slate-100 dark:border-slate-800 rounded-xl transition-all peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-slate-100 dark:bg-slate-700 rounded-lg text-slate-600 dark:text-slate-300 transition-colors peer-checked:bg-primary/10">
+<span class="material-icons text-3xl">account_balance</span>
+</div>
+<div class="flex-1 pr-8">
+<h3 class="font-bold text-lg mb-1">Bank Transfer (KSh)</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Direct transfer to local Kenyan banks. Takes 1-2 business days.</p>
+</div>
+<div class="absolute top-5 right-5 w-6 h-6 border-2 border-slate-200 dark:border-slate-700 rounded-full flex items-center justify-center transition-all peer-checked:bg-primary peer-checked:border-primary">
+<!-- Inner circle shown only when parent peer is checked -->
+<div class="w-2.5 h-2.5 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</div>
+</div>
+</label>
+<!-- Option: PayPal -->
+<label class="relative block group cursor-pointer">
+<input class="peer hidden" name="payout_method" type="radio"/>
+<div class="p-5 bg-white dark:bg-slate-800/50 border-2 border-slate-100 dark:border-slate-800 rounded-xl transition-all peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-slate-100 dark:bg-slate-700 rounded-lg text-slate-600 dark:text-slate-300">
+<span class="material-icons text-3xl">payments</span>
+</div>
+<div class="flex-1 pr-8">
+<h3 class="font-bold text-lg mb-1">PayPal</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">International payments. Settlement takes 3-5 business days.</p>
+</div>
+<div class="absolute top-5 right-5 w-6 h-6 border-2 border-slate-200 dark:border-slate-700 rounded-full flex items-center justify-center transition-all peer-checked:bg-primary peer-checked:border-primary">
+<div class="w-2.5 h-2.5 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</div>
+</div>
+</label>
+</div>
+<!-- Trust Note -->
+<div class="mt-8 p-4 bg-slate-100/50 dark:bg-slate-800/30 rounded-lg flex gap-3">
+<span class="material-icons text-slate-400 text-xl">verified_user</span>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Your payment information is encrypted and securely stored. We use industry-standard protocols to ensure your club funds are always protected.
+            </p>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<footer class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light via-background-light/95 to-transparent dark:from-background-dark dark:via-background-dark/95 ios-safe-area">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/25 flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+            Continue
+            <span class="material-icons">arrow_forward</span>
+</button>
+</footer>
+<!-- Image for Context (Abstract pattern consistent with theme) -->
+<div class="fixed top-0 right-0 -z-10 opacity-5 dark:opacity-10">
+<img class="w-64 h-64 object-cover rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" data-alt="Abstract chess board pattern in teal tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZq7jdHBf5YD5X185BEIRT7tmS36fBQ2g5r2fbwHCkgu1Zie2jwQhEm6UFPugUxMREMUNZoGhOErA8_JqVM_MSmZ_pxBirXQesrnigkw6Zj_ShAFCvTOYzPa7ZAUb9NNrSKhs5didQ443yckzMllXro0HrI0tGiBvjxZiBkAy9evaF-DmWs07YFrD6eEunZe18CdrxPuywR8UlglUXg5qtZ_adiRN5DMhzo8mgOib01UlNDGpfQAkVtDrCf8bwt6JlReDFRM5ex3w"/>
+</div>
+
+```</body></html>

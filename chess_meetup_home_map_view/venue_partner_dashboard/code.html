@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Venue Partner Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cfbf",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112120",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 min-h-screen">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-icons">storefront</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight">Bao Box</h1>
+<p class="text-[10px] uppercase tracking-widest text-primary font-semibold">Venue Partner</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 p-1 rounded-full">
+<span class="text-[10px] font-bold px-3 text-slate-500 uppercase">Venue</span>
+<button class="bg-white dark:bg-slate-700 shadow-sm rounded-full px-3 py-1 text-[10px] font-bold text-primary flex items-center gap-1">
+                    Player <span class="material-icons text-[12px]">swap_horiz</span>
+</button>
+</div>
+</div>
+</header>
+<main class="p-6 space-y-6 pb-32">
+<!-- Monthly Performance Card -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Monthly Performance</h2>
+<span class="text-xs font-medium text-primary">June 2024</span>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-lg p-6 shadow-sm border border-primary/5">
+<div class="mb-6">
+<p class="text-xs text-slate-400 font-medium mb-1">Estimated Commission</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold text-slate-900 dark:text-white">KSh 15,000</span>
+<span class="text-xs font-bold text-primary flex items-center">
+<span class="material-icons text-sm">trending_up</span> 12%
+                        </span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-slate-50 dark:border-slate-800 pt-6">
+<div>
+<p class="text-xs text-slate-400 font-medium mb-1">Total Referrals</p>
+<p class="text-xl font-bold text-slate-800 dark:text-slate-100">142</p>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium mb-1">Active Meetups</p>
+<p class="text-xl font-bold text-slate-800 dark:text-slate-100">5</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Referral Growth Chart -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Referral Growth</h2>
+<div class="flex gap-2">
+<span class="w-2 h-2 rounded-full bg-primary mt-1.5"></span>
+<span class="text-xs font-medium text-slate-400 italic">Weekly</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-lg p-4 h-48 relative overflow-hidden shadow-sm border border-primary/5 flex items-end justify-between px-6">
+<!-- Simple SVG Line Chart Representation -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0 80 Q 20 75, 40 50 T 80 30 T 100 20" fill="none" stroke="#17cfbf" stroke-width="3"></path>
+<path d="M0 80 Q 20 75, 40 50 T 80 30 T 100 20 V 100 H 0 Z" fill="url(#gradient)" opacity="0.1"></path>
+<defs>
+<lineargradient id="gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#17cfbf;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#17cfbf;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="relative z-10 w-full flex justify-between text-[10px] font-bold text-slate-300 pb-2">
+<span>WK1</span>
+<span>WK2</span>
+<span>WK3</span>
+<span>WK4</span>
+</div>
+</div>
+</section>
+<!-- Recent Check-ins List -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Recent Check-ins</h2>
+<button class="text-xs font-bold text-primary">View All</button>
+</div>
+<div class="space-y-3">
+<!-- Check-in Item -->
+<div class="flex items-center justify-between bg-white dark:bg-slate-900 p-3 rounded-xl border border-primary/5">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full object-cover border-2 border-primary/10" data-alt="Close up portrait of a smiling man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByKPYimZY_k4RN8rnVYEd_LKJmBELhJ4LfnjdRz5Q2QtDcYj2OiFTuyq0weE4t0_dpXXk4VQXWEfKDL2fWfl5Qwjl-UvV-i1XNcGPv5Dh5y_vBVM1e0oHtz9gTHhhwPu72jdTjG-7331mU7KhUoULZPy15AmcwkZZQVWAlv1rrc790wAGKCqNsj-CUcXEDIMmC0qVFGmi2GGY5HcZLeXyrmdWbz0jiS5MUg2SYOC-vRnYDd9x1cNV0fTdgJ_xiM3J_bzuES21ESJo"/>
+<div>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-100">Alex M.</p>
+<p class="text-[10px] text-slate-400 uppercase tracking-tighter">Grandmaster Level</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-medium text-slate-500">5 mins ago</p>
+<span class="inline-block px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">Verified</span>
+</div>
+</div>
+<!-- Check-in Item -->
+<div class="flex items-center justify-between bg-white dark:bg-slate-900 p-3 rounded-xl border border-primary/5">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full object-cover border-2 border-primary/10" data-alt="Portrait of a young woman with a friendly smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEnOVD2Xb4E6o-g4DQ4SXihOntNyRBkzk_-MreEyIT8Xn4HgHCM0Pd1Ms4sRq2IBC2TDncf0bY4RKzH5UNqMY0dqskWeVcDiTwiEyzr30OjQuYckl3UssNQJvrQNWjaRUr53cG7ROCTUkkgC2W8_N_qi7dSigH6NOmDalBSvM47jw-9hwHx4zzi0nfcC46ekNPoJHeXRAIQfeX1fFXbBOwN0QKqxTQTCopg1_ltYH7By9Xic5eK3jNfk93wEtDhQrX5h8Vfsw-8YQ"/>
+<div>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-100">Sarah J.</p>
+<p class="text-[10px] text-slate-400 uppercase tracking-tighter">Newcomer</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-medium text-slate-500">22 mins ago</p>
+<span class="inline-block px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">Verified</span>
+</div>
+</div>
+<!-- Check-in Item -->
+<div class="flex items-center justify-between bg-white dark:bg-slate-900 p-3 rounded-xl border border-primary/5">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full object-cover border-2 border-primary/10" data-alt="Headshot of a middle-aged man with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI2lt5GvP-C4mE2d4-Q1H8pUgUS5VVeyvAnv0Qi8UKFI4BEcdfXolmZqxpgD6e89WZybGifh2193w0rEMS8695d1okG5KPdma4gaHXIAsXUKcQGk-CyEWLWLK9Tc7PGg0x3uSWQQ30OHW0mseM9yvtZnkylkYviw4ib1EzrsPl0XLOa-kqMjUv1FZq3KRE2gF3XAioBFwUWSS7PqO5E6TFsRhoS9YzsIA1iQM2c2ylRR5ttZwKvvYlsFsAcwgsEss8KtSsmrTbCMs"/>
+<div>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-100">David K.</p>
+<p class="text-[10px] text-slate-400 uppercase tracking-tighter">Regular Member</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-medium text-slate-500">1 hr ago</p>
+<span class="inline-block px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-bold">Verified</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button Area -->
+<div class="fixed bottom-0 left-0 right-0 p-6 pointer-events-none">
+<div class="max-w-md mx-auto flex flex-col items-center gap-4">
+<div class="bg-slate-900 dark:bg-primary/20 backdrop-blur-xl px-4 py-2 rounded-full border border-white/10 flex items-center gap-3 shadow-2xl pointer-events-auto">
+<div class="flex flex-col">
+<span class="text-[9px] uppercase tracking-widest text-primary font-bold">Current Perk</span>
+<span class="text-white text-xs font-bold leading-tight">Free Coffee for Referrals</span>
+</div>
+<div class="w-[1px] h-6 bg-white/20"></div>
+<button class="bg-primary text-slate-900 font-bold px-4 py-2 rounded-full text-xs flex items-center gap-2 hover:scale-105 transition-transform active:scale-95">
+                    Update Perks
+                    <span class="material-icons text-sm">edit</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Mock (iOS style) -->
+<nav class="fixed bottom-0 w-full bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 pb-4 pt-2 px-8 flex justify-between items-center z-40">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons">dashboard</span>
+<span class="text-[10px] font-bold">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">event</span>
+<span class="text-[10px] font-bold">Events</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">account_balance_wallet</span>
+<span class="text-[10px] font-bold">Payouts</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">settings</span>
+<span class="text-[10px] font-bold">Settings</span>
+</div>
+</nav>
+</body></html>

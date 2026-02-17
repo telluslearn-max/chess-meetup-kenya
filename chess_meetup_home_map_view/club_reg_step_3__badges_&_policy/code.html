@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Club Registration - Step 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0faebd",
+                "background-light": "#f6f8f8",
+                "background-dark": "#102022",
+              },
+              fontFamily: {
+                "display": ["Plus Jakarta Sans"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col">
+<!-- iOS Status Bar Spacer -->
+<div class="h-12 w-full"></div>
+<!-- Header & Progress -->
+<header class="px-6 py-4">
+<div class="flex items-center justify-between mb-6">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-icons text-slate-600 dark:text-slate-300">chevron_left</span>
+</button>
+<span class="text-sm font-semibold text-slate-400">Step 3 of 4</span>
+<div class="w-10"></div>
+</div>
+<!-- Progress Bar (75%) -->
+<div class="w-full h-2 bg-primary/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4 rounded-full"></div>
+</div>
+</header>
+<main class="flex-grow px-6 pb-24 overflow-y-auto">
+<div class="mt-4">
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Club Badges &amp; Members</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Define how your members are recognized and admitted to the club.</p>
+</div>
+<!-- Badge Preview Card -->
+<div class="mt-8">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4">Member Badge Preview</label>
+<div class="relative bg-white dark:bg-slate-800 p-6 rounded-lg border border-slate-100 dark:border-slate-700 shadow-sm overflow-hidden">
+<!-- Abstract background pattern for preview -->
+<div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 bg-primary/5 rounded-full"></div>
+<div class="flex items-center gap-4">
+<img class="w-14 h-14 rounded-full border-2 border-white dark:border-slate-700 shadow-md object-cover" data-alt="Close up portrait of a professional chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1rv46ljNamcserT7nzh_b63-VmaBfSObGqP2nV1pWJEEPeIBEuhKw4HXAOkO0tTVSCunNMyJvIcxx9y40JERXGpaljTckYSHHje4C_kgyTwnvBcQm3OnqDn8syzlpfNLR3YOXxzmgbiATbX871-WnUEnAyxRDQZ-uomuJwhlmKVBXSEUYH-vckjQBVByPjiycnTIrGyYTvTKn-US0UuO8PyiLqlk7Pw0tTCQn__ppE51np46Nhs8zE_ynKKg6Jc4CHqa8pdYRLqo"/>
+<div class="flex flex-col gap-1">
+<span class="text-slate-900 dark:text-white font-bold">Alex Thompson</span>
+<div class="flex items-center gap-1.5 py-1 px-3 bg-primary/10 border border-primary/20 rounded-full w-fit">
+<span class="material-icons text-[14px] text-primary">verified</span>
+<span class="text-[11px] font-bold text-primary uppercase tracking-wider leading-none">Verified Club Member</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-50 dark:border-slate-700">
+<p class="text-[12px] text-slate-400 dark:text-slate-500 italic">"This is how the badge will appear on member profiles."</p>
+</div>
+</div>
+</div>
+<!-- Admin Controls -->
+<div class="mt-10 space-y-8">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col">
+<span class="font-semibold text-slate-900 dark:text-white">Manual Approval</span>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+                        Admins must manually approve each request before the badge is displayed on a member's profile.
+                    </p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer mt-1">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Perks Input Area -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<label class="font-semibold text-slate-900 dark:text-white">Member Perks</label>
+<span class="text-xs text-slate-400">Optional</span>
+</div>
+<div class="relative">
+<textarea class="w-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-4 text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none resize-none" placeholder="e.g., Access to private tournaments, free coffee at meetups, discounts on coaching..." rows="4"></textarea>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary text-sm">info</span>
+<p class="text-[11px] text-slate-500 dark:text-slate-400">These will be listed on your club's public profile page.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Navigation Footer -->
+<footer class="fixed bottom-0 left-0 right-0 p-6 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-100 dark:border-slate-800">
+<div class="max-w-md mx-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-full shadow-lg shadow-primary/25 transition-all active:scale-[0.98]">
+                Next Step
+            </button>
+<!-- iOS Home Indicator Space -->
+<div class="h-4"></div>
+</div>
+</footer>
+</body></html>

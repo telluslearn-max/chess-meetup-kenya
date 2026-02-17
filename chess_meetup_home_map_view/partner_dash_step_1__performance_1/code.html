@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partner Dash Step 1: Performance Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0ab3c2",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(10, 179, 194, 0.08), 0 8px 10px -6px rgba(10, 179, 194, 0.05);
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .progress-bar-transition {
+            transition: width 0.5s ease-in-out;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex justify-center items-start">
+<div class="w-full max-w-[430px] min-h-screen bg-background-light dark:bg-background-dark relative flex flex-col pb-40">
+<div class="px-8 pt-4 flex justify-between items-center w-full">
+<span class="text-sm font-bold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons-round text-sm">signal_cellular_alt</span>
+<span class="material-icons-round text-sm">wifi</span>
+<span class="material-icons-round text-sm">battery_full</span>
+</div>
+</div>
+<header class="px-6 pt-6 pb-4">
+<div class="flex items-center justify-between mb-8">
+<button class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="material-icons-round text-slate-600 dark:text-slate-300">close</span>
+</button>
+<div class="flex flex-col items-center gap-2">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Step 1 of 4</span>
+<div class="flex gap-1.5">
+<div class="w-10 h-1.5 rounded-full bg-primary"></div>
+<div class="w-10 h-1.5 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+<div class="w-10 h-1.5 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+<div class="w-10 h-1.5 rounded-full bg-slate-200 dark:bg-slate-700"></div>
+</div>
+</div>
+<div class="w-10"></div>
+</div>
+<h1 class="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-2">Performance Overview</h1>
+<p class="text-slate-500 dark:text-slate-400 font-medium leading-relaxed">Let's review your venue's impact and earnings for this month.</p>
+</header>
+<main class="px-6 space-y-6">
+<div class="bg-white dark:bg-slate-800 rounded-[24px] p-6 card-shadow border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-14 h-14 rounded-2xl overflow-hidden ring-4 ring-primary/5">
+<img alt="Bao Box" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_o-d1CKopxivlApzcCEmhqWqpeWlLEceuzjPTkCRbU8uemoORo6m6dmao5KcfpFYbOm0oTcxBx4gmdew_gc8679M_1-xn6Oq6wFOffebxx9miC4pyFmqLvuntKDjdFbN4vcx_N5Aj3HaCYEv-8XPp9Cl-TlfyfqB4RVuzDJe-occ_JGB5-TklBdXhpZZwHYaYQ-d0_8Oxldi46SbbV2G8SdZK8w-toDEt4CNYuhgkA2UwjHFEWAH8s8qkbqiQvPvf_3cGmHa3v14"/>
+</div>
+<div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Bao Box</h2>
+<div class="flex items-center text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons-round text-xs mr-1 text-primary">location_on</span>
+                        Westlands, Nairobi
+                    </div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-slate-50 dark:bg-slate-900/50 rounded-[20px] p-5 border border-slate-100 dark:border-slate-700">
+<div class="flex justify-between items-start mb-1">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Monthly Revenue Shared</span>
+<div class="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-500/10 flex items-center justify-center">
+<span class="material-icons-round text-emerald-600 text-sm">payments</span>
+</div>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold tracking-tight">KSh 12,500</span>
+<span class="text-xs font-bold text-emerald-500 flex items-center bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-100 dark:border-emerald-500/20">
+<span class="material-icons-round text-xs mr-0.5">trending_up</span>12%
+                        </span>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-900/50 rounded-[20px] p-5 border border-slate-100 dark:border-slate-700">
+<div class="flex justify-between items-start mb-1">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Monthly Chess Footfall</span>
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">group</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="text-3xl font-extrabold tracking-tight">142</span>
+<span class="text-slate-500 dark:text-slate-400 font-bold text-sm">players</span>
+</div>
+<div class="flex -space-x-2">
+<img class="w-7 h-7 rounded-full border-2 border-white dark:border-slate-800 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVZG4rDMqA3c8XeOA55pN799e0Ba8swDvrB99kUhm7XWKUp8cTklN2A743VM4QdIgc1g8Pp8UIEzGeWhXyG_2w2ZT5O3L9MIwY7Ejzn2Qa8ElPgDvmnHBZNnAt7H4B3V3i7bTSWke5G7sciS7xIXX4nAz8GQTTqQ7dfUyvUujOfelE-jtpu8RgGQPUMuYDlJMUx4y1kvTt3C_F4I3rqYfv7fXwWLp8-X1RrnJgCej7IHsRA7X_YKHv__NzN2WWeL5X2jK9ihMEMno"/>
+<img class="w-7 h-7 rounded-full border-2 border-white dark:border-slate-800 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMxPaR2bUOv2yTGaoSKM3oN7zhF3wTpNdB--aRgzy7_pzFxCmmT0gIWq9pNwH1VxI9lRruT3v58y1nkgZGU6PtX6d7Gt6zkgrFDikl9AafIjfmxPFZvJH2f5zUEAkEUwO_JLbcoeRFr4khBFUpgPhxscuE50qSLE709vFTyja63wHlvyZ2TtWWk_85Ohz_wCevPrm6ptc9zg__IR-NMDAkiwQjoeR39MNAY8kIo7q3C8mBQJCK7U4_r9yBHwPGKZDPnZjHY9TJkUo"/>
+<div class="w-7 h-7 rounded-full border-2 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-[8px] font-bold">+140</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section>
+<div class="flex items-center justify-between mb-4 px-1">
+<h3 class="text-lg font-bold flex items-center gap-2">
+                    Live Meetups
+                    <span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
+</span>
+</h3>
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Updates live</span>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-[24px] overflow-hidden card-shadow border border-slate-100 dark:border-slate-700">
+<div class="p-5 flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl">games</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-slate-900 dark:text-white">Main Hall Blitz Session</h4>
+<div class="flex items-center gap-3 mt-0.5">
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="material-icons-round text-[14px]">grid_view</span> 3 Tables
+                            </span>
+<span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+<span class="material-icons-round text-[14px]">person</span> 6 Players
+                            </span>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 px-5 py-3.5 flex justify-between items-center border-t border-primary/5">
+<div class="flex flex-col">
+<span class="text-[9px] font-black text-primary uppercase tracking-widest">Commission</span>
+<span class="text-sm font-bold text-slate-800 dark:text-slate-200">KSh 450.00</span>
+</div>
+<button class="px-4 py-2 bg-white dark:bg-slate-700 rounded-lg text-xs font-bold text-primary shadow-sm border border-primary/10">
+                        View Details
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<div class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto z-50">
+<div class="px-6 pb-8 pt-4 ios-blur bg-white/90 dark:bg-background-dark/90 border-t border-slate-200/50 dark:border-slate-800/50">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-extrabold py-4 rounded-2xl flex items-center justify-center gap-2 shadow-xl shadow-primary/20 transition-all active:scale-[0.98]">
+<span>Continue to Step 2</span>
+<span class="material-icons-round">arrow_forward</span>
+</button>
+<nav class="flex justify-around items-center mt-6">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons-round">grid_view</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-icons-round">bar_chart</span>
+<span class="text-[10px] font-bold">Analytics</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-icons-round">event_note</span>
+<span class="text-[10px] font-bold">Bookings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-icons-round">account_circle</span>
+<span class="text-[10px] font-bold">Profile</span>
+</button>
+</nav>
+</div>
+<div class="bg-white/90 dark:bg-background-dark/90 pb-2 flex justify-center">
+<div class="w-32 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Host Step 2: Date &amp; Time</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header Navigation -->
+<header class="px-6 pt-12 pb-4 flex items-center justify-between sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<button class="p-2 -ml-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-icons text-slate-700 dark:text-slate-300">arrow_back_ios_new</span>
+</button>
+<div class="flex-1 px-4">
+<div class="h-1.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2 rounded-full"></div>
+</div>
+</div>
+<button class="text-sm font-semibold text-slate-500 dark:text-slate-400">Save &amp; Exit</button>
+</header>
+<main class="flex-1 px-6 pb-32">
+<!-- Title Section -->
+<div class="mt-4 mb-8">
+<h1 class="text-3xl font-bold tracking-tight">When are you playing?</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-2">Pick a date and time for your chess match.</p>
+</div>
+<!-- Calendar Widget -->
+<div class="bg-white dark:bg-slate-900 rounded-lg p-6 shadow-sm border border-slate-100 dark:border-slate-800 mb-8">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-lg">October 2023</h3>
+<div class="flex gap-2">
+<button class="p-1 rounded-full border border-slate-200 dark:border-slate-700"><span class="material-icons text-sm">chevron_left</span></button>
+<button class="p-1 rounded-full border border-slate-200 dark:border-slate-700"><span class="material-icons text-sm">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-y-4 text-center">
+<!-- Day Labels -->
+<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Su</div>
+<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Mo</div>
+<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Tu</div>
+<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">We</div>
+<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Th</div>
+<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Fr</div>
+<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Sa</div>
+<!-- Calendar Dates -->
+<div class="text-slate-300">24</div>
+<div class="text-slate-300">25</div>
+<div class="text-slate-300">26</div>
+<div class="text-slate-300">27</div>
+<div class="text-slate-300">28</div>
+<div class="text-slate-300">29</div>
+<div class="text-slate-300">30</div>
+<div class="py-2 text-sm font-medium">1</div>
+<div class="py-2 text-sm font-medium">2</div>
+<div class="py-2 text-sm font-medium">3</div>
+<div class="py-2 text-sm font-medium">4</div>
+<div class="py-2 text-sm font-medium">5</div>
+<div class="py-2 text-sm font-medium">6</div>
+<div class="py-2 text-sm font-medium">7</div>
+<div class="py-2 text-sm font-medium">8</div>
+<div class="py-2 text-sm font-medium">9</div>
+<div class="py-2 text-sm font-medium">10</div>
+<div class="py-2 text-sm font-medium">11</div>
+<div class="py-2 text-sm font-medium">12</div>
+<div class="py-2 text-sm font-medium relative flex items-center justify-center">
+<span class="z-10 text-white">13</span>
+<div class="absolute inset-0 bg-primary rounded-full scale-110"></div>
+</div>
+<div class="py-2 text-sm font-medium">14</div>
+<div class="py-2 text-sm font-medium">15</div>
+<div class="py-2 text-sm font-medium">16</div>
+<div class="py-2 text-sm font-medium">17</div>
+<div class="py-2 text-sm font-medium">18</div>
+<div class="py-2 text-sm font-medium">19</div>
+<div class="py-2 text-sm font-medium">20</div>
+<div class="py-2 text-sm font-medium">21</div>
+<div class="py-2 text-sm font-medium">22</div>
+<div class="py-2 text-sm font-medium">23</div>
+<div class="py-2 text-sm font-medium">24</div>
+<div class="py-2 text-sm font-medium">25</div>
+<div class="py-2 text-sm font-medium">26</div>
+<div class="py-2 text-sm font-medium">27</div>
+<div class="py-2 text-sm font-medium">28</div>
+</div>
+</div>
+<!-- Time Selector Section -->
+<div class="space-y-6">
+<h3 class="font-bold text-lg px-1">Common slots</h3>
+<div class="overflow-x-auto no-scrollbar -mx-6 px-6 flex gap-3">
+<button class="whitespace-nowrap flex items-center gap-2 px-5 py-3 rounded-full bg-primary text-white font-semibold shadow-md transition-all active:scale-95">
+<span class="material-icons text-sm">wb_sunny</span>
+                    Morning
+                </button>
+<button class="whitespace-nowrap flex items-center gap-2 px-5 py-3 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold transition-all active:scale-95">
+<span class="material-icons text-sm">restaurant</span>
+                    Lunch
+                </button>
+<button class="whitespace-nowrap flex items-center gap-2 px-5 py-3 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold transition-all active:scale-95">
+<span class="material-icons text-sm">light_mode</span>
+                    Afternoon
+                </button>
+<button class="whitespace-nowrap flex items-center gap-2 px-5 py-3 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold transition-all active:scale-95">
+<span class="material-icons text-sm">nights_stay</span>
+                    Evening
+                </button>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-lg p-5 border border-slate-100 dark:border-slate-800 mt-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-icons text-primary">schedule</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-tight">Specific Time</p>
+<p class="text-lg font-bold">09:30 AM</p>
+</div>
+</div>
+<button class="text-primary font-bold text-sm">Change</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Navigation -->
+<footer class="fixed bottom-0 left-0 right-0 p-6 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 z-20">
+<div class="max-w-md mx-auto flex items-center gap-4">
+<button class="flex-1 py-4 px-6 rounded-lg bg-primary text-white font-bold text-center transition-all hover:opacity-90 active:scale-95 shadow-lg shadow-primary/20">
+                Next
+            </button>
+</div>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-4"></div>
+</footer>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

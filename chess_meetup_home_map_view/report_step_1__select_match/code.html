@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Report Result - Select Match</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbdbd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- iOS Status Bar Simulation -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 py-3">
+<span class="text-sm font-bold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons text-[14px]">signal_cellular_alt</span>
+<span class="material-icons text-[14px]">wifi</span>
+<span class="material-icons text-[14px]">battery_full</span>
+</div>
+</div>
+<!-- Navigation & Progress -->
+<div class="px-6 pb-2">
+<div class="flex items-center gap-2 mb-2">
+<button class="text-primary hover:opacity-80">
+<span class="material-icons">arrow_back_ios</span>
+</button>
+<h1 class="text-xl font-extrabold tracking-tight">Report Result</h1>
+</div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-semibold uppercase tracking-wider text-primary">Step 1 of 4</span>
+<span class="text-xs font-medium opacity-60">Select Match</span>
+</div>
+<div class="w-full h-1.5 bg-primary/20 rounded-full overflow-hidden">
+<div class="w-[25%] h-full bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-6 py-4">
+<div class="relative group">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 material-icons text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-800/50 border-none rounded-xl py-3 pl-12 pr-4 text-sm focus:ring-2 focus:ring-primary/50 placeholder:text-slate-500" placeholder="Search board or player name..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Match List Content -->
+<main class="px-6 pb-32">
+<div class="flex flex-col gap-4 mt-2">
+<!-- Board 1 - Selected State Example -->
+<div class="relative bg-white dark:bg-slate-800/40 rounded-xl p-4 border-2 border-primary ring-4 ring-primary/10">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-primary bg-primary/10 px-2 py-1 rounded">Board 1</span>
+<span class="material-icons text-primary">check_circle</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Player White -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover border border-slate-200 dark:border-slate-700" data-alt="Portrait of a female chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG0mlc22DzjXj1efSaWFTF7GgT9GZLVB-VmRR6Au6TaKhn7V_Qh8HnJzoIaSeg5Y2yE3od_b69q1goj9B83SThB84O-MMzL7IYh9dl_WL0QzySUt64wMGtHEVDa_o6ZreIMDymTqDg6cdIsA8DQXJjYsdx4GkoS3RQQLHkX_jy2A11bAvjGrYfeAiLsnvQJmudpgTNrg03RFSEJwNUVP22zdrnZXjr8hwgDlc3auA65omE9WFaFeJu9cfxcgYdm-zOkFBVSEkoXvU"/>
+<div>
+<p class="font-bold text-sm">Elena Rodriguez</p>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Grandmaster Knights</p>
+</div>
+</div>
+<div class="w-6 h-6 bg-white border border-slate-300 dark:border-slate-600 rounded shadow-sm flex items-center justify-center" title="White">
+<div class="w-2 h-2 bg-slate-200 rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-center">
+<div class="h-px bg-slate-200 dark:bg-slate-700 w-full"></div>
+<span class="px-3 text-[10px] font-black text-slate-400 italic">VS</span>
+<div class="h-px bg-slate-200 dark:bg-slate-700 w-full"></div>
+</div>
+<!-- Player Black -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover border border-slate-200 dark:border-slate-700" data-alt="Portrait of a male chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtWmqkRe0HjrWsV-UKImdvNd1BszS61ThDX7OFFyxBbleuZVQXtqm0tFDqmJ2uNlmXuMfRKY_4-oLvurs3baHI96NVYp5jFee3nH-J-Z1kylZyS6XTmnU3vtune1AAXPPgjShuxaTAb8ETXx5ud-uxnbzKy_pk5NNMDoJLbhyELq6a9v-AfdsIYLWT5_OneqiEudEfYGEuccF9zEEHCtEaheVCFMbZShMe-3rbmeE5jhGA9-UFb_aEZ9At0JjN1VwqgCzC_3OGvTk"/>
+<div>
+<p class="font-bold text-sm">Marcus Chen</p>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">City Rook Society</p>
+</div>
+</div>
+<div class="w-6 h-6 bg-slate-900 border border-slate-700 rounded shadow-sm flex items-center justify-center" title="Black">
+<div class="w-2 h-2 bg-slate-700 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Board 2 -->
+<div class="bg-white dark:bg-slate-800/20 rounded-xl p-4 border border-slate-200 dark:border-slate-800 transition-all hover:bg-slate-50 dark:hover:bg-slate-800/40">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Board 2</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Player White -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 opacity-90">
+<img class="w-10 h-10 rounded-full object-cover border border-slate-200 dark:border-slate-700" data-alt="Portrait of a male chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkWBPBKLeTvVIy3P1WkSYj2WJwU5YKw0nOxe9ENFjnXOOfaFL52UrTNy1rTZGQbHVigCskOMYxYVzFGWxMPFVG6z9HxQyjSXaw7cQLxX1Ifral8H4u_MomiOyo8eFB6EzKlekK7JKUy_J62NRDXDm8M71_1Dyd-8f5_u0l1p4CjnmdnV8Cqotc3DIBpswCvsexeDjJit4lYtmJCOY7mBq5hAG3zOMw_2Ky3q82Uhu_aWg2Pi9w7-2GyTHNviEDvzjL7C2XAYk76ZA"/>
+<div>
+<p class="font-bold text-sm">Samuel Whitaker</p>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">The Gambit Club</p>
+</div>
+</div>
+<div class="w-6 h-6 bg-white border border-slate-300 dark:border-slate-600 rounded shadow-sm"></div>
+</div>
+<div class="flex items-center justify-center">
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full"></div>
+<span class="px-3 text-[10px] font-black text-slate-400 italic">VS</span>
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full"></div>
+</div>
+<!-- Player Black -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 opacity-90">
+<img class="w-10 h-10 rounded-full object-cover border border-slate-200 dark:border-slate-700" data-alt="Portrait of a female chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNfQ2hcSVQ_agFg6tKaXl8ri6xU_tgqimCss3tqJmkY8Efq8-ULZ3gceawZ-NUvyRqB8U1hudNqXZ7QvuiGnWHKqIzhhoWEAIIrRoCFq85XcWCEWRQYba82QyL4x1-cJbQSJrkwkFDG-jCQR7hykVrNe2IV2bfzl1Lh6Q272c0jLRdpcBVvXk6uSunIkEWZDFHr7JpcRv94Kfo30S1GZtoT_M86oh2Pa5HS--p4qvm7X-AJFmLPVqBjUtrH0ZGjfmd9OlPMH-endU"/>
+<div>
+<p class="font-bold text-sm">Sarah Jenkins</p>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Lakeview Chess</p>
+</div>
+</div>
+<div class="w-6 h-6 bg-slate-900 border border-slate-700 rounded shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- Board 3 -->
+<div class="bg-white dark:bg-slate-800/20 rounded-xl p-4 border border-slate-200 dark:border-slate-800 transition-all hover:bg-slate-50 dark:hover:bg-slate-800/40">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Board 3</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Player White -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 opacity-90">
+<img class="w-10 h-10 rounded-full object-cover border border-slate-200 dark:border-slate-700" data-alt="Portrait of a male chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOfthdtBBN0TeizrH7bSBs2bqmqUovKchdsL98c0nGBvso0kr9qvheGmAB0Xrh6cXWV5uAB5iJC5IgYg59sEAZj0uU3K9qAF9BWCAMkBkYIAH2GXtRbSRXBmDztbiX1RS5PM2ymBJRMWwXG4G7MxQa_4d_OMctM_HCtOVArltlYciHzszS_zeDkn_5hVqhJtRsS5no64MmU7zTG2aaNI4rHZt30yMYX5nx6e70Gfm37v-xdEG0uT9rdPo7M3-Fnp5ZsziA1CT0vLw"/>
+<div>
+<p class="font-bold text-sm">Peter Novak</p>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Independent</p>
+</div>
+</div>
+<div class="w-6 h-6 bg-white border border-slate-300 dark:border-slate-600 rounded shadow-sm"></div>
+</div>
+<div class="flex items-center justify-center">
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full"></div>
+<span class="px-3 text-[10px] font-black text-slate-400 italic">VS</span>
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full"></div>
+</div>
+<!-- Player Black -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 opacity-90">
+<img class="w-10 h-10 rounded-full object-cover border border-slate-200 dark:border-slate-700" data-alt="Portrait of a male chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRrHt1dWycyfnIyRV9XqP0JfzxQpNgrFvMIjBXxZpUvSoVtRDBVsBy1VSFydTG76HpJt3bWkcDYI2EDXy8_1zyO0zcS7JSTO22eRGTho79fLeSV0a3TWVhfrFo9NWZl05nffr3bZ_CfCKh8t3vCSBGM-MBzqqvWgV4xvDIA6HJLx_1vwQ1x3BQ6QxaSPLZ0f32g-6CDpdzbYCfldoycI0r4ZmcWn2hy6MwkhnbSWAmeJU0j6St_1b2-3AuAlhwj8QsYbfPNTIS9Rs"/>
+<div>
+<p class="font-bold text-sm">Ray Sterling</p>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">The Gambit Club</p>
+</div>
+</div>
+<div class="w-6 h-6 bg-slate-900 border border-slate-700 rounded shadow-sm"></div>
+</div>
+</div>
+</div>
+<!-- Board 4 -->
+<div class="bg-white dark:bg-slate-800/20 rounded-xl p-4 border border-slate-200 dark:border-slate-800 transition-all hover:bg-slate-50 dark:hover:bg-slate-800/40">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">Board 4</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Player White -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 opacity-90">
+<img class="w-10 h-10 rounded-full object-cover border border-slate-200 dark:border-slate-700" data-alt="Portrait of a female chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIEmLoUHQJjYWrWwHzos-XyeXUTtLlIfG8JhpznS4KP6XCOQMUlc3yZdykXB5-s07fLyjxn0RB7I-i-MKRM6YFdNy_7UQapGXb9MVo019HPY5LS-O6a8M4hXulOdP3EEoFxu1ej2fQDrArYvTC3kuRE2Cg_byI74FRWNJYDVuYHSu9ds8xOEvznz0wwbIREBGr7HwjBxwsSWcDMPw1VxLQtPi8iOSDnNLFWm0al7Ji0_c7uIzjYQfPTotFc-iSwaDthjPNr3523Y4"/>
+<div>
+<p class="font-bold text-sm">Jessica Vance</p>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Skyline Chess</p>
+</div>
+</div>
+<div class="w-6 h-6 bg-white border border-slate-300 dark:border-slate-600 rounded shadow-sm"></div>
+</div>
+<div class="flex items-center justify-center">
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full"></div>
+<span class="px-3 text-[10px] font-black text-slate-400 italic">VS</span>
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full"></div>
+</div>
+<!-- Player Black -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3 opacity-90">
+<img class="w-10 h-10 rounded-full object-cover border border-slate-200 dark:border-slate-700" data-alt="Portrait of a male chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANpTC7Rm_RsexpMaPTRLgZxnLa-EZHoYWpvt9_qcH68V4RSVl4MwFi5i8UFYDtA2OLWRX3vFfszJMqi6LGIu8Ov4rG8QzU5QVIlCRqrYG6cFr3fFb6iJL5QWxf4dbq9oUaAONxcrzJhgv-txGYRT3fKbbZfSoCGqiz8NQHIXRETkUe4J9A4a95yLXEpFLGt0wUTog7YPnjUK-uaOnW1Q1bEbttV9_DE5UJGP8K-6myTOvuaUlBqfDhr2c_SxOtoDeupflhpadY1eg"/>
+<div>
+<p class="font-bold text-sm">Leo Hudson</p>
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Grandmaster Knights</p>
+</div>
+</div>
+<div class="w-6 h-6 bg-slate-900 border border-slate-700 rounded shadow-sm"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light via-background-light/95 to-transparent dark:from-background-dark dark:via-background-dark/95 dark:to-transparent">
+<button class="w-full bg-primary py-4 rounded-xl text-white font-bold text-lg shadow-lg shadow-primary/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+            Next
+            <span class="material-icons text-xl">keyboard_arrow_right</span>
+</button>
+<!-- iOS Home Indicator -->
+<div class="w-32 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mt-6"></div>
+</div>
+</body></html>

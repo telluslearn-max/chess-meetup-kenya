@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Host a Game: Step 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Custom styles for the slider range to mimic a dual slider UI */
+        .slider-track {
+            background: linear-gradient(to right, #e5e7eb 0%, #0faebd 20%, #0faebd 80%, #e5e7eb 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-slate-900 dark:text-slate-100">
+<!-- Header & Progress -->
+<header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10 px-6 pt-6 pb-4">
+<div class="flex items-center justify-between mb-6">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm text-slate-600 dark:text-slate-300">
+<span class="material-icons">arrow_back</span>
+</button>
+<div class="text-sm font-semibold text-slate-500 dark:text-slate-400">Step 3 of 4</div>
+<button class="text-sm font-semibold text-primary">Cancel</button>
+</div>
+<div class="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-3/4 transition-all duration-500"></div>
+</div>
+</header>
+<main class="flex-1 px-6 pb-32">
+<!-- Title Section -->
+<section class="mt-8 mb-10">
+<h1 class="text-3xl font-bold tracking-tight mb-2">Set the vibe</h1>
+<p class="text-slate-500 dark:text-slate-400">Help players know what to expect from your meetup.</p>
+</section>
+<!-- Vibe Selection -->
+<section class="space-y-4 mb-10">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2 block">Atmosphere</label>
+<!-- Vibe Option: Casual -->
+<button class="w-full flex items-center p-4 rounded-xl border-2 border-primary bg-primary/5 dark:bg-primary/10 text-left transition-all">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4">
+<span class="material-icons text-primary">coffee</span>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-white">Casual / Social</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-tight">Relaxed play, beginners welcome, coffee and chats.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center">
+<div class="w-3 h-3 bg-primary rounded-full"></div>
+</div>
+</button>
+<!-- Vibe Option: Learning -->
+<button class="w-full flex items-center p-4 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800 text-left hover:border-slate-200 transition-all">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center mr-4 text-slate-500">
+<span class="material-icons">school</span>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-white">Learning / Training</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-tight">Post-game analysis, tips, and improving together.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700"></div>
+</button>
+<!-- Vibe Option: Competitive -->
+<button class="w-full flex items-center p-4 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800 text-left hover:border-slate-200 transition-all">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center mr-4 text-slate-500">
+<span class="material-icons">military_tech</span>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-white">Competitive</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-tight">Serious games, clock play, and rating focused.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700"></div>
+</button>
+</section>
+<!-- Elo Range (Disabled State for Casual) -->
+<section class="mb-10 opacity-40 select-none grayscale pointer-events-none">
+<div class="flex justify-between items-center mb-6">
+<div>
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400 block">Elo Range</label>
+<p class="text-slate-900 dark:text-white font-bold text-lg mt-1">Open to all levels</p>
+</div>
+<div class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-medium text-slate-500">
+                    Casual mode active
+                </div>
+</div>
+<div class="relative h-6 flex items-center px-2">
+<div class="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full relative">
+<!-- Range Indicator Mock -->
+<div class="absolute left-0 right-0 h-full bg-slate-300 dark:bg-slate-600 rounded-full"></div>
+<!-- Handles Mock -->
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-6 h-6 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 rounded-full shadow-md"></div>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-6 h-6 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 rounded-full shadow-md"></div>
+</div>
+</div>
+<div class="flex justify-between mt-2 text-xs text-slate-400 font-medium">
+<span>400</span>
+<span>2800+</span>
+</div>
+</section>
+<!-- Player Count Stepper -->
+<section class="mb-10">
+<label class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 block">Maximum Players</label>
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-6 flex items-center justify-between border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex flex-col">
+<span class="text-3xl font-bold text-slate-900 dark:text-white">8</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Total spots</span>
+</div>
+<div class="flex items-center space-x-4">
+<button class="w-12 h-12 rounded-full border-2 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<span class="material-icons">remove</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-transform">
+<span class="material-icons">add</span>
+</button>
+</div>
+</div>
+<p class="text-xs text-slate-400 mt-3 flex items-center">
+<span class="material-icons text-sm mr-1">info</span>
+                Even numbers are recommended for pairing.
+            </p>
+</section>
+</main>
+<!-- Bottom Action -->
+<footer class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-100 dark:border-slate-800 p-6 flex items-center justify-between z-20">
+<div class="hidden sm:block">
+<p class="text-xs font-bold uppercase tracking-widest text-slate-400">Preview</p>
+<p class="font-bold text-slate-900 dark:text-white">Casual Meetup • 8 Spots</p>
+</div>
+<button class="w-full sm:w-auto px-10 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/30 flex items-center justify-center space-x-2 active:scale-95 transition-transform">
+<span>Next Step</span>
+<span class="material-icons text-sm">arrow_forward</span>
+</button>
+</footer>
+<!-- Image for Context (Hidden/Abstract) -->
+<div class="hidden">
+<img data-alt="Abstract geometric chess pattern with teal accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMyNrgGUlwjNZo-i3gOMbg5R0d4oq3wlQVIo1_5YTYoWv6xmN6oZaN_rCCNOl6ATdjJOZo2zyMSiwBicHEAQp6sZBFApnVTlFaW8_5_1oBKCfTWPI9u4mcDCN_KpTZktDQbTrxXR8n8x9D3t7fuh-Y8x-_O_sp7YxOURfRpqLSpTCDpQBcWmU58aTfM744Hl9eU4HZAq9WFbN8Z_hm9lL7JR5EPiQYOB6cGZShjBJ8HVRC0JbrfanH1-hs5B2KsH1Mua8gqeemjuc"/>
+</div>
+</body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Tournament - Format &amp; Eligibility</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbdbd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .slider-thumb::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            background: #0fbdbd;
+            border: 4px solid #102222;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(15, 189, 189, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Header Navigation -->
+<header class="px-6 pt-12 pb-4 flex items-center justify-between sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200/50 dark:bg-primary/10 text-slate-800 dark:text-primary">
+<span class="material-icons">arrow_back</span>
+</button>
+<div class="text-center">
+<h1 class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">Step 3 of 4</h1>
+<p class="text-lg font-extrabold">Game Format</p>
+</div>
+<div class="w-10"></div> <!-- Spacer for symmetry -->
+</header>
+<!-- Progress Bar -->
+<div class="px-6 mb-8">
+<div class="h-1.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%] rounded-full shadow-[0_0_12px_rgba(15,189,189,0.5)]"></div>
+</div>
+</div>
+<main class="flex-1 px-6 pb-32 overflow-y-auto">
+<!-- Time Control Section -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Time Control</h2>
+<span class="material-icons text-slate-400 text-sm">info_outline</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-primary bg-primary/10 text-primary">
+<span class="material-icons mb-1">bolt</span>
+<span class="text-sm font-bold">Blitz</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-transparent bg-slate-100 dark:bg-slate-800/50 text-slate-500">
+<span class="material-icons mb-1">timer</span>
+<span class="text-sm font-bold">Rapid</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-transparent bg-slate-100 dark:bg-slate-800/50 text-slate-500">
+<span class="material-icons mb-1">history</span>
+<span class="text-sm font-bold">Classic</span>
+</button>
+</div>
+</section>
+<!-- Tournament Style Section -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Tournament Style</h2>
+</div>
+<div class="space-y-3">
+<label class="flex items-center justify-between p-4 rounded-xl bg-primary/20 border-2 border-primary cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white">
+<span class="material-icons">account_tree</span>
+</div>
+<div>
+<p class="font-bold">Swiss System</p>
+<p class="text-xs text-slate-400">Non-eliminating format</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-primary flex items-center justify-center">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+</div>
+</label>
+<label class="flex items-center justify-between p-4 rounded-xl bg-slate-100 dark:bg-slate-800/50 border-2 border-transparent cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-400">
+<span class="material-icons">cached</span>
+</div>
+<div>
+<p class="font-bold text-slate-600 dark:text-slate-300">Round Robin</p>
+<p class="text-xs text-slate-500">Everyone plays everyone</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-300 dark:border-slate-600"></div>
+</label>
+<label class="flex items-center justify-between p-4 rounded-xl bg-slate-100 dark:bg-slate-800/50 border-2 border-transparent cursor-pointer">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-slate-400">
+<span class="material-icons">emoji_events</span>
+</div>
+<div>
+<p class="font-bold text-slate-600 dark:text-slate-300">Knockout</p>
+<p class="text-xs text-slate-500">Single elimination</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-300 dark:border-slate-600"></div>
+</label>
+</div>
+</section>
+<!-- Eligibility Section -->
+<section class="mb-10">
+<h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-6">Eligibility &amp; Rating</h2>
+<div class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-medium text-slate-400">Elo Range</span>
+<span class="text-sm font-bold text-primary px-3 py-1 bg-primary/10 rounded-full">1200 - 2400</span>
+</div>
+<div class="relative h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full">
+<div class="absolute h-full bg-primary/40 rounded-full left-[20%] right-[20%]"></div>
+<input class="absolute w-full h-full bg-transparent appearance-none pointer-events-none slider-thumb z-10" max="3000" min="0" type="range" value="600"/>
+<input class="absolute w-full h-full bg-transparent appearance-none pointer-events-none slider-thumb z-20" max="3000" min="0" type="range" value="2400"/>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[10px] text-slate-500">0</span>
+<span class="text-[10px] text-slate-500">3000+</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 rounded-xl bg-slate-100 dark:bg-slate-800/50">
+<div class="flex flex-col">
+<span class="font-bold">Rated Tournament</span>
+<span class="text-xs text-slate-400 italic">Results affect official FIDE ratings</span>
+</div>
+<button class="w-14 h-8 bg-primary rounded-full relative p-1 flex items-center transition-colors">
+<div class="w-6 h-6 bg-white rounded-full ml-auto shadow-sm"></div>
+</button>
+</div>
+</section>
+<!-- Info Card -->
+<div class="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 flex gap-4">
+<span class="material-icons text-blue-400">lightbulb</span>
+<p class="text-sm text-blue-200/80 leading-relaxed">
+                Most casual tournaments use the <span class="text-blue-400 font-bold">Swiss System</span> to ensure all players get an equal number of games.
+            </p>
+</div>
+</main>
+<!-- Bottom Action Button -->
+<footer class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/95 dark:via-background-dark/95 to-transparent">
+<button class="w-full h-16 bg-primary hover:bg-primary/90 text-white font-extrabold text-lg rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/25 active:scale-[0.98] transition-transform">
+<span>Continue</span>
+<span class="material-icons">arrow_forward</span>
+</button>
+</footer>
+</body></html>

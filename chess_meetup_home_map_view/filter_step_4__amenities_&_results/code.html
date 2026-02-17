@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0faebd",
+              "background-light": "#f6f8f8",
+              "background-dark": "#102022",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .ios-status-bar {
+            height: 44px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen flex items-center justify-center p-4">
+<!-- Phone Frame (iPhone 14/15 size representation) -->
+<div class="w-full max-w-[393px] h-[852px] bg-white dark:bg-zinc-900 rounded-[3.5rem] shadow-2xl overflow-hidden border-[8px] border-slate-900 dark:border-zinc-800 flex flex-col relative">
+<!-- Status Bar -->
+<div class="ios-status-bar flex justify-between items-center px-8 pt-4">
+<span class="text-sm font-bold">9:41</span>
+<div class="flex gap-1.5">
+<span class="material-icons text-sm">signal_cellular_alt</span>
+<span class="material-icons text-sm">wifi</span>
+<span class="material-icons text-sm rotate-90">battery_full</span>
+</div>
+</div>
+<!-- Navigation & Progress -->
+<div class="px-6 pt-4 pb-2">
+<div class="flex items-center mb-6">
+<button class="w-10 h-10 rounded-full bg-slate-100 dark:bg-zinc-800 flex items-center justify-center">
+<span class="material-icons text-slate-600 dark:text-slate-300">chevron_left</span>
+</button>
+<div class="flex-1 flex justify-center">
+<span class="text-sm font-semibold text-slate-400">Step 4 of 4</span>
+</div>
+<div class="w-10 h-10"></div> <!-- Spacer -->
+</div>
+<!-- Progress Bar -->
+<div class="h-1.5 w-full bg-slate-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full rounded-full transition-all duration-500"></div>
+</div>
+</div>
+<!-- Content Area -->
+<div class="flex-1 px-6 overflow-y-auto">
+<header class="mt-8 mb-8">
+<h1 class="text-3xl font-bold tracking-tight">What do you need?</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-2">Pick the essential amenities for your chess session.</p>
+</header>
+<!-- Amenities Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Boards Provided - Selected -->
+<div class="relative group border-2 border-primary bg-primary/5 dark:bg-primary/10 p-5 rounded-lg flex flex-col gap-4 cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+<span class="material-icons text-white">grid_4x4</span>
+</div>
+<span class="font-semibold text-slate-800 dark:text-white">Boards Provided</span>
+<div class="absolute top-3 right-3 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+<span class="material-icons text-white text-xs">check</span>
+</div>
+</div>
+<!-- Free WiFi -->
+<div class="relative group border-2 border-slate-100 dark:border-zinc-800 p-5 rounded-lg flex flex-col gap-4 cursor-pointer hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-zinc-800 flex items-center justify-center">
+<span class="material-icons text-slate-600 dark:text-slate-400">wifi</span>
+</div>
+<span class="font-semibold text-slate-800 dark:text-white text-sm">Free WiFi</span>
+</div>
+<!-- Coffee/Drinks - Selected -->
+<div class="relative group border-2 border-primary bg-primary/5 dark:bg-primary/10 p-5 rounded-lg flex flex-col gap-4 cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+<span class="material-icons text-white">local_cafe</span>
+</div>
+<span class="font-semibold text-slate-800 dark:text-white">Coffee/Drinks</span>
+<div class="absolute top-3 right-3 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+<span class="material-icons text-white text-xs">check</span>
+</div>
+</div>
+<!-- Quiet Area -->
+<div class="relative group border-2 border-slate-100 dark:border-zinc-800 p-5 rounded-lg flex flex-col gap-4 cursor-pointer hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-zinc-800 flex items-center justify-center">
+<span class="material-icons text-slate-600 dark:text-slate-400">volume_off</span>
+</div>
+<span class="font-semibold text-slate-800 dark:text-white">Quiet Area</span>
+</div>
+<!-- Power Outlets -->
+<div class="relative group border-2 border-slate-100 dark:border-zinc-800 p-5 rounded-lg flex flex-col gap-4 cursor-pointer hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-zinc-800 flex items-center justify-center">
+<span class="material-icons text-slate-600 dark:text-slate-400">power</span>
+</div>
+<span class="font-semibold text-slate-800 dark:text-white">Power Outlets</span>
+</div>
+<!-- Smoking Area -->
+<div class="relative group border-2 border-slate-100 dark:border-zinc-800 p-5 rounded-lg flex flex-col gap-4 cursor-pointer hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-slate-100 dark:bg-zinc-800 flex items-center justify-center">
+<span class="material-icons text-slate-600 dark:text-slate-400">smoking_rooms</span>
+</div>
+<span class="font-semibold text-slate-800 dark:text-white">Outdoor Area</span>
+</div>
+</div>
+<!-- Illustration/Empty Space decoration -->
+<div class="mt-8 flex justify-center">
+<div class="w-24 h-24 rounded-full bg-primary/5 flex items-center justify-center">
+<img class="w-16 h-16 rounded-full object-cover opacity-60" data-alt="Modern wooden chess pieces on board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWe2gff1UVnXVe29iB5M-WxUu0WkGE7oqNMf0MZmw2XrFaJC8lgqjds5dHnRG61wl0D_ajrKr0pYM6Maym9W133_sO4OeltjRG7n_ktIwOKgobDJoqrlB8tmvROGlSadNcN8Zf7JDMJQmf9uuKr5m8RnrIHSRS-muvK8truhf7i_1BM1fpm3Aegts1uy0mHOjzR7iw7Y8uEx92ws8F3_y1li6I2btIZh2yhyL16YtYS0eUUBXMjPLaW_CcV5IguHZs9ASuwDyMfuA"/>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="p-6 pb-10 bg-white dark:bg-zinc-900 border-t border-slate-100 dark:border-zinc-800 shadow-[0_-8px_24px_rgba(0,0,0,0.02)]">
+<!-- Filter Summary -->
+<div class="mb-6">
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-2">Current Selection</p>
+<div class="flex flex-wrap gap-2">
+<div class="px-3 py-1.5 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center gap-1.5">
+<span class="material-icons text-[14px] text-primary">location_on</span>
+<span class="text-xs font-semibold">Nairobi</span>
+</div>
+<div class="px-3 py-1.5 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center gap-1.5">
+<span class="material-icons text-[14px] text-primary">straighten</span>
+<span class="text-xs font-semibold">10km</span>
+</div>
+<div class="px-3 py-1.5 bg-slate-100 dark:bg-zinc-800 rounded-full flex items-center gap-1.5">
+<span class="material-icons text-[14px] text-primary">groups</span>
+<span class="text-xs font-semibold">Casual</span>
+</div>
+</div>
+</div>
+<!-- Main Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-5 rounded-full shadow-lg shadow-primary/25 flex items-center justify-center gap-2">
+<span>Show 38 results</span>
+<span class="material-icons">arrow_forward</span>
+</button>
+</div>
+<!-- Home Indicator (iOS) -->
+<div class="w-full flex justify-center pb-2">
+<div class="w-32 h-1 bg-slate-200 dark:bg-zinc-700 rounded-full"></div>
+</div>
+</div>
+</body></html>

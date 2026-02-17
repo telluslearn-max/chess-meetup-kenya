@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Venue Registration - Step 4</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 24px -1px rgba(15, 174, 189, 0.08);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex justify-center items-start">
+<!-- Mobile Container -->
+<main class="w-full max-w-[430px] min-h-screen bg-background-light dark:bg-background-dark relative flex flex-col pb-10">
+<!-- Status Bar Spacer (iOS Style) -->
+<div class="h-12 w-full"></div>
+<!-- Progress Header -->
+<header class="px-6 mb-8">
+<div class="flex items-center justify-between mb-3">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-icons text-slate-600 dark:text-slate-300">chevron_left</span>
+</button>
+<span class="text-sm font-semibold text-primary">Step 4 of 4</span>
+<div class="w-10"></div> <!-- Balancer -->
+</div>
+<div class="w-full bg-primary/20 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-full rounded-full"></div>
+</div>
+</header>
+<!-- Main Content -->
+<div class="flex-1 px-6">
+<h1 class="text-3xl font-bold mb-2 leading-tight">Showcase your space</h1>
+<p class="text-slate-500 dark:text-slate-400 mb-8">First impressions matter for chess players. Let them see where the magic happens.</p>
+<!-- Upload Area -->
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-8 group cursor-pointer border-2 border-dashed border-primary/30 bg-white dark:bg-slate-800 flex flex-col items-center justify-center">
+<img alt="Cozy cafe interior" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity" data-alt="Cozy cafe interior with wooden tables and warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcZPilJc2fcsxkcFOpV2BPVdTa4V4cQ_jF-tVDkNf4Ttt7NOpivd2gxA_C8Jgy_k6uK5JmHc5MN1ardbfYcE0J3RiZtTzWa0JQsExjv-gX9184nIY04lJZulJuwdFhsKRXTwOEt4K7z8v9hxeIY_XoJjHh1eDyzyJ29WWOsFu1zLGL_a6xuLC4cJUGw-Dn9BP_e86DNu2waTMXLus2CrBOYHWJ7m08IWQoqyqcUJb-PLMpAYq1KEEEIJKNE73QbtH_IZRW91Lp4t0"/>
+<div class="relative z-10 flex flex-col items-center p-6 text-center">
+<div class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center mb-4 shadow-lg">
+<span class="material-icons text-3xl">add_a_photo</span>
+</div>
+<span class="font-bold text-slate-800 dark:text-white">Add Photos</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 mt-1">Upload at least 3 high-quality images</span>
+</div>
+</div>
+<!-- Summary Card -->
+<div class="bg-white dark:bg-slate-800/50 rounded-xl p-6 ios-shadow border border-primary/5 mb-8">
+<div class="flex justify-between items-center mb-4">
+<h2 class="font-bold text-lg">Registration Summary</h2>
+<button class="text-primary text-sm font-semibold">Edit Details</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-icons text-primary text-xl">storefront</span>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Venue Name</p>
+<p class="text-sm font-semibold">The Gambit Coffee House</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-icons text-primary text-xl">location_on</span>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Address</p>
+<p class="text-sm font-semibold">123 King's Row, London, UK</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-icons text-primary text-xl">groups</span>
+</div>
+<div>
+<p class="text-xs text-slate-400 font-medium uppercase tracking-wider">Capacity</p>
+<p class="text-sm font-semibold">24 Chess Players (12 Tables)</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Terms & Agreement -->
+<div class="flex items-start gap-3 mb-10">
+<div class="relative flex items-center justify-center mt-1">
+<input class="peer h-6 w-6 opacity-0 absolute cursor-pointer" id="terms" type="checkbox"/>
+<div class="h-6 w-6 border-2 border-primary/30 rounded-full flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary transition-all">
+<span class="material-icons text-white text-base scale-0 peer-checked:scale-100 transition-transform">check</span>
+</div>
+</div>
+<label class="text-sm text-slate-600 dark:text-slate-400 leading-snug" for="terms">
+                    I agree to the <span class="text-primary font-semibold">partnership commission terms</span> and confirm that the venue provides a suitable environment for focused chess play.
+                </label>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="px-6 mt-auto">
+<button class="w-full bg-primary hover:bg-[#0d9aa8] text-white font-bold py-5 rounded-full shadow-lg shadow-primary/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span>Submit Registration</span>
+<span class="material-icons">send</span>
+</button>
+<p class="text-center text-xs text-slate-400 mt-4 px-8">
+                By submitting, you agree to our Terms of Service and Privacy Policy.
+            </p>
+</div>
+<!-- iOS Home Indicator Spacer -->
+<div class="h-8"></div>
+</main>
+</body></html>

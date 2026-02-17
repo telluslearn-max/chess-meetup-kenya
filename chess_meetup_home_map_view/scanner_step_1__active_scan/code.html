@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbdbd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .qr-frame-animation {
+            box-shadow: 0 0 15px rgba(15, 189, 189, 0.4);
+        }
+        .scanner-mask {
+            background: radial-gradient(circle, transparent 150px, rgba(16, 34, 34, 0.85) 150px);
+        }
+        .ios-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-white overflow-hidden">
+<!-- Main Scanner Container (Full Screen Camera View) -->
+<div class="relative h-screen w-full bg-black flex flex-col items-center justify-between">
+<!-- Background Camera Simulation -->
+<div class="absolute inset-0 z-0">
+<img alt="Blurred chess board top view" class="w-full h-full object-cover opacity-60 grayscale-[0.2]" data-alt="Overhead view of a chess board with wooden pieces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkz6boeFKIwZN9XTG9gQFC-Z06RxOgdabIVZpH9aXFRf07XD1CbCMrcqRhd3lNKBbMjzlh8EY52Wqf0zy67SQIQANtlFVvoNm3_aHhM47wNlXdpyNHei10A8bJypWDX6eDrg6nKnm3LBtgDO1uMl4Q5VQknAFfM6jp-vLujw0-Anbi0sUlaVNVqSIeBHS5ygs7ammhAiIgbM-6Eck18O-dDDx59RpB-uQVy78AcaWbyhugbs4hDh7VtLo7jX4JcKapAOw32HdHPN4"/>
+</div>
+<!-- Scanning Overlay Mask -->
+<div class="absolute inset-0 z-10 scanner-mask pointer-events-none"></div>
+<!-- Top Navigation & Status Bar (Safe Area) -->
+<header class="relative z-20 w-full pt-14 px-6">
+<div class="bg-background-dark/60 ios-blur rounded-xl border border-primary/20 p-4 flex items-center justify-between">
+<div class="flex flex-col">
+<h1 class="text-sm font-semibold text-white/90">Nairobi Blitz Meetup</h1>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<p class="text-xs text-primary font-bold tracking-wide uppercase">12/25 checked-in</p>
+</div>
+</div>
+<button class="bg-white/10 hover:bg-white/20 h-10 w-10 rounded-full flex items-center justify-center transition-colors">
+<span class="material-icons-round text-primary">flash_on</span>
+</button>
+</div>
+</header>
+<!-- Central Scanner Viewfinder -->
+<main class="relative z-20 flex-grow flex flex-col items-center justify-center w-full">
+<div class="relative">
+<!-- The Framing Box -->
+<div class="w-64 h-64 border-2 border-primary rounded-xl qr-frame-animation relative">
+<!-- Corner Accents -->
+<div class="absolute -top-1 -left-1 w-6 h-6 border-t-4 border-l-4 border-primary rounded-tl-lg"></div>
+<div class="absolute -top-1 -right-1 w-6 h-6 border-t-4 border-r-4 border-primary rounded-tr-lg"></div>
+<div class="absolute -bottom-1 -left-1 w-6 h-6 border-b-4 border-l-4 border-primary rounded-bl-lg"></div>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 border-b-4 border-r-4 border-primary rounded-br-lg"></div>
+<!-- Scanning Line -->
+<div class="absolute inset-x-4 h-0.5 bg-primary/50 top-1/2 -translate-y-1/2 shadow-[0_0_10px_rgba(15,189,189,0.8)]"></div>
+</div>
+<div class="absolute -bottom-12 left-0 right-0 text-center">
+<p class="text-white/80 text-sm font-medium tracking-wide">Align QR code within frame</p>
+</div>
+</div>
+</main>
+<!-- Bottom Actions -->
+<footer class="relative z-20 w-full pb-12 px-8 flex flex-col gap-4">
+<button class="w-full bg-primary text-background-dark font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+<span class="material-icons-round">keyboard</span>
+                Enter Code Manually
+            </button>
+<div class="flex justify-center items-center gap-6 py-2">
+<div class="flex flex-col items-center opacity-100">
+<div class="w-1.5 h-1.5 rounded-full bg-primary mb-1"></div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">Scan</span>
+</div>
+<div class="flex flex-col items-center opacity-40">
+<div class="w-1.5 h-1.5 rounded-full bg-transparent mb-1"></div>
+<span class="text-[10px] font-bold text-white uppercase tracking-widest">Verify</span>
+</div>
+<div class="flex flex-col items-center opacity-40">
+<div class="w-1.5 h-1.5 rounded-full bg-transparent mb-1"></div>
+<span class="text-[10px] font-bold text-white uppercase tracking-widest">Done</span>
+</div>
+</div>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-2 w-32 bg-white/20 rounded-full mx-auto mt-2"></div>
+</footer>
+</div>
+</body></html>

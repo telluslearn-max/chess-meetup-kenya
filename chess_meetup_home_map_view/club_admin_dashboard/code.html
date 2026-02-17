@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nairobi Kings Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 20px -2px rgba(15, 174, 189, 0.08);
+        }
+        .chart-gradient {
+            background: linear-gradient(180deg, rgba(15, 174, 189, 0.15) 0%, rgba(15, 174, 189, 0) 100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 pt-12 pb-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white">
+<span class="material-icons-round">extension</span>
+</div>
+<div>
+<h1 class="text-xl font-800 tracking-tight">Nairobi Kings</h1>
+<p class="text-xs font-600 text-primary/80 uppercase tracking-widest">Chess Club Admin</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-slate-200/50 dark:bg-primary/10 p-1 rounded-full">
+<span class="text-[10px] font-bold px-2 text-slate-500">USER</span>
+<div class="bg-primary w-8 h-5 rounded-full relative flex items-center px-0.5">
+<div class="bg-white w-4 h-4 rounded-full shadow-sm ml-auto"></div>
+</div>
+<span class="text-[10px] font-bold px-2 text-primary">ADMIN</span>
+</div>
+</div>
+</header>
+<main class="px-6 mt-4 space-y-6">
+<!-- Summary Metrics Grid -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl ios-shadow border border-slate-100 dark:border-slate-700/50">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Total Members</p>
+<h3 class="text-2xl font-800 text-slate-800 dark:text-white">245</h3>
+<div class="mt-2 flex items-center gap-1 text-emerald-500 font-bold text-[10px]">
+<span class="material-icons-round text-sm">trending_up</span>
+<span>12%</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl ios-shadow border border-slate-100 dark:border-slate-700/50">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">App-Referred</p>
+<h3 class="text-2xl font-800 text-slate-800 dark:text-white">84</h3>
+<div class="mt-2 flex items-center gap-1 text-primary font-bold text-[10px]">
+<span class="material-icons-round text-sm">bolt</span>
+<span>34% SHARE</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl ios-shadow border border-slate-100 dark:border-slate-700/50">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Monthly Rev</p>
+<h3 class="text-xl font-800 text-slate-800 dark:text-white">KSh 42k</h3>
+<div class="mt-2 flex items-center gap-1 text-slate-400 font-bold text-[10px]">
+<span>TARGET: 50k</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl ios-shadow border border-slate-100 dark:border-slate-700/50">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Pending Badges</p>
+<h3 class="text-2xl font-800 text-primary">07</h3>
+<div class="mt-2 flex items-center gap-1 text-amber-500 font-bold text-[10px]">
+<span class="material-icons-round text-sm">priority_high</span>
+<span>ACTION REQ.</span>
+</div>
+</div>
+</section>
+<!-- Membership Growth Chart Section -->
+<section class="bg-white dark:bg-slate-800/50 p-6 rounded-xl ios-shadow border border-slate-100 dark:border-slate-700/50">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-800 text-lg">Growth Trends</h2>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold">APP JOINS</div>
+</div>
+<!-- Mock Chart Visualization -->
+<div class="relative h-32 w-full flex items-end justify-between gap-1 px-2">
+<div class="absolute inset-x-0 bottom-0 h-full chart-gradient rounded-b-lg"></div>
+<div class="w-full h-full absolute inset-0 flex items-center justify-center">
+<svg class="w-full h-full" viewbox="0 0 300 100">
+<path d="M0 80 Q 50 70, 100 50 T 200 30 T 300 10" fill="none" stroke="#0faebd" stroke-linecap="round" stroke-width="3"></path>
+<circle cx="100" cy="50" fill="#0faebd" r="4"></circle>
+<circle cx="200" cy="30" fill="#0faebd" r="4"></circle>
+<circle cx="300" cy="10" fill="#0faebd" r="4"></circle>
+</svg>
+</div>
+<!-- Labels -->
+<div class="flex justify-between w-full absolute -bottom-6 text-[9px] font-bold text-slate-400">
+<span>JAN</span>
+<span>FEB</span>
+<span>MAR</span>
+<span>APR</span>
+<span>MAY</span>
+<span>JUN</span>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-slate-50 dark:border-slate-700/50 flex justify-between items-center">
+<span class="text-xs font-bold text-slate-400">Projected July Growth</span>
+<span class="text-xs font-800 text-emerald-500">+18%</span>
+</div>
+</section>
+<!-- Pending Approvals Section -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-800 text-lg">Pending Badges</h2>
+<button class="text-primary text-[11px] font-800 uppercase tracking-wide">See All</button>
+</div>
+<div class="space-y-3">
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl ios-shadow flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Profile photo of a club member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-pH7LESTJNoxa5RHZMXVg5h4Ic9JgJeEjrmHe7LtG-gcGb4t7RyeklFpH8cRR_yTtUNl6zRQUWQyShW3ImADHCMVoZyZFD506LHilbJJDnNC0mI5HaD6pXBnxccW5DY9BQm-LZBzgudA86mNdedk4_FA32YICNUPkV67eOABocVEDEGKkJRtOJDePBS6_7DAwwb33Q6s2x88fUCLnU6WXlSp51oiQkte-JEwRxA_84WYbSGv-alBMcUBh3GIkzNMwdFCaqeOF9Ts"/>
+<div>
+<h4 class="font-700 text-sm">Kevin Omondi</h4>
+<p class="text-[10px] text-slate-500 font-medium">Grandmaster Badge</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-400 flex items-center justify-center">
+<span class="material-icons-round text-sm">close</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-icons-round text-sm">check</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800/50 p-4 rounded-xl ios-shadow flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Profile photo of a female club member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK1Nz_E9qKpkIPxDyt7wb8toZBX0ZoCbdmsCJRuFXNP5Jn7nBQLr5cls8o5diFx5O3D78RqylwEfoHSSyxa--Pc2Y1a0YCT2tMBntQ9uM5uZ92TcUyt-umvfR_ZX1Gy14enfTpei3xHnkY4fRS7iQ15Gk_ziNOq1WI5RVtl-N72whqBhV2k8j75wPODybdzR8kFsCiOfeOii-XUO9YdeMBI5a0HofqM8aLK-J7GP9DmyUs932ebuQ9QHwvLzT23Tp3SP_tF-iv2bk"/>
+<div>
+<h4 class="font-700 text-sm">Sarah Mwangi</h4>
+<p class="text-[10px] text-slate-500 font-medium">Blitz Pro Badge</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-400 flex items-center justify-center">
+<span class="material-icons-round text-sm">close</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center">
+<span class="material-icons-round text-sm">check</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Paid Joins -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-800 text-lg">Recent Paid Joins</h2>
+<span class="bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded-full text-[9px] font-900">ACTIVE SESSION</span>
+</div>
+<div class="bg-white dark:bg-slate-800/50 rounded-xl overflow-hidden ios-shadow">
+<div class="divide-y divide-slate-50 dark:divide-slate-700/50">
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full border-2 border-primary/20 p-0.5" data-alt="Member profile icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ37A-cmdG8aHa3PgpFlQLit3nDDBguwywz-gQbfuif6_mLBUmlRpwU3mGGxzx0TPwBTxJZmcAGvq0ykOI4KSV8kKjjHbzSyIyuohtfYzI44FDr1Rrynho17Fux_YRXHfq-IUswrSty_JkxiRPDBKjSZg2bXYJu46IlyxIa4nr-mUMdpkXp0y0I6imh2WMeLK984nbJfB1A-d0Xb-ftFj6PnQlLpKLOwaa19BjekTFihYEZ6xgBcHgeVPsR2KsmeoGrD5P7xYfMBw"/>
+<div>
+<h4 class="font-700 text-sm">David Chen</h4>
+<p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">Joined June 12</p>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-primary/10 px-2 py-1 rounded-full">
+<span class="material-icons-round text-[12px] text-primary">verified</span>
+<span class="text-[9px] font-800 text-primary">VERIFIED</span>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full border-2 border-primary/20 p-0.5" data-alt="Member profile icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNgkxAYHJFyDO7AqqqGx8x1hh9w9X6N0lmPz8TRJ9JrsDJYiXM0WBthQcvZP5H0nH3RtppfgxlskL2zETvo1ElkKts8ePa7OCB2R3UJnZlvXsYZIIEio5_5ztM2XhSChc1q3TNHaTNz-7bmvUvQz9clHJna8cOxjK9CAkhPkqxSypaF3LYbq8J_TP4eWeby17ANMSs8VwSNt_iv5gcMY0VOvSr0HDXzKsBtbjXUjQx1oH4ax0Am2KHx6z0T-Tl3y_Z-Cozrd9rZ-o"/>
+<div>
+<h4 class="font-700 text-sm">Amara Okafor</h4>
+<p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">Joined June 10</p>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-primary/10 px-2 py-1 rounded-full">
+<span class="material-icons-round text-[12px] text-primary">verified</span>
+<span class="text-[9px] font-800 text-primary">VERIFIED</span>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full border-2 border-slate-200 p-0.5" data-alt="Member profile icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1-IiPdPzQT2bvYVJN3hDeDSpfeWdYYeptxeOFMs7V6gfCOv20vHPMDvvG0wxMUiFSLy-uZqowYku2dhV4jB9xE-3inOd-vG1QKQNUBetU98RkFrudI3U-AEEPVGyg-mtZSb-WB_brArPACEiebOBJgff5mX5ZBcWd5vea6V4ypUTiOG89k-dMg3Hy5vdOP_VmQVamBKMA6Ez5eSsnEKrpQlV67kGuyjMISiOP-VoyDo_DgLSrUUJMpAl0H2gD2I0U2HzujNJNtqs"/>
+<div>
+<h4 class="font-700 text-sm">John Doe</h4>
+<p class="text-[10px] text-slate-400 font-bold uppercase tracking-tight">Joined June 08</p>
+</div>
+</div>
+<div class="text-[9px] font-800 text-slate-400 px-2 py-1 border border-slate-100 rounded-full">PENDING</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 inset-x-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 pb-8 pt-3 px-8 flex justify-between items-center">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons-round">dashboard</span>
+<span class="text-[10px] font-800">Overview</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">people</span>
+<span class="text-[10px] font-700">Members</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">military_tech</span>
+<span class="text-[10px] font-700">Badges</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">payments</span>
+<span class="text-[10px] font-700">Finances</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">settings</span>
+<span class="text-[10px] font-700">Setup</span>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Host Step 1: Select Venue</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 20px -2px rgba(15, 174, 189, 0.1);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex items-center justify-center p-0 sm:p-4">
+<!-- Mobile Container (iPhone Pro Max roughly) -->
+<main class="w-full max-w-[430px] h-[932px] bg-white dark:bg-zinc-950 relative flex flex-col overflow-hidden shadow-2xl sm:rounded-[3rem] border-8 border-slate-900 dark:border-zinc-800">
+<!-- Status Bar Space -->
+<div class="h-12 w-full flex justify-between items-center px-8 pt-4">
+<span class="font-bold text-sm">9:41</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-sm">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-sm">wifi</span>
+<span class="material-symbols-outlined text-sm">battery_full</span>
+</div>
+</div>
+<!-- Progress Header -->
+<header class="px-6 pt-6 pb-2">
+<div class="flex items-center justify-between mb-4">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-zinc-800 rounded-full transition-colors">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+<div class="text-sm font-semibold text-slate-500">Step 1 of 4</div>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</div>
+<div class="w-full h-1.5 bg-primary/10 dark:bg-primary/5 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/4 rounded-full"></div>
+</div>
+</header>
+<!-- Main Content Area -->
+<div class="flex-1 overflow-y-auto hide-scrollbar px-6 pt-8 pb-32">
+<h1 class="text-3xl font-extrabold mb-8 tracking-tight">Where is the match?</h1>
+<!-- Search Section -->
+<div class="relative group mb-10">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="w-full py-4 pl-12 pr-4 bg-slate-50 dark:bg-zinc-900 border-none rounded-2xl focus:ring-2 focus:ring-primary/40 text-sm font-medium transition-all shadow-sm" placeholder="Search for a cafe, park, or address" type="text"/>
+<button class="absolute inset-y-0 right-4 flex items-center">
+<span class="material-symbols-outlined text-slate-400 text-lg">my_location</span>
+</button>
+</div>
+<!-- Nearby Venues Section -->
+<div>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-lg font-bold">Nearby Venues</h2>
+<button class="text-primary text-sm font-bold">See on Map</button>
+</div>
+<div class="space-y-4">
+<!-- Venue Card 1 -->
+<div class="p-4 rounded-2xl bg-white dark:bg-zinc-900 border-2 border-primary ring-4 ring-primary/5 cursor-pointer">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-slate-100">
+<img class="w-full h-full object-cover" data-alt="Modern cozy cafe interior with wooden tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0KQvk1q3WT9_mVGdpBY3hhTHSEPjg-fYGuUOHEmcrH-OGcssWMupVO9wdlGH7nK_Z3mpx-ukqU0lKK8YWch_eZExfTDzb96zNmH6uIfDVM2LcnF4N13JTiXwQxeaBoR32NuLGT1oP7MpqCcFUY5DpnsmtXRrog92M4so3ckZ4dOWOsUMSpVGBnJXSoFRTyCtZM4UvibvutAFk8Gt9nNrbDKfZ2xHJ-wIruW344Upl_UvINVSLUd-p0jFfnA6nFHmKSrOV9I6m2d0"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<div class="flex items-start justify-between">
+<h3 class="font-bold text-base">Bao Box</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider border border-primary/20">Partner</span>
+</div>
+<p class="text-slate-500 text-sm mt-0.5">0.3 miles away</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+<span class="text-xs font-bold">4.8</span>
+<span class="text-xs text-slate-400 ml-1">• Coffee &amp; Board Games</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Venue Card 2 -->
+<div class="p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 hover:border-primary/30 transition-all cursor-pointer">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-slate-100">
+<img class="w-full h-full object-cover" data-alt="Interior of a busy metropolitan coffee shop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3WjwjUtVScVPcdE7EB-8wVRXvdk7xqH2ofTB_DMjy45A_3tAmXqvkrqTFZtfKT4EEoQr6bl79aiXS2Il41ji2Pz3kAAxTdE_97rySZgOmQdoh0IwtW3zhAT-A1Ju9F-PqGDpo75gyFmn3-bbOFKKoiBZf0iZGlYoF61dclvTcNlS6i2IoIcpR7rhG-rbdmz-69NPxREdYBG-vnasOlWnF7jv6rDWVPHFsCKWcSGPYFyi09zbiqPLLkRufyIFQ4KkYUjHMQMR7xsU"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<h3 class="font-bold text-base">Java House</h3>
+<p class="text-slate-500 text-sm mt-0.5">0.8 miles away</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+<span class="text-xs font-bold">4.5</span>
+<span class="text-xs text-slate-400 ml-1">• Quiet atmosphere</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Venue Card 3 -->
+<div class="p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 hover:border-primary/30 transition-all cursor-pointer">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-slate-100">
+<img class="w-full h-full object-cover" data-alt="Scenic park with outdoor stone chess tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9DxiBlt4OBieeGocxwRJ5wOOD7S4O6iWi2Ca35zlmXT4_Cxg09VMRS392czfc1M3VYDpF81IlADxJCqc87kgGx6Sp2pppCEhZxSaaEQwTA_vu0QKUxCeSjeq3aQ6HAU2O8VxKFsbX1XU8UJpG02wlw88Gy94tEyr1d4j6AEzVmY1EhQs887VLWdJfe9nKyvyRA8ZYisuLMHOf-_9mwCyxeHKAuiUJaCXnD7ZKWBtB2i-Hl-1pidli-Dzq9Umq32YYkDH74kYAosM"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<div class="flex items-start justify-between">
+<h3 class="font-bold text-base leading-tight">Central Park Chess House</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider border border-primary/20">Partner</span>
+</div>
+<p class="text-slate-500 text-sm mt-0.5">1.2 miles away</p>
+<div class="flex items-center gap-1 mt-2">
+<span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+<span class="text-xs font-bold">4.9</span>
+<span class="text-xs text-slate-400 ml-1">• Outdoor match</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Custom Location Option -->
+<div class="mt-8 pt-8 border-t border-slate-100 dark:border-zinc-800">
+<button class="w-full flex items-center justify-between p-4 rounded-2xl bg-slate-50 dark:bg-zinc-900 hover:bg-slate-100 dark:hover:bg-zinc-800 transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">add_location_alt</span>
+</div>
+<div class="text-left">
+<div class="font-bold">Add a custom location</div>
+<div class="text-xs text-slate-500">Specify an address not listed</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Navigation -->
+<footer class="absolute bottom-0 left-0 right-0 p-6 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border-t border-slate-100 dark:border-zinc-800 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-xs text-slate-400 font-bold uppercase tracking-widest">Selected</span>
+<span class="text-sm font-extrabold truncate max-w-[150px]">Bao Box</span>
+</div>
+<button class="bg-primary text-white font-bold py-4 px-10 rounded-full shadow-lg shadow-primary/30 active:scale-95 transition-all flex items-center gap-2">
+                Next Step
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</footer>
+<!-- iPhone Home Indicator -->
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-900 dark:bg-zinc-800 rounded-full opacity-20"></div>
+</main>
+</body></html>

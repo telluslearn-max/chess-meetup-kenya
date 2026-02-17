@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Organizer Registration - Step 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0aaab8",
+                "background-light": "#f5f8f8",
+                "background-dark": "#102122",
+              },
+              fontFamily: {
+                "display": ["Manrope", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Custom scrollbar for text area */
+        textarea::-webkit-scrollbar {
+            width: 4px;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background-color: #0aaab833;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+<!-- iOS Phone Container -->
+<div class="w-full max-w-[390px] h-[844px] bg-white dark:bg-zinc-900 rounded-[3rem] shadow-2xl overflow-hidden flex flex-col relative border-[8px] border-zinc-200 dark:border-zinc-800">
+<!-- Status Bar -->
+<div class="h-11 px-8 flex items-center justify-between w-full">
+<span class="text-xs font-bold dark:text-white">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons text-[16px] dark:text-white">signal_cellular_alt</span>
+<span class="material-icons text-[16px] dark:text-white">wifi</span>
+<span class="material-icons text-[16px] dark:text-white rotate-90">battery_full</span>
+</div>
+</div>
+<!-- Progress Bar Header -->
+<div class="px-6 pt-4">
+<div class="flex items-center justify-between mb-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">
+<span class="material-icons">arrow_back_ios_new</span>
+</button>
+<span class="text-sm font-semibold text-zinc-500 dark:text-zinc-400">Step 3 of 4</span>
+<div class="w-10"></div> <!-- Spacer -->
+</div>
+<div class="w-full h-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%] rounded-full transition-all duration-500"></div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex-1 overflow-y-auto px-6 py-8">
+<header class="mb-8">
+<h1 class="text-3xl font-extrabold text-zinc-900 dark:text-white mb-2 leading-tight">Organizer Profile</h1>
+<p class="text-zinc-500 dark:text-zinc-400 leading-relaxed">Tell us a bit about your motivation and agree to our community standards.</p>
+</header>
+<!-- Form Section -->
+<div class="space-y-8">
+<!-- Motivation Input -->
+<div class="space-y-3">
+<label class="block text-sm font-bold text-zinc-700 dark:text-zinc-200">
+                        Why do you want to host chess meetups?
+                    </label>
+<textarea class="w-full bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 rounded-xl p-4 text-zinc-900 dark:text-white placeholder-zinc-400 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none" placeholder="Share your passion for chess or your experience organizing events..." rows="4"></textarea>
+</div>
+<!-- Guidelines Checklist -->
+<div class="space-y-4">
+<h3 class="text-sm font-bold text-zinc-700 dark:text-zinc-200 uppercase tracking-wider">Community Guidelines</h3>
+<div class="space-y-3">
+<!-- Checklist Item 1 -->
+<label class="flex items-start gap-4 p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl border border-zinc-200 dark:border-zinc-700 cursor-pointer hover:border-primary/50 transition-colors group">
+<div class="mt-0.5 relative flex items-center justify-center">
+<input checked="" class="peer appearance-none w-6 h-6 border-2 border-zinc-300 dark:border-zinc-600 rounded-md checked:bg-primary checked:border-primary transition-all cursor-pointer" type="checkbox"/>
+<span class="material-icons absolute text-white text-sm scale-0 peer-checked:scale-100 transition-transform pointer-events-none">check</span>
+</div>
+<div class="flex-1">
+<span class="text-sm font-semibold text-zinc-900 dark:text-white block">Safe Space</span>
+<span class="text-xs text-zinc-500 dark:text-zinc-400">I will provide a safe and inclusive space for all.</span>
+</div>
+</label>
+<!-- Checklist Item 2 -->
+<label class="flex items-start gap-4 p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl border border-zinc-200 dark:border-zinc-700 cursor-pointer hover:border-primary/50 transition-colors group">
+<div class="mt-0.5 relative flex items-center justify-center">
+<input checked="" class="peer appearance-none w-6 h-6 border-2 border-zinc-300 dark:border-zinc-600 rounded-md checked:bg-primary checked:border-primary transition-all cursor-pointer" type="checkbox"/>
+<span class="material-icons absolute text-white text-sm scale-0 peer-checked:scale-100 transition-transform pointer-events-none">check</span>
+</div>
+<div class="flex-1">
+<span class="text-sm font-semibold text-zinc-900 dark:text-white block">Full Presence</span>
+<span class="text-xs text-zinc-500 dark:text-zinc-400">I will be present for the full duration of my events.</span>
+</div>
+</label>
+<!-- Checklist Item 3 -->
+<label class="flex items-start gap-4 p-4 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl border border-zinc-200 dark:border-zinc-700 cursor-pointer hover:border-primary/50 transition-colors group">
+<div class="mt-0.5 relative flex items-center justify-center">
+<input checked="" class="peer appearance-none w-6 h-6 border-2 border-zinc-300 dark:border-zinc-600 rounded-md checked:bg-primary checked:border-primary transition-all cursor-pointer" type="checkbox"/>
+<span class="material-icons absolute text-white text-sm scale-0 peer-checked:scale-100 transition-transform pointer-events-none">check</span>
+</div>
+<div class="flex-1">
+<span class="text-sm font-semibold text-zinc-900 dark:text-white block">All Skill Levels</span>
+<span class="text-xs text-zinc-500 dark:text-zinc-400">I will welcome all skill levels, from beginners to masters.</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Button -->
+<div class="px-6 py-6 bg-white dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Continue</span>
+<span class="material-icons text-lg">arrow_forward</span>
+</button>
+<!-- Home Indicator -->
+<div class="mt-6 w-32 h-1.5 bg-zinc-200 dark:bg-zinc-800 rounded-full mx-auto"></div>
+</div>
+</div>
+<!-- Decorative Chess Background Element (Hidden on small mobile if container logic is used) -->
+<div class="fixed top-0 right-0 p-12 -z-10 opacity-10 pointer-events-none hidden lg:block">
+<img class="w-64 h-64 object-contain" data-alt="Abstract chess pieces composition in soft light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWVhFs2XGMA4xQgUqEq7H3GMvGHoFbSqzFvKIyM1Uwhg5XfvopsWByM9yMBred9I8nHJq12YtRESezmy0GYpnrdUk-EHCfxAiZb6xEofxispiro2N-wrtMUcFTkDSaoWTLhMsO7VGXfmO9itCkmY_jaYpk76E0HQKzDP0mpnD1OjxhJmyXFFiUEeQylH3vIjXlfP1hK7ec5_mtiUiNo1UYoY8juhRDDMBw_e6yuPBCZW9fMkqBZFuXwN9G9nxcPkZDQN2lXPR9Oxg"/>
+</div>
+</body></html>

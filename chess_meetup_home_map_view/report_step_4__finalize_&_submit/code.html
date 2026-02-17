@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Report Result - Finalize &amp; Submit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbdbd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior-y: contain;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Navigation -->
+<header class="px-6 pt-12 pb-4 flex items-center justify-between sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/5 text-primary">
+<span class="material-icons">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Report Result</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<!-- Progress Indicator -->
+<div class="px-6 mt-4">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Step 4 of 4</span>
+<span class="text-xs font-medium text-slate-400">100% Complete</span>
+</div>
+<div class="h-1.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-full rounded-full"></div>
+</div>
+</div>
+<main class="flex-grow px-6 pt-8 pb-32">
+<div class="mb-8">
+<h2 class="text-3xl font-extrabold leading-tight">Points &amp; Summary</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-2">Review the final impact of the match before committing to the leaderboard.</p>
+</div>
+<!-- Winner Spotlight Card -->
+<div class="relative overflow-hidden bg-primary/10 dark:bg-primary/5 border border-primary/20 rounded-xl p-6 mb-6">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Winner Avatar" class="w-16 h-16 rounded-full object-cover border-2 border-primary" data-alt="Close up portrait of Peter smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiEUs-Z-EPCLSL67E-HSQPpiqtEQm1WrXnt6RrQ3gRvCLENpXRkCAR-SiiMoCyDhS6NN58NDVXgo2E9NnZg8iE1fAmA5AwaKMVrv_pWa4GphKGz58dVGEsXp2g4JhrMky05BiU29ghRfwj0afp_ZibvOZauB3Aj__YwcYSGQDSG4BvRtsQEWA0HS4c3HZsj0q0O3kVUwQaD_HmW41uX-nbT7Pk_Y9CTLWzGvX4JpXDd1v0Ruw40TMH5AXU9x6KnAuZwMm7sL6h284"/>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white p-1 rounded-full border-2 border-background-dark">
+<span class="material-icons text-sm block leading-none">emoji_events</span>
+</div>
+</div>
+<div>
+<span class="inline-block px-2 py-0.5 rounded-full bg-primary text-white text-[10px] font-bold uppercase tracking-wider mb-1">Match Winner</span>
+<h3 class="text-xl font-bold">Peter "The Gambit"</h3>
+</div>
+</div>
+<div class="absolute -top-4 -right-4 opacity-10">
+<span class="material-icons text-8xl text-primary">military_tech</span>
+</div>
+</div>
+<!-- Impact Summary -->
+<div class="bg-white dark:bg-slate-900/40 rounded-xl p-5 ios-shadow border border-slate-200 dark:border-slate-800 space-y-4">
+<h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Monthly Leaderboard Impact</h4>
+<!-- Player 1 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-primary font-bold">P</div>
+<span class="font-semibold">Peter</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs text-slate-500 line-through">1,240</span>
+<span class="material-icons text-primary text-sm">trending_up</span>
+<span class="font-extrabold text-primary text-lg">+15 pts</span>
+</div>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+<!-- Player 2 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 font-bold">R</div>
+<span class="font-semibold">Ray</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs text-slate-500 line-through">1,195</span>
+<span class="material-icons text-primary text-sm">trending_up</span>
+<span class="font-extrabold text-primary text-lg">+2 pts</span>
+</div>
+</div>
+</div>
+<!-- Match Details List -->
+<div class="mt-8 space-y-4">
+<h4 class="text-sm font-bold text-slate-400 uppercase tracking-widest ml-1">Recap</h4>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-4 bg-slate-100/50 dark:bg-slate-800/30 p-4 rounded-lg">
+<span class="material-icons text-slate-400">history</span>
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 uppercase font-semibold">Duration</span>
+<span class="font-medium">34 min 12 sec</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-slate-100/50 dark:bg-slate-800/30 p-4 rounded-lg">
+<span class="material-icons text-slate-400">grid_on</span>
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 uppercase font-semibold">Ending Position</span>
+<span class="font-medium">Checkmate (White)</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-slate-100/50 dark:bg-slate-800/30 p-4 rounded-lg">
+<span class="material-icons text-slate-400">event</span>
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 uppercase font-semibold">Match Type</span>
+<span class="font-medium">Competitive Ranked</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Actions -->
+<footer class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light dark:via-background-dark to-transparent">
+<div class="max-w-md mx-auto space-y-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+<span>Submit &amp; Update Standings</span>
+<span class="material-icons">send</span>
+</button>
+<button class="w-full py-3 text-sm font-semibold text-slate-500 dark:text-slate-400 text-center hover:text-primary transition-colors">
+                Edit Match Info
+            </button>
+</div>
+</footer>
+<!-- Safe Area Padding for iOS -->
+<div class="h-8 bg-background-light dark:bg-background-dark w-full"></div>
+</body></html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manage Event Sponsors Tool</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbdbd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .ios-shadow { box-shadow: 0 4px 12px rgba(15, 189, 189, 0.08); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen">
+<div class="max-w-[430px] mx-auto min-h-screen bg-white dark:bg-slate-900 flex flex-col relative shadow-2xl">
+<!-- Status Bar Area (iOS Style) -->
+<div class="px-8 pt-6 pb-2 flex justify-between items-center text-xs font-semibold">
+<span>9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons text-sm">signal_cellular_alt</span>
+<span class="material-icons text-sm">wifi</span>
+<span class="material-icons text-sm">battery_full</span>
+</div>
+</div>
+<!-- Header -->
+<header class="px-6 py-4 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<button class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-icons text-slate-600 dark:text-slate-300">chevron_left</span>
+</button>
+<div class="flex flex-col items-center">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Step 4 of 5</span>
+<h1 class="text-lg font-bold">Add Sponsor</h1>
+</div>
+<button class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-icons text-slate-600 dark:text-slate-300">help_outline</span>
+</button>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-slate-100 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-4/5 rounded-full"></div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto px-6 pb-24">
+<!-- Search & Quick Add Section -->
+<section class="mt-4 flex flex-col gap-4">
+<div class="relative">
+<span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary/50 transition-all text-sm" placeholder="Search existing partners..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex-1 h-px bg-slate-100 dark:bg-slate-800"></div>
+<span class="text-xs font-medium text-slate-400 uppercase tracking-wider">or</span>
+<div class="flex-1 h-px bg-slate-100 dark:bg-slate-800"></div>
+</div>
+<button class="w-full py-3.5 px-4 border-2 border-dashed border-primary/40 rounded-xl flex items-center justify-center gap-2 text-primary font-bold bg-primary/5 hover:bg-primary/10 transition-colors">
+<span class="material-icons">add_circle_outline</span>
+<span>Create New Sponsor</span>
+</button>
+</section>
+<!-- Sponsor Form -->
+<section class="mt-8 space-y-6">
+<!-- Sponsorship Tier Selection -->
+<div class="space-y-3">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-200 ml-1">Sponsorship Tier</label>
+<div class="grid grid-cols-2 gap-3">
+<!-- Tier Card -->
+<button class="p-4 rounded-xl border-2 border-primary bg-primary/5 flex flex-col items-start gap-2 text-left transition-all">
+<span class="material-icons text-primary">stars</span>
+<span class="font-bold text-sm">Headline</span>
+<span class="text-[10px] text-slate-500 uppercase">Premium Placement</span>
+</button>
+<!-- Tier Card -->
+<button class="p-4 rounded-xl border-2 border-transparent bg-slate-50 dark:bg-slate-800 flex flex-col items-start gap-2 text-left transition-all hover:bg-slate-100">
+<span class="material-icons text-yellow-500">workspace_premium</span>
+<span class="font-bold text-sm">Gold</span>
+<span class="text-[10px] text-slate-500 uppercase">High Visibility</span>
+</button>
+<!-- Tier Card -->
+<button class="p-4 rounded-xl border-2 border-transparent bg-slate-50 dark:bg-slate-800 flex flex-col items-start gap-2 text-left transition-all hover:bg-slate-100">
+<span class="material-icons text-slate-400">military_tech</span>
+<span class="font-bold text-sm">Silver</span>
+<span class="text-[10px] text-slate-500 uppercase">Standard Tier</span>
+</button>
+<!-- Tier Card -->
+<button class="p-4 rounded-xl border-2 border-transparent bg-slate-50 dark:bg-slate-800 flex flex-col items-start gap-2 text-left transition-all hover:bg-slate-100">
+<span class="material-icons text-slate-400">local_shipping</span>
+<span class="font-bold text-sm">Logistics</span>
+<span class="text-[10px] text-slate-500 uppercase">Service Partner</span>
+</button>
+</div>
+</div>
+<!-- Sponsor Name (Hidden unless "Add New" is clicked, but shown here for layout purpose) -->
+<div class="space-y-3">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-200 ml-1">Sponsor Brand Name</label>
+<input class="w-full px-4 py-3.5 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary/50 transition-all text-sm" placeholder="e.g. Grandmaster Gear" type="text"/>
+</div>
+<!-- Attendee Perk -->
+<div class="space-y-3">
+<div class="flex justify-between items-center px-1">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-200">Sponsor Perk</label>
+<span class="text-[10px] font-medium text-slate-400">Optional</span>
+</div>
+<textarea class="w-full px-4 py-3.5 bg-slate-50 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary/50 transition-all text-sm resize-none" placeholder="What do attendees get? (e.g. 20% discount code on chess sets)" rows="3"></textarea>
+<p class="text-[10px] text-slate-500 px-1">This perk will be automatically shared with all registered attendees via the event app.</p>
+</div>
+<!-- Preview Logo -->
+<div class="space-y-3">
+<label class="text-sm font-bold text-slate-700 dark:text-slate-200 ml-1">Brand Identity</label>
+<div class="flex items-center gap-4">
+<div class="w-20 h-20 bg-slate-50 dark:bg-slate-800 rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 flex items-center justify-center overflow-hidden">
+<span class="material-icons text-slate-300">image</span>
+</div>
+<div class="flex flex-col gap-2">
+<button class="px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-bold text-slate-700 dark:text-slate-200">Upload Logo</button>
+<span class="text-[10px] text-slate-400">PNG, JPG up to 5MB</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Footer -->
+<footer class="absolute bottom-0 left-0 right-0 p-6 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-100 dark:border-slate-800 flex gap-4">
+<button class="flex-1 py-4 px-6 bg-slate-100 dark:bg-slate-800 rounded-xl font-bold text-slate-600 dark:text-slate-300 active:scale-[0.98] transition-all">
+                Back
+            </button>
+<button class="flex-[2] py-4 px-6 bg-primary rounded-xl font-bold text-white ios-shadow active:scale-[0.98] transition-all">
+                Continue
+            </button>
+</footer>
+<!-- Bottom Notch Indicator -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+</body></html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Report Step 2: Select Winner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbdbd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Navigation -->
+<header class="px-6 pt-12 pb-4">
+<div class="flex items-center justify-between mb-6">
+<button class="p-2 -ml-2 rounded-full bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-primary transition-colors">
+<span class="material-icons block">arrow_back_ios_new</span>
+</button>
+<div class="text-center">
+<h1 class="text-sm font-bold uppercase tracking-widest text-slate-500 dark:text-primary/60">Report Result</h1>
+</div>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</div>
+<!-- Progress Bar -->
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase">
+<span>Step 2 of 4</span>
+<span>50% Complete</span>
+</div>
+<div class="h-1.5 w-full bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2 rounded-full"></div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-6 py-4 flex flex-col">
+<h2 class="text-3xl font-extrabold mb-8 text-slate-900 dark:text-white">Who won?</h2>
+<!-- Player Profiles Visualizer -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<!-- Player White -->
+<div class="relative group">
+<div class="flex flex-col items-center p-6 bg-white dark:bg-primary/5 border-2 border-primary rounded-xl transition-all shadow-lg shadow-primary/10">
+<div class="w-20 h-20 rounded-full mb-4 bg-white border-2 border-slate-200 dark:border-white/20 flex items-center justify-center shadow-inner overflow-hidden">
+<img alt="Peter" class="w-full h-full object-cover" data-alt="Portrait of a smiling man with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSUnhaOXQr8Gk5c4U2boSYP8YRkadBs7QR3n7yDhK-G7irSeyFMFgK0-CsMi5CCayp3142xI2QdFuWaxSl-Y4QB1RRmN961kbuThi6tQGAprhnWTRZkQkZE_IQ0s3DOHEcXx18TAXAHcP4yhSzlrAsNiLJ-ZGTAo593bNvkTA7lh_yKJKZ57D2LgWd5QS-sRzlrU2ACzv14xOcphhYaJnPF6pJQ455BRXEAaxd-g84h_3Nk7nIeCtZQ_YhUWLDJcoCAqKKkQsGC34"/>
+</div>
+<span class="font-bold text-lg mb-1">Peter</span>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-tighter">White Pieces</span>
+<!-- Selected Badge -->
+<div class="absolute -top-2 -right-2 bg-primary text-white p-1 rounded-full shadow-lg">
+<span class="material-icons text-sm">check</span>
+</div>
+</div>
+</div>
+<!-- Player Black -->
+<div class="relative group">
+<div class="flex flex-col items-center p-6 bg-white dark:bg-white/5 border-2 border-transparent rounded-xl transition-all">
+<div class="w-20 h-20 rounded-full mb-4 bg-slate-800 border-2 border-slate-700 flex items-center justify-center shadow-inner overflow-hidden">
+<img alt="Ray" class="w-full h-full object-cover" data-alt="Portrait of a man with a beard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBgIzQMS7otXS0XmiAL7mJDG4e2cQDCrdFs4v4GTORf2xbN-GMLRCr_ZzMF4LgaDMLLViUMfHGZeeEyT9nOzProRlfg7l2zQgKG6cxKeHfrieD_Jgy8A19hnk0Y2c6BMnEtMEYJ8c2qfdZCHbYVMwHMc31ElLlvcePlEIm16GuwM3qlf1KjAcgMw4_jMe9M8Wwu3qVR8LSxkljm4p4PvZgGahW1kLV3ev9ZgqK93sUCaA_MBs1uuIkCK5j6vx0QSfjW1gn_eL--OU"/>
+</div>
+<span class="font-bold text-lg mb-1">Ray</span>
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-tighter">Black Pieces</span>
+</div>
+</div>
+</div>
+<!-- Selection Buttons -->
+<div class="space-y-4">
+<button class="w-full py-5 px-6 rounded-xl border-2 border-primary bg-primary text-white font-bold text-lg flex justify-between items-center transition-all shadow-xl shadow-primary/20">
+<span>White Won</span>
+<span class="material-icons">emoji_events</span>
+</button>
+<button class="w-full py-5 px-6 rounded-xl border-2 border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 text-slate-900 dark:text-white font-bold text-lg flex justify-between items-center hover:border-primary/50 transition-all">
+<span>Draw</span>
+<span class="material-icons">Balance</span>
+</button>
+<button class="w-full py-5 px-6 rounded-xl border-2 border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 text-slate-900 dark:text-white font-bold text-lg flex justify-between items-center hover:border-primary/50 transition-all">
+<span>Black Won</span>
+<span class="material-icons opacity-40">emoji_events</span>
+</button>
+</div>
+</main>
+<!-- Fixed Footer Action -->
+<footer class="p-6 safe-area-bottom">
+<button class="w-full py-4 bg-primary text-white rounded-xl font-extrabold text-lg shadow-xl shadow-primary/30 active:scale-[0.98] transition-transform">
+            Next Step
+        </button>
+<p class="text-center mt-4 text-xs text-slate-500 dark:text-slate-400">
+            Confirming this will move you to step 3: Board details.
+        </p>
+</footer>
+<!-- Visual background accent -->
+<div class="fixed top-0 right-0 -z-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+<div class="fixed bottom-0 left-0 -z-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+</body></html>

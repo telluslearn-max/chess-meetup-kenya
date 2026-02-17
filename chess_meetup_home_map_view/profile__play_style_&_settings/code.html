@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile: Play Style &amp; Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen flex justify-center items-start">
+<!-- Mobile Screen Container -->
+<div class="w-full max-w-[430px] min-h-screen bg-background-light dark:bg-background-dark flex flex-col relative pb-10">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between px-6 py-4 sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<button class="w-10 h-10 flex items-center justify-start">
+<span class="material-icons text-slate-500">arrow_back_ios</span>
+</button>
+<h1 class="text-lg font-bold">Profile</h1>
+<button class="w-10 h-10 flex items-center justify-end">
+<span class="material-icons text-primary">settings</span>
+</button>
+</header>
+<!-- Profile Header Section -->
+<section class="flex flex-col items-center px-6 pt-6 pb-8">
+<div class="relative mb-4">
+<div class="w-32 h-32 rounded-full ring-4 ring-primary/10 overflow-hidden">
+<img alt="User Profile Picture" class="w-full h-full object-cover" data-alt="A friendly portrait of a person smiling warmly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADZCfAIHXzLMv54R84aMFD_iKGvVLqir542fCXyGQnkOsR4MuRxt6bjiQlcBo9DO9Xi2ugOfbCxAl8wRyG-p65Y5ouNoOAZ_55FBdt1X8H-mWDLbmKx3jUC_zk3p_e2Sn5naDE2Mv5dLJXI_1uST3H3BBBL54zU-q96BSTRwyAwywastlTPOYiTBlfCn-7lP182M2HG7IEUz6uxI5Rvmf6WeA-b_LIRdpF8ttIjtXOPMpH3-TZHI1_tApMriUtZmJwwA29UplsY3Q"/>
+</div>
+<div class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full border-4 border-background-light dark:border-background-dark">
+<span class="material-icons text-sm">edit</span>
+</div>
+</div>
+<h2 class="text-3xl font-bold mb-2">Tellus</h2>
+<div class="bg-primary/10 dark:bg-primary/20 text-primary px-4 py-1.5 rounded-full flex items-center gap-2">
+<span class="material-icons text-sm">emoji_events</span>
+<span class="text-sm font-semibold tracking-wide">Casual Learner</span>
+</div>
+</section>
+<!-- Main Content Area -->
+<main class="px-6 space-y-6">
+<!-- Play Style Section -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-icons text-primary">psychology</span>
+<h3 class="font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest text-xs">Play Style</h3>
+</div>
+<p class="text-slate-700 dark:text-slate-300 italic leading-relaxed">
+                    "I enjoy relaxed games over coffee. No pressure!"
+                </p>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Meetups Attended -->
+<div class="bg-white dark:bg-slate-900 p-5 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center">
+<div class="bg-primary/10 p-3 rounded-full mb-3">
+<span class="material-icons text-primary">groups</span>
+</div>
+<span class="text-2xl font-bold mb-1">24</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Meetups Attended</span>
+</div>
+<!-- Favorite Venues -->
+<div class="bg-white dark:bg-slate-900 p-5 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center">
+<div class="bg-primary/10 p-3 rounded-full mb-3">
+<span class="material-icons text-primary">local_cafe</span>
+</div>
+<span class="text-2xl font-bold mb-1">8</span>
+<span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Favorite Venues</span>
+</div>
+</div>
+<!-- Recent Locations Map/Preview (Custom Component) -->
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden">
+<div class="h-32 w-full relative">
+<img class="w-full h-full object-cover" data-alt="A stylized street map view of a city" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC14fZuZO39KD7h3R6SQXmi3RsymFfLdZjqFEhPpNsD0kLAwLoCpVsHlSKMk4qbL6hZ4uStv0a1e25r36T3yk--B7t96UO0s8_fzQBjozh3sRqT_owZxtZOxkaLqYZiG9nybTXkEl1Ku5bulRWSZLSuCAyQdEotRSt3m82XpRHGmi58z9cja2uIi0fKoMZNetDJA57XEB9EtA9W0yJGp6I05hfOlaj50TKIeXHYIfZX-uIdMfDJl9QRVip8xbhjcr4B9Hq5OgtZQzQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900 to-transparent"></div>
+<div class="absolute bottom-3 left-4">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Primary Venue</span>
+<h4 class="font-bold text-slate-800 dark:text-slate-100">The Knight's Roastery</h4>
+</div>
+</div>
+</div>
+<!-- Settings/Account Actions -->
+<div class="space-y-3">
+<button class="w-full bg-white dark:bg-slate-900 px-6 py-4 rounded-full border border-slate-100 dark:border-slate-800 flex items-center justify-between text-slate-700 dark:text-slate-200">
+<div class="flex items-center gap-3">
+<span class="material-icons text-slate-400">notifications</span>
+<span class="font-medium">Game Notifications</span>
+</div>
+<div class="w-10 h-6 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</button>
+</div>
+</main>
+<!-- Admin Footer Link -->
+<footer class="mt-auto px-6 py-8">
+<a class="flex items-center justify-center gap-2 text-primary font-bold bg-primary/5 py-4 rounded-full border border-primary/20 hover:bg-primary/10 transition-colors" href="#">
+<span class="material-icons">dashboard_customize</span>
+<span>Venue Partner Dashboard</span>
+<span class="material-icons text-sm">chevron_right</span>
+</a>
+<p class="text-center text-[10px] text-slate-400 mt-6 uppercase tracking-[0.2em]">Profile Version 1.0.4</p>
+</footer>
+<!-- iOS Home Indicator -->
+<div class="h-1.5 w-32 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mb-2 mt-2"></div>
+</div>
+</body></html>

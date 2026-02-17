@@ -1,0 +1,228 @@
+<html class="dark" lang="en"><head>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">```html
+
+
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Attendee List - Nairobi Blitz Meetup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbdbd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                        "card-dark": "#1a2e2e",
+                        "status-green": "#10b981",
+                        "status-grey": "#64748b"
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior-y: contain;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .safe-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 ios-blur border-b border-primary/10">
+<div class="px-4 pt-4 pb-2">
+<div class="flex items-center justify-between mb-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-icons">chevron_left</span>
+</button>
+<div class="text-center">
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold">Step 3 of 3</span>
+<h1 class="text-lg font-bold leading-tight">Attendee List</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-icons">filter_list</span>
+</button>
+</div>
+<p class="text-xs text-center text-slate-500 dark:text-slate-400 mb-4">Nairobi Blitz Meetup</p>
+<!-- Search Bar -->
+<div class="relative mb-4">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="w-full bg-slate-200/50 dark:bg-card-dark border-none rounded-xl py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary outline-none" placeholder="Search by name..." type="text"/>
+</div>
+<!-- Segmented Control -->
+<div class="flex bg-slate-200/50 dark:bg-card-dark p-1 rounded-xl mb-2">
+<button class="flex-1 py-1.5 text-xs font-semibold rounded-lg bg-white dark:bg-primary text-slate-900 dark:text-white shadow-sm">All</button>
+<button class="flex-1 py-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400">Checked In</button>
+<button class="flex-1 py-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400">Awaiting</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="px-4 pb-32">
+<div class="space-y-3 mt-4">
+<!-- Checked In Section -->
+<div class="space-y-2">
+<h2 class="text-[10px] uppercase tracking-widest text-slate-500 font-bold px-1">Checked In (13)</h2>
+<!-- Attendee 1 -->
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-card-dark rounded-xl border border-transparent dark:border-primary/5">
+<div class="relative">
+<img alt="" class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a young man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcdlvOi0HXnNVkt-VJ2lzTuEWwo_-ZN-AhHlnUQ-TXTnkUA_5k-18Nm4NBc5ZsV6UD8LxGJhDYOwbM0bcZMmFjWVRrHA36yenimThCjuWrbw9WF6Mzo1gy0DNBlMTajktvHOpllcC1D5XTHOCaChXaZCQYsJgsn9S-5lJFRbOCnE63Sl95lxOEOAC0_G0KBbYmoiWLDF0sfutOFsLAloDDC2YmXSRGapmY_A62PUI8TZx7mvZqanu1vPC9Hd4sCKzjf2AbXCyy-5o"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-status-green rounded-full flex items-center justify-center border-2 border-white dark:border-card-dark">
+<span class="material-icons text-[12px] text-white">done</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-sm">David Maina</h3>
+<p class="text-[10px] text-status-green font-medium">Arrived at 18:45</p>
+</div>
+<div class="text-primary/40">
+<span class="material-icons">more_horiz</span>
+</div>
+</div>
+<!-- Attendee 2 -->
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-card-dark rounded-xl border border-transparent dark:border-primary/5">
+<div class="relative">
+<img alt="" class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a young woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_qCrHtOf0qyZrbhf17xIAElrf2wADAJzJ_1ftIgVygmPGpz8tUKH4f271n-bG_PXJ23jRMi6S-lzc803NKOG0F3sOCy04wseV2P4goM1GbZJg_ebYgAPXJCPhMnEAHeOoi-6L3UpOQCMyTEY2BsHzyFld5eHl3nj6VVjouDnQbX16VktcjsGJPdVaoTZGZf3R0T2NVd9-qlSDk82az28m8sq8QvEGfrpM6zuGd8hPYsK91aYlD82eAmqrosne3DpUEO1OJd3quGE"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-status-green rounded-full flex items-center justify-center border-2 border-white dark:border-card-dark">
+<span class="material-icons text-[12px] text-white">done</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-sm">Sarah Wanjiku</h3>
+<p class="text-[10px] text-status-green font-medium">Arrived at 18:52</p>
+</div>
+<div class="text-primary/40">
+<span class="material-icons">more_horiz</span>
+</div>
+</div>
+</div>
+<!-- Awaiting Section -->
+<div class="space-y-2 pt-4">
+<h2 class="text-[10px] uppercase tracking-widest text-slate-500 font-bold px-1">Awaiting (12)</h2>
+<!-- Attendee 3 -->
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-card-dark rounded-xl border border-transparent dark:border-primary/5">
+<div class="relative">
+<img alt="" class="w-12 h-12 rounded-full object-cover grayscale" data-alt="Portrait of a man wearing glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGoTF0MnoGA4U3R2lb8q24H-LwaAaQqQNzlx_guVA1yQ6jYejb2WTbEXNveysmwA_fY6NDtSgmaDu6Rz4LVWXxDiBGqTtMZHAd8NP0VDF-F20DT2YVkKYC-k0-1a4Kin_XrT-AKpWkEedU4J1PibbrdsRKZMxcJHMclr_saWVeDERXT0TfkNQbARlDbGfdBbfSnGBUHGABLILbtLRzCjg2Nj9cjEL8JzPGJa1PqDHN08WGXOacGJWxiS81ss5COTNz4qq9imWdn9U"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-status-grey rounded-full flex items-center justify-center border-2 border-white dark:border-card-dark">
+<span class="material-icons text-[12px] text-white">schedule</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-sm text-slate-700 dark:text-slate-300">Kevin Omboga</h3>
+<p class="text-[10px] text-slate-500 font-medium">Regular Member</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white text-[10px] font-bold py-1.5 px-3 rounded-lg transition-colors">
+                        CHECK IN
+                    </button>
+</div>
+<!-- Attendee 4 -->
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-card-dark rounded-xl border border-transparent dark:border-primary/5">
+<div class="relative">
+<img alt="" class="w-12 h-12 rounded-full object-cover grayscale" data-alt="Portrait of a focused woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL_eG-dOuhTnMKtlaTox2cxsUvaFnNK6Vp1O6d3AzAniwHNW5Fa5RHgfbrjBVvSpxzChvmBTtv903uOJr3dfGJ6ndo5qNjY_qCBqS8lgoZz5Zb9eJK8JglSO2c6QjHi9iPSyzkERAp4asUWf8OMz9gswCvbGVZKccrYV8XlQJuCEUPgekMeGT2qYgYR8AFOe08r7uoTRNlv4T3n5OkrknbWqXZi4g6afGp9TGIYAnX-6LqFh5uvCO7ylkyHZnlKk0B6o7McK7dS_I"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-status-grey rounded-full flex items-center justify-center border-2 border-white dark:border-card-dark">
+<span class="material-icons text-[12px] text-white">schedule</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-sm text-slate-700 dark:text-slate-300">Anita Otieno</h3>
+<p class="text-[10px] text-slate-500 font-medium">New Attendee</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white text-[10px] font-bold py-1.5 px-3 rounded-lg transition-colors">
+                        CHECK IN
+                    </button>
+</div>
+<!-- Attendee 5 -->
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-card-dark rounded-xl border border-transparent dark:border-primary/5">
+<div class="relative">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">
+                            JK
+                        </div>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-status-grey rounded-full flex items-center justify-center border-2 border-white dark:border-card-dark">
+<span class="material-icons text-[12px] text-white">schedule</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-sm text-slate-700 dark:text-slate-300">James Kamau</h3>
+<p class="text-[10px] text-slate-500 font-medium">Grandmaster</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white text-[10px] font-bold py-1.5 px-3 rounded-lg transition-colors">
+                        CHECK IN
+                    </button>
+</div>
+<!-- Attendee 6 -->
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-card-dark rounded-xl border border-transparent dark:border-primary/5">
+<div class="relative">
+<img alt="" class="w-12 h-12 rounded-full object-cover grayscale" data-alt="Portrait of a bearded man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9DLgi3u-j_gy9TxHH0_7-gIjRKIEiUcVFA1G0pjsvjh46KdJIPn7B5bko04j0WKX2Lz6zHHBedwFjpoVOu0Rdt-NT3tw1L6nwg0JuDrYcYucEQ2qiEzhqe-RsApixJcuHeVylnwkLOZimBkest50tbmZfVbbC6jZsLL0SyzLxwpdIt93cg38Wz-g0d4HqUzUW6tTyKM05S-XQOzrP1_NjixTtwSams2_4h_x65QUQftKcLZs0KbRUOAVKurXPpVfZIcCR5A7OqkA"/>
+<div class="absolute -bottom-1 -right-1 w-5 h-5 bg-status-grey rounded-full flex items-center justify-center border-2 border-white dark:border-card-dark">
+<span class="material-icons text-[12px] text-white">schedule</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-sm text-slate-700 dark:text-slate-300">Mark Chen</h3>
+<p class="text-[10px] text-slate-500 font-medium">International Master</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white text-[10px] font-bold py-1.5 px-3 rounded-lg transition-colors">
+                        CHECK IN
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Summary Footer -->
+<footer class="fixed bottom-0 left-0 right-0 p-4 bg-background-light dark:bg-background-dark border-t border-primary/20 safe-bottom">
+<div class="max-w-md mx-auto">
+<div class="flex items-end justify-between mb-2 px-1">
+<div>
+<span class="text-[10px] uppercase font-bold text-slate-500">Attendance Status</span>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-black text-primary">13</span>
+<span class="text-sm font-medium text-slate-400">/ 25 Present</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-lg font-bold">52%</span>
+<p class="text-[10px] text-slate-500">Capacity reached</p>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-3 bg-slate-200 dark:bg-card-dark rounded-full overflow-hidden border border-slate-300/10 mb-2">
+<div class="h-full bg-primary rounded-full shadow-[0_0_10px_rgba(15,189,189,0.5)]" style="width: 52%"></div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 bg-primary text-white font-bold py-3 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-icons text-lg">qr_code_scanner</span>
+<span>RESUME SCANNING</span>
+</button>
+</div>
+</div>
+</footer>
+</body></html>

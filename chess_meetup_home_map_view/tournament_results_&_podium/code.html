@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tournament Results &amp; Podium</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#11d4d4",
+                "background-light": "#f6f8f8",
+                "background-dark": "#102222",
+                "gold": "#FFD700",
+                "silver": "#C0C0C0",
+                "bronze": "#CD7F32",
+              },
+              fontFamily: {
+                "display": ["Manrope"]
+              },
+              borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .podium-gradient {
+            background: linear-gradient(180deg, rgba(17, 212, 212, 0.1) 0%, rgba(16, 34, 34, 1) 100%);
+        }
+        .confetti-dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #11d4d4;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex justify-center">
+<!-- Mobile Container -->
+<main class="w-full max-w-[430px] bg-background-light dark:bg-background-dark min-h-screen relative overflow-hidden flex flex-col">
+<!-- Header -->
+<header class="px-6 pt-12 pb-4 flex items-center justify-between z-10">
+<button class="p-2 -ml-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800">
+<span class="material-icons text-slate-600 dark:text-slate-400">arrow_back_ios_new</span>
+</button>
+<div class="text-center">
+<h1 class="text-xs uppercase tracking-widest font-bold text-primary/80">Final Standings</h1>
+<p class="text-xl font-extrabold">Nairobi Open</p>
+</div>
+<button class="p-2 -mr-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800">
+<span class="material-icons text-slate-600 dark:text-slate-400">more_horiz</span>
+</button>
+</header>
+<!-- Podium Section -->
+<section class="relative pt-8 pb-12 podium-gradient">
+<!-- Confetti Elements (Visual decoration) -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<div class="confetti-dot" style="top: 10%; left: 15%;"></div>
+<div class="confetti-dot" style="top: 25%; left: 85%;"></div>
+<div class="confetti-dot" style="top: 40%; left: 50%;"></div>
+<div class="confetti-dot" style="top: 60%; left: 10%;"></div>
+<div class="confetti-dot" style="top: 15%; left: 70%;"></div>
+</div>
+<div class="flex items-end justify-center px-4 gap-2 relative z-10">
+<!-- 2nd Place -->
+<div class="flex flex-col items-center flex-1">
+<div class="relative mb-3">
+<div class="w-16 h-16 rounded-full border-2 border-silver p-0.5">
+<img alt="" class="w-full h-full rounded-full object-cover" data-alt="Profile picture of the second place winner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfHmbQCHXK1DLVBZjDE5fCfffkQnMvdEIY1MHdbFQ55gEF8YXBjhk123pW2d2OVCqcVhXm2HekwSheXrlRmazWPVujLynSGsDyBaWS0u82dub22a5ug2C9tSinWW0Ipw8PNFIrBiUSn86IDp8ATlw4hV1eIH-nO26LyId_kzSBMxEzXE1-hkzZsmgVI9phnQQm5mV4hxJhnHSEjmh7lrmB4OnwEDQy60cUwcPGUTTLvh5h8Oj_sxJUfWuXrgBEuavYzvIyYl9fBdU"/>
+</div>
+<div class="absolute -top-2 -right-1 bg-silver text-background-dark text-[10px] font-bold px-1.5 py-0.5 rounded-full">2ND</div>
+</div>
+<p class="text-sm font-bold truncate w-full text-center">Jabari K.</p>
+<p class="text-xs text-primary font-semibold mb-2">$1,200</p>
+<div class="w-full bg-slate-800/50 dark:bg-primary/10 h-24 rounded-t-lg border-t border-x border-slate-700/50 flex items-center justify-center">
+<span class="material-icons text-silver/40 text-4xl">emoji_events</span>
+</div>
+</div>
+<!-- 1st Place -->
+<div class="flex flex-col items-center flex-1">
+<div class="relative mb-4 scale-110">
+<div class="absolute inset-0 bg-primary/30 blur-xl rounded-full animate-pulse"></div>
+<div class="w-20 h-20 rounded-full border-4 border-primary p-0.5 relative z-10">
+<img alt="" class="w-full h-full rounded-full object-cover" data-alt="Profile picture of the first place winner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNSjcLKP_bl41M87-VFmQ8uCdHggnW4gJMEafoIAq3cdU-QtzOd98s4fM5rPlU155KkVaX4nUELri2LKRaa7ySJYDfRzRa-a4us-Ar4nYOs8zfspxVG-QoeD9eworxhICOzo_MlqGqHovuOncj_X-TM2KXuUzMK9DpsfU0iOV2kXdaUT2-Un970sSVJki9jctFwaCMToq1h4LsHPZTyjMZF8S2-YQPb5FvqLzoSnBV1r2Hnn6-aKjq5VB6UKsAhRtXh9mrvlmLW9o"/>
+</div>
+<div class="absolute -top-3 -right-2 bg-gold text-background-dark text-[10px] font-black px-2 py-0.5 rounded-full shadow-lg">WINNER</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2">
+<span class="material-icons text-gold text-2xl drop-shadow-md">military_tech</span>
+</div>
+</div>
+<p class="text-base font-extrabold truncate w-full text-center">Malik O.</p>
+<p class="text-sm text-gold font-bold mb-3">$2,500</p>
+<div class="w-full bg-primary/20 h-32 rounded-t-xl border-t-2 border-x-2 border-primary/40 flex items-center justify-center shadow-[0_-10px_30px_rgba(17,212,212,0.15)]">
+<span class="material-icons text-gold text-5xl">emoji_events</span>
+</div>
+</div>
+<!-- 3rd Place -->
+<div class="flex flex-col items-center flex-1">
+<div class="relative mb-3">
+<div class="w-16 h-16 rounded-full border-2 border-bronze p-0.5">
+<img alt="" class="w-full h-full rounded-full object-cover" data-alt="Profile picture of the third place winner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCAl7k-mdVS8aW36_uJbhHzevqo38eY9KeAy0KJ20Pi3I7qFCbRhGM_WiPgI5-RvYugXQrlSTkOE8kT38G_4h-wwkmIOePZTx9q-UCt059VpAzpj2CYXR5DNeZqfeiigeL8A7LaNha-6S1VTPGoFnnGR542oFizgn4LmlK0nH3imwG-iYo-kSlnLYKxQysqMlXItmjfd1rNRPktQHGp-YNjwletT3ncxfNv0QN12Ic2OXeNfBcen-iGOp7amlbDg5H8KMvFWI8SR0"/>
+</div>
+<div class="absolute -top-2 -right-1 bg-bronze text-background-dark text-[10px] font-bold px-1.5 py-0.5 rounded-full">3RD</div>
+</div>
+<p class="text-sm font-bold truncate w-full text-center">Zuri M.</p>
+<p class="text-xs text-primary font-semibold mb-2">$500</p>
+<div class="w-full bg-slate-800/50 dark:bg-primary/10 h-20 rounded-t-lg border-t border-x border-slate-700/50 flex items-center justify-center">
+<span class="material-icons text-bronze/40 text-4xl">emoji_events</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Full Results List -->
+<section class="px-6 flex-1 -mt-4 bg-background-light dark:bg-background-dark rounded-t-3xl relative z-20 pt-8 shadow-2xl">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-lg font-bold">Leaderboard Standings</h2>
+<span class="text-xs font-medium text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">256 Players</span>
+</div>
+<div class="space-y-3">
+<!-- Table Header -->
+<div class="grid grid-cols-12 px-4 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+<div class="col-span-1">#</div>
+<div class="col-span-6">PLAYER</div>
+<div class="col-span-2 text-right">POINTS</div>
+<div class="col-span-3 text-right">ELO</div>
+</div>
+<!-- Leaderboard Row 4 -->
+<div class="grid grid-cols-12 items-center px-4 py-3 bg-slate-100 dark:bg-white/5 rounded-xl border border-slate-200 dark:border-white/10">
+<div class="col-span-1 font-bold text-slate-400">4</div>
+<div class="col-span-6 flex items-center gap-3">
+<img alt="" class="w-8 h-8 rounded-full" data-alt="Avatar of the 4th rank player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyBBBLPTfzEPMXS0EsCGwoOpVdEc8tZJ0dt1DbTYeSfka7h3_mDuvnyWlYUIVm4Wjz1MHQeKmE70YNNF_hIGhD-pRrsqr5aN5TvQnhAR-UNd4GoiajdYU09ixV5DecY_uRpvnyZwhdaTDYRczx-AXaOdZGvP2bsRBxphHWmszeHy5rSeL7mbhJq2Y4eULSen33hcREKNB_cmG6SUWvIjTIzdZJ98MwonuUOUh0XE8E19ryOGZPbQetGsjHaM56sfZ8QUlmu3JrSEQ"/>
+<span class="font-bold text-sm">Amina S.</span>
+</div>
+<div class="col-span-2 text-right font-bold text-sm">4,820</div>
+<div class="col-span-3 text-right flex items-center justify-end gap-1">
+<span class="text-primary text-xs font-bold">+24</span>
+<span class="material-icons text-primary text-sm">arrow_drop_up</span>
+</div>
+</div>
+<!-- Leaderboard Row 5 -->
+<div class="grid grid-cols-12 items-center px-4 py-3 bg-slate-100 dark:bg-white/5 rounded-xl border border-slate-200 dark:border-white/10">
+<div class="col-span-1 font-bold text-slate-400">5</div>
+<div class="col-span-6 flex items-center gap-3">
+<img alt="" class="w-8 h-8 rounded-full" data-alt="Avatar of the 5th rank player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5XYxpQlKs-VppLIm_eE_O-XqJBhAdVFyyZm-lS-583YMei6nE_m7V_mj6Ez9WoWhUg2cnDL0ozbhMQ3JdE_M_JVkJlUU6DVFYgLbDeM1oZyR1iqL_Wwcqj6nrxPuKQ1KP83dxVEKZOCMhlsxktwyNOYSLozpmmWupxpj2TnWpsEX2VxZy3B1Lmjtw3zoQTiqaWiynXrc3NqMR78Fs53q2q2p6JHltFQEjQGK6Nutf4uBAwom2XPe4OIv9WumZGbCO3T2OQlr1w04"/>
+<span class="font-bold text-sm">Baraka L.</span>
+</div>
+<div class="col-span-2 text-right font-bold text-sm">4,750</div>
+<div class="col-span-3 text-right flex items-center justify-end gap-1">
+<span class="text-primary text-xs font-bold">+18</span>
+<span class="material-icons text-primary text-sm">arrow_drop_up</span>
+</div>
+</div>
+<!-- Leaderboard Row 6 -->
+<div class="grid grid-cols-12 items-center px-4 py-3 bg-slate-100 dark:bg-white/5 rounded-xl border border-slate-200 dark:border-white/10">
+<div class="col-span-1 font-bold text-slate-400">6</div>
+<div class="col-span-6 flex items-center gap-3">
+<img alt="" class="w-8 h-8 rounded-full" data-alt="Avatar of the 6th rank player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI9PEgJnAnt7LyPvGPldSCRleygedyP2VrxRl9XA0sF4Wtvar2rjdngxQd5khepPgxdTobdN7l70zvyVhhxtFmXPWiDhEXjwUMVOq7F0Lkw0KznSFsnVQe13XK2Ie_MUsu2oMrEvz2fcr6bd8l2H8CHBdKy9FDZGgDEVAyG6dG2Rp0iQkuDUVBE807Aqx5yb8H1e7lrXR7XZlpwXlTzRWS7jHlI_ySdjt2xV774MEil7RfoYVes2sgIaBj-4A3kvFAuP4wM_mllDQ"/>
+<span class="font-bold text-sm">Tariq J.</span>
+</div>
+<div class="col-span-2 text-right font-bold text-sm">4,610</div>
+<div class="col-span-3 text-right flex items-center justify-end gap-1">
+<span class="text-slate-400 text-xs font-bold">-2</span>
+<span class="material-icons text-slate-400 text-sm rotate-180">arrow_drop_up</span>
+</div>
+</div>
+</div>
+<!-- Share Button -->
+<div class="mt-8 mb-6">
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark font-extrabold py-4 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+<span class="material-icons">share</span>
+                    SHARE RESULTS
+                </button>
+</div>
+</section>
+<!-- Footer / Teaser Section -->
+<footer class="px-6 pb-8 pt-4 bg-slate-100 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+<div class="bg-gradient-to-r from-background-dark to-slate-800 rounded-2xl p-4 flex items-center gap-4 border border-primary/20 relative overflow-hidden">
+<!-- Background Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<pattern height="20" id="grid" patternunits="userSpaceOnUse" width="20">
+<path d="M 20 0 L 0 0 0 20" fill="none" stroke="#11d4d4" stroke-width="0.5"></path>
+</pattern>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center relative z-10">
+<span class="material-icons text-primary">event_available</span>
+</div>
+<div class="flex-1 relative z-10">
+<p class="text-[10px] font-bold text-primary tracking-wider uppercase">Next Tournament</p>
+<h3 class="text-sm font-bold text-white">Mombasa Invitational</h3>
+<p class="text-[11px] text-slate-400">Starts in 3 days • $5,000 Prize Pool</p>
+</div>
+<button class="bg-white/10 hover:bg-white/20 p-2 rounded-full relative z-10">
+<span class="material-icons text-white text-sm">chevron_right</span>
+</button>
+</div>
+</footer>
+<!-- iOS Home Indicator -->
+<div class="flex justify-center pb-2">
+<div class="w-32 h-1 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+</main>
+</body></html>

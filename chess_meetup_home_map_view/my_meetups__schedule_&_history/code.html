@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Meetups: Schedule &amp; History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- iOS Status Bar Spacer -->
+<div class="h-12 w-full"></div>
+<main class="max-w-md mx-auto px-5 pb-24">
+<!-- Header -->
+<header class="flex items-center justify-between mb-8">
+<h1 class="text-3xl font-extrabold tracking-tight">My Meetups</h1>
+<div class="flex gap-3">
+<button class="w-10 h-10 flex items-center justify-center bg-white dark:bg-slate-800 rounded-full shadow-sm">
+<span class="material-icons text-primary">add</span>
+</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPozd2FRaxVJrr3aYWWHe8ktehFio8AM3o3xPr03mO7uOAsovIIEA-CyuwGKvtDWSWWY92ZEl8hUelJIwscZ-9Gu3lttPTcR7yWZKMn9_kRkx39oNOMe9n43hh-wlorH0Ec3JEXie_jkHSJbFu8hFgjOv057NyKMW9yxyyHSvdI3NUWdoHCd-LiREV7PchReLPbRAK6-FJeOtCgO22wgtZC9Oj3hQ4m180IEBjSq4eQZNJ_RSfceCkSWV5-TDv4qjBoZhWPQ-7itI"/>
+</div>
+</div>
+</header>
+<!-- Segmented Control (Tabs) -->
+<div class="bg-primary/10 dark:bg-primary/5 p-1 rounded-full flex mb-8">
+<button class="flex-1 py-2.5 rounded-full bg-primary text-white font-semibold text-sm transition-all shadow-md">
+                Upcoming
+            </button>
+<button class="flex-1 py-2.5 rounded-full text-slate-500 dark:text-slate-400 font-semibold text-sm">
+                History
+            </button>
+</div>
+<!-- Section Title -->
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-sm font-bold uppercase tracking-widest text-slate-400">Scheduled Matches</h2>
+<span class="text-xs bg-primary/20 text-primary font-bold px-3 py-1 rounded-full">3 Active</span>
+</div>
+<!-- Meetup List -->
+<div class="space-y-5">
+<!-- Today's Meetup Card -->
+<div class="bg-white dark:bg-slate-800 p-5 rounded-lg shadow-xl shadow-primary/5 border-l-4 border-primary relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter mb-1 block">Happening Today</span>
+<h3 class="text-xl font-bold">Goan Gymkhana</h3>
+<p class="text-slate-500 text-sm flex items-center gap-1 mt-1">
+<span class="material-icons text-sm">location_on</span> Marine Lines, Mumbai
+                        </p>
+</div>
+<div class="bg-primary/10 px-3 py-1 rounded-full">
+<span class="text-[10px] font-bold text-primary">18:30</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-icons text-primary text-sm">bolt</span>
+</div>
+<div>
+<p class="text-[10px] text-slate-400 leading-none">Vibe</p>
+<p class="text-xs font-semibold">Casual Drop-in</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-icons text-primary text-sm">people</span>
+</div>
+<div>
+<p class="text-[10px] text-slate-400 leading-none">Players</p>
+<p class="text-xs font-semibold">12 Joined</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between border-t border-slate-50 dark:border-slate-700 pt-5">
+<div class="flex -space-x-3">
+<img class="w-9 h-9 rounded-full border-2 border-white dark:border-slate-800 object-cover" data-alt="Female participant avatar thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwLa0cG1AGTqXa768rSy7nRXUYJKl0KzW51QGd27kIo5X7KeXRqllwYyBw6Nzn30D3reaTSKpKtIYIx8Z_H9smdVpLzdNsc3sgH9ikWJogbHSUsC2pdWTF6fVVnV7T_AogD-jl10Iswz4tgWEKzawznb_b1X_lWeT8BPiRX8Wr7_EK6u7xvOGQZ1qChixK7fpVMLh1SWadDLBttiTehltwwOeOmgYdn3sHe3zo6QUIvSX8UP4uQeWiUzak_KATwoou7D8oC8AJ_Sk"/>
+<img class="w-9 h-9 rounded-full border-2 border-white dark:border-slate-800 object-cover" data-alt="Male participant avatar thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjcygs25q9XqLm2WsbaeLfa9PL7rVqWfTYfXfqFyIKpR1Pyj-OfmUqz4wghG5YOVQ1SqFu95O8H-DizkAVmCyd5MTb8ape1dpRKNGyxYmJfh2h7BYcLMlvOSsFvDF1Hkjd7roLPx4eH4Hv6jQrzlefSQ13zqU7Cv-pcf-8loqBQXP4LMs14e4S6onVyw-OqmT3MVUzezbM1K1Sla8I-0uCMaZV9Lje_BokBLgUSAXhvXn9QTCzrUw-iyZHw0C60tSQiEPIULUz6NY"/>
+<img class="w-9 h-9 rounded-full border-2 border-white dark:border-slate-800 object-cover" data-alt="Female player avatar thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2cBpGHLBlxsaxieEM2GReHxjTsDlcl7VOBmOXeFljZXRwRKKblE4-3U6AoggR6qJoWFF-VtiAnK_993r-ANIOZh0oH8JmN9UodJCgcNnE_uOsxiXJOoMQTAuYXj_6CnOkca5fVs5CJ6qpOwaOWiHCl-8XGzmn6dsQJT9vKJFL44GKYMrKDjEw_pNvBXneAyy-XVvlNRY8U65U7o-m4Umngtzey-30zrqUkgoum2hOzl35SBuxT87GaKGoP9IW0Md3pJw7Fo-qbPg"/>
+<div class="w-9 h-9 rounded-full border-2 border-white dark:border-slate-800 bg-primary flex items-center justify-center text-[10px] font-bold text-white uppercase">+9</div>
+</div>
+<button class="bg-primary text-white px-5 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg shadow-primary/30">
+<span class="material-icons text-sm">qr_code_2</span>
+                        Check-in
+                    </button>
+</div>
+</div>
+<!-- Future Meetup Card 1 -->
+<div class="bg-white dark:bg-slate-800 p-5 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold">The Chess Cafe</h3>
+<p class="text-slate-500 text-sm flex items-center gap-1 mt-1">
+<span class="material-icons text-sm">location_on</span> Bandra West
+                        </p>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Oct 24</p>
+<p class="text-xs font-bold text-slate-700 dark:text-slate-300">16:00</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 px-3 py-1 rounded-full">
+<span class="text-[10px] font-bold text-primary">Blitz Tournament</span>
+</div>
+<div class="flex -space-x-2">
+<img class="w-7 h-7 rounded-full border border-white dark:border-slate-800 object-cover" data-alt="User avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3qngM9S8TomUZdaACvBwBUBfgT9N90fT4t0Jpbhfp6E5kv3F6DyxwRX4WJHWXjnji06p6g5YMS7oSlC4P7aPklSkrN0DXJx6K7TFpDSNtMK7mMo6Z9NBF5YnztjrBPETOnOitHAG8g435J0lBpaY4fPPryRdz5I3uIgijaTEb69yIGxvyT_YZ0_Z6dvKxZ90jRby3cgacref4sEQOWjL4KwUxADn2mqISysxi-Cw5HTXcmJ5yT5lh4IcKsrrUxupOO-gLn3imK_s"/>
+<img class="w-7 h-7 rounded-full border border-white dark:border-slate-800 object-cover" data-alt="User avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwx3_cSCtvH3coEjBETEV8Mpr9vv8-iJniJQyRnZlBJNxAYFm771oPEdz8CpPlMBqF4KJTxjSPcv_u31PUGhgTHSyW1oWwkQQbz7FHtPqP-N-wKZWFBTnXt96Sm6VgDmp-Y-KVCsrE99bHQzzBkHeHqcAXGsO_DndOPWgVe0tEQzoTpz7sUwoSbskw7alB2Qgb6AAFIs_Y6kGnUcMdEfRFaNceprtlB1mgoMH43UsLf0Dt_WurS85LNUbJyTIGnFRgy07dIhuOXSk"/>
+<div class="w-7 h-7 rounded-full border border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-[8px] font-bold text-slate-500">+4</div>
+</div>
+</div>
+<button class="text-primary font-bold text-sm">Details</button>
+</div>
+</div>
+<!-- Future Meetup Card 2 -->
+<div class="bg-white dark:bg-slate-800 p-5 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700 opacity-80">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold">Knights Arena</h3>
+<p class="text-slate-500 text-sm flex items-center gap-1 mt-1">
+<span class="material-icons text-sm">location_on</span> Powai Central
+                        </p>
+</div>
+<div class="text-right">
+<p class="text-[10px] font-bold text-slate-400 uppercase">Oct 28</p>
+<p class="text-xs font-bold text-slate-700 dark:text-slate-300">11:00</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full">
+<span class="text-[10px] font-bold text-slate-500">Rapid Game</span>
+</div>
+<div class="flex -space-x-2">
+<img class="w-7 h-7 rounded-full border border-white dark:border-slate-800 object-cover" data-alt="User avatar small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpE9j9ICv96Vro5lqKg1WBTSJY0uj-8Bvmt-hCu4AQqH8v_s5QIMfC5k8OUnvkddjy484TvXteGhw08b29Yy36ZMdGBLwRp_Y5JlQJjPhy9GqZGomZLFV_qID4HSm2d3uAI3fHjIYInY8PRmtB1BzDGk68wquchP1FEMiq0KHYJEymygaJWf0RE5UqmyoaWNfcd-G3S9K0YLXwnor99ZqcwIRqlcfjD9EtA6oGR116dfk2PcmaGpkSNdg8ySbYW3GSYRgyhEvtBEY"/>
+<div class="w-7 h-7 rounded-full border border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-[8px] font-bold text-slate-500">+2</div>
+</div>
+</div>
+<button class="text-slate-400 font-bold text-sm">Details</button>
+</div>
+</div>
+</div>
+<!-- Empty State Preview (Subtle Footer) -->
+<div class="mt-12 text-center">
+<p class="text-slate-400 text-sm">Looking for more challenges?</p>
+<button class="text-primary font-bold text-sm mt-1">Explore upcoming events</button>
+</div>
+</main>
+<!-- Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 px-8 py-4 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">explore</span>
+<span class="text-[10px] font-bold">Discover</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons">event_note</span>
+<span class="text-[10px] font-bold">My Games</span>
+</button>
+<div class="relative -mt-10">
+<button class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/40">
+<span class="material-icons text-3xl">add</span>
+</button>
+</div>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">emoji_events</span>
+<span class="text-[10px] font-bold">Leaderboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">settings</span>
+<span class="text-[10px] font-bold">Profile</span>
+</button>
+</nav>
+<!-- Background Decoration -->
+<div class="fixed top-0 right-0 -z-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+<div class="fixed bottom-0 left-0 -z-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+</body></html>

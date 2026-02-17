@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Monthly Rewards &amp; Gifts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "accent-teal": "#0d9488",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .prize-gradient-1 {
+            background: linear-gradient(135deg, #f4c025 0%, #eab308 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex justify-center">
+<!-- Phone Container -->
+<main class="w-full max-w-[430px] bg-white dark:bg-zinc-900 min-h-screen shadow-2xl relative overflow-hidden flex flex-col">
+<!-- Status Bar Mockup -->
+<div class="h-12 w-full flex justify-between items-center px-8 pt-4">
+<span class="font-bold text-sm">9:41</span>
+<div class="flex space-x-2">
+<span class="material-icons text-sm">signal_cellular_alt</span>
+<span class="material-icons text-sm">wifi</span>
+<span class="material-icons text-sm">battery_full</span>
+</div>
+</div>
+<!-- Header -->
+<header class="px-6 py-4 flex items-center justify-between">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300">
+<span class="material-icons">chevron_left</span>
+</button>
+<h1 class="text-xl font-800 tracking-tight">Monthly Rewards</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-slate-300">
+<span class="material-icons">info_outline</span>
+</button>
+</header>
+<!-- Main Content Scroll Area -->
+<div class="flex-1 overflow-y-auto px-6 pb-24">
+<!-- Season Countdown -->
+<div class="mt-4 mb-6 flex items-center justify-center space-x-2 bg-primary/10 dark:bg-primary/5 py-2 px-4 rounded-full border border-primary/20">
+<span class="material-icons text-primary text-sm">timer</span>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Season ends in: 12d 04h 20m</span>
+</div>
+<!-- Rank Status Card -->
+<section class="bg-white dark:bg-zinc-800 rounded-xl p-5 shadow-sm border border-slate-100 dark:border-zinc-700 mb-8">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wide">My Current Rank</p>
+<h2 class="text-3xl font-800 text-slate-900 dark:text-white">42nd <span class="text-lg font-medium text-slate-400">/ 1,240</span></h2>
+</div>
+<div class="text-right">
+<p class="text-accent-teal text-xs font-bold bg-accent-teal/10 px-2 py-1 rounded-md mb-1">+12 pos this week</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-xs font-bold">
+<span class="text-slate-400">Current (42nd)</span>
+<span class="text-primary">Next Prize (3rd)</span>
+</div>
+<div class="w-full h-3 bg-slate-100 dark:bg-zinc-700 rounded-full overflow-hidden">
+<div class="w-[65%] h-full bg-primary rounded-full"></div>
+</div>
+<p class="text-[11px] text-slate-500 dark:text-slate-400 italic text-center mt-2">
+                        You are only <span class="font-bold text-accent-teal">150 points</span> away from the 3rd Place prize!
+                    </p>
+</div>
+</section>
+<!-- Rewards Title -->
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-800">September Gifts</h3>
+<span class="text-accent-teal text-xs font-bold underline cursor-pointer">View Past Winners</span>
+</div>
+<!-- Prize Cards List -->
+<div class="space-y-4">
+<!-- 1st Place -->
+<div class="relative overflow-hidden group">
+<div class="bg-white dark:bg-zinc-800 rounded-xl p-5 shadow-md border-l-4 border-primary flex items-start space-x-4">
+<div class="w-16 h-16 flex-shrink-0 prize-gradient-1 rounded-lg flex items-center justify-center text-white shadow-lg">
+<span class="material-icons text-4xl">emoji_events</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-900 bg-primary/20 text-yellow-700 dark:text-primary px-2 py-0.5 rounded-full uppercase">1st Place</span>
+</div>
+<h4 class="text-lg font-800 mt-1 leading-tight">KSh 10,000 Java Voucher</h4>
+<div class="mt-3 flex items-center space-x-2">
+<span class="text-[10px] text-slate-400 font-semibold uppercase">Sponsored by</span>
+<div class="w-20 h-8 bg-slate-50 dark:bg-zinc-900 rounded-md border border-slate-100 dark:border-zinc-700 p-1 flex items-center justify-center overflow-hidden">
+<img alt="Java House Logo" class="h-full w-auto grayscale opacity-80" data-alt="Java House Coffee Brand Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqDp9FzLWLsBexmXK13bNY00YWzzOVUyXNhQZVyriKWv-td9QUFDMNdttQFHUirmOthn51zBVULZwKbRXNN4Vb4TMDlg4BEduiAMRQueSAxQ4X99AAL-70sxnPsz1ESRaBUS6WV_ADID0B3JBGkWaGk8_-uTQnRUtZSDjLmmbwdvzCw5Y_n13rFnz4_eTmNc-ycxwpcxZDVoa-uYZcyDU-wydH3g3-ykgke37T28E7xjVeUxVDZ5nDBsQ2L5eV5xtxL7aJY_nBk1M"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2nd Place -->
+<div class="relative overflow-hidden group">
+<div class="bg-white dark:bg-zinc-800 rounded-xl p-5 shadow-md border-l-4 border-slate-300 dark:border-zinc-500 flex items-start space-x-4">
+<div class="w-16 h-16 flex-shrink-0 bg-slate-100 dark:bg-zinc-700 rounded-lg flex items-center justify-center text-slate-500 shadow-sm border border-slate-200 dark:border-zinc-600">
+<span class="material-icons text-4xl">style</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-900 bg-slate-100 dark:bg-zinc-700 text-slate-600 dark:text-slate-300 px-2 py-0.5 rounded-full uppercase">2nd Place</span>
+</div>
+<h4 class="text-lg font-800 mt-1 leading-tight">Chess Set from Chess Kenya</h4>
+<div class="mt-3 flex items-center space-x-2">
+<span class="text-[10px] text-slate-400 font-semibold uppercase">Sponsored by</span>
+<div class="w-20 h-8 bg-slate-50 dark:bg-zinc-900 rounded-md border border-slate-100 dark:border-zinc-700 p-1 flex items-center justify-center overflow-hidden">
+<img alt="Chess Kenya Logo" class="h-full w-auto grayscale opacity-80" data-alt="Chess Kenya Federation Official Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4qGo-IsIdsRRUavlvqQEsuMl4dvnh1HP3_obCLHNRl-s3bOn8nioQozwHzaFxm-ODAi1CrYJUbLtG05Dr7xTvKHdZ0-yRzDvQIOl91ckB8eUINnNL86gAIBBvK4At5T-tQkPiJAB-WkJpzFMa46BIS80C8MA_lsEbTCFYOUAi2xut6XDFkQNUptAQWvRK-nxQHcuADKFLHEgPtypurBPvxeQPgDP8O4bId3twxxM16aAxFl4jkcKsoXhjiUgzGZSphgG50QBnTwc"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3rd Place -->
+<div class="relative overflow-hidden group">
+<div class="bg-white dark:bg-zinc-800 rounded-xl p-5 shadow-md border-l-4 border-orange-200 dark:border-orange-900 flex items-start space-x-4">
+<div class="w-16 h-16 flex-shrink-0 bg-orange-50 dark:bg-orange-950/20 rounded-lg flex items-center justify-center text-orange-400 shadow-sm border border-orange-100 dark:border-orange-900/40">
+<span class="material-icons text-4xl">confirmation_number</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<span class="text-[10px] font-900 bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-400 px-2 py-0.5 rounded-full uppercase">3rd Place</span>
+</div>
+<h4 class="text-lg font-800 mt-1 leading-tight">Free Game Pass at Bao Box</h4>
+<div class="mt-3 flex items-center space-x-2">
+<span class="text-[10px] text-slate-400 font-semibold uppercase">Sponsored by</span>
+<div class="w-20 h-8 bg-slate-50 dark:bg-zinc-900 rounded-md border border-slate-100 dark:border-zinc-700 p-1 flex items-center justify-center overflow-hidden">
+<img alt="Bao Box Logo" class="h-full w-auto grayscale opacity-80" data-alt="Bao Box Social Gaming Lounge Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6bGcpV3-Fhf2BAiS-ek-kuopaeCFv9rdLwwh0PD5tLRjdQJSQ4n6dHVZrV2G88mUZObfQHfjd4pC1rdzbI2nLI-NEC-VUND_BFIz8Op_7ev5TC8iPL96_Q5rOBTZScVgPFkGCAQLu2ILUKVsOSn_1zkMghc-xEwyg9BYZC6b9oO22BXaIptKvmv6ShcyzdmT-7jxPxbnznHULYxEbP22jPNrfJTiD-AKiELna6zwQF6i4asZ_hTAt--nzwG-G0NRpBnsaoXCXPSk"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Help Section -->
+<div class="mt-8 mb-4 p-4 rounded-xl bg-slate-50 dark:bg-zinc-800/50 border border-slate-200 dark:border-zinc-700 text-center">
+<p class="text-sm font-semibold text-slate-600 dark:text-slate-300">Want to reach the top faster?</p>
+<p class="text-[11px] text-slate-400 mt-1">Participate in Weekend Tournaments to earn double ELO points!</p>
+<button class="mt-3 text-accent-teal font-800 text-xs flex items-center justify-center mx-auto space-x-1">
+<span>How it works</span>
+<span class="material-icons text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Sticky Bottom Navigation Mockup -->
+<nav class="absolute bottom-0 w-full ios-blur bg-white/80 dark:bg-zinc-900/80 border-t border-slate-200 dark:border-zinc-800 px-8 py-4 pb-8 flex justify-between items-center">
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">grid_view</span>
+<span class="text-[10px] font-bold mt-1">Lobby</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">leaderboard</span>
+<span class="text-[10px] font-bold mt-1">Ranking</span>
+</div>
+<div class="flex flex-col items-center text-primary">
+<span class="material-icons">redeem</span>
+<span class="text-[10px] font-bold mt-1">Rewards</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">person</span>
+<span class="text-[10px] font-bold mt-1">Profile</span>
+</div>
+</nav>
+<!-- Home Indicator Mockup -->
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-300 dark:bg-zinc-700 rounded-full"></div>
+</main>
+</body></html>

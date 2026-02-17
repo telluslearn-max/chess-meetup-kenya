@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Venue Registration - Step 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-shadow {
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .map-gradient {
+            background: linear-gradient(to bottom, rgba(246, 248, 248, 0.8) 0%, rgba(246, 248, 248, 0) 20%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 min-h-screen flex flex-col overflow-hidden">
+<!-- Header & Progress -->
+<header class="px-6 pt-12 pb-4 bg-background-light dark:bg-background-dark z-20">
+<div class="flex items-center justify-between mb-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-icons text-slate-600 dark:text-slate-300">chevron_left</span>
+</button>
+<span class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Step 2 of 4</span>
+<div class="w-10"></div> <!-- Spacer -->
+</div>
+<div class="w-full h-1.5 bg-primary/20 rounded-full overflow-hidden">
+<div class="w-1/2 h-full bg-primary rounded-full"></div>
+</div>
+<h1 class="text-2xl font-bold mt-6 tracking-tight">Pin your location</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Drag the map to position the pin exactly where players will meet.</p>
+</header>
+<!-- Map Container -->
+<main class="relative flex-grow overflow-hidden">
+<!-- Mock Map Background -->
+<div class="absolute inset-0 bg-slate-200 dark:bg-slate-900">
+<img alt="Detailed city map view" class="w-full h-full object-cover opacity-80" data-alt="A clean top-down street map view of an urban neighborhood" data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7o3vZJ9fRawfPA3KNivuAIoneJPD7WUsfNz4xiVlIWUO-IcKT8LiY7iemzIPeyuhSdpMRdA8c5g7mS4-T5wGW4_9TCurCApRRFhWjGwasQC--q3lkrP0lluO6GQqltRhfEyuw8YnLSyq2PRpxQ_WKpjXxhCRb2am8pMRc0NdfZqGEbvaJlO0Wu9ulsJsTPb0qmLGM3PGcPDQxv8_9cfg9erVnapxJbLn8KqW_yl1nnrlyf-JZbLGom9rwTyE3QO6yiTxqrf3Xg1c"/>
+<div class="absolute inset-0 map-gradient"></div>
+</div>
+<!-- Draggable Pin UI (Fixed center of map) -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+<div class="relative mb-12 flex flex-col items-center">
+<!-- Tooltip for feedback -->
+<div class="bg-slate-900 text-white text-[10px] px-3 py-1.5 rounded-full mb-2 shadow-lg animate-bounce">
+                    DRAG TO MOVE
+                </div>
+<!-- Pin Icon -->
+<div class="relative">
+<span class="material-icons text-primary text-5xl drop-shadow-md">place</span>
+<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3 h-1 bg-black/20 rounded-full blur-[2px]"></div>
+</div>
+</div>
+</div>
+<!-- Floating Map Controls -->
+<div class="absolute right-4 top-4 flex flex-col gap-2">
+<button class="w-12 h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg flex items-center justify-center text-primary">
+<span class="material-icons">my_location</span>
+</button>
+<button class="w-12 h-12 bg-white dark:bg-slate-800 rounded-full shadow-lg flex items-center justify-center text-slate-600 dark:text-slate-300">
+<span class="material-icons">layers</span>
+</button>
+</div>
+</main>
+<!-- Bottom Sheet Controls -->
+<section class="bg-white dark:bg-slate-900 rounded-t-lg ios-shadow px-6 pt-8 pb-10 z-30">
+<div class="space-y-6">
+<!-- Privacy Toggle -->
+<div class="flex items-center justify-between">
+<div class="flex-1 pr-4">
+<label class="block font-semibold text-slate-800 dark:text-slate-100">Hide exact location</label>
+<p class="text-xs text-slate-500 dark:text-slate-400">Show general area until booking is confirmed.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-12 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<hr class="border-slate-100 dark:border-slate-800"/>
+<!-- Landmark Input -->
+<div class="space-y-2">
+<label class="block font-semibold text-slate-800 dark:text-slate-100">Nearby Landmarks</label>
+<div class="relative">
+<span class="absolute left-4 top-3.5 material-icons text-slate-400 text-sm">info_outline</span>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-none rounded-full py-3.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary text-slate-800 dark:text-slate-100" placeholder="e.g., Next to the red fountain, 2nd floor balcony" type="text"/>
+</div>
+</div>
+<!-- Footer Action -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-full shadow-lg shadow-primary/20 flex items-center justify-center transition-colors group">
+<span>Next</span>
+<span class="material-icons ml-2 text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Home Indicator (Mock) -->
+<div class="mt-8 flex justify-center">
+<div class="w-32 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+</section>
+</body></html>

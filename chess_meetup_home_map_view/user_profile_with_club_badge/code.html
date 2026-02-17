@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile - Chess Meetup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex justify-center">
+<!-- Mobile Container (iPhone Pro Max roughly) -->
+<div class="w-full max-w-[430px] bg-background-light dark:bg-background-dark relative pb-32">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 py-4 flex items-center justify-between">
+<button class="p-2 -ml-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-icons text-slate-700 dark:text-slate-300">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold">Profile</h1>
+<button class="p-2 -mr-2 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-icons text-slate-700 dark:text-slate-300">more_horiz</span>
+</button>
+</header>
+<!-- Profile Header Section -->
+<section class="px-6 pt-6 flex flex-col items-center">
+<!-- Avatar Container -->
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full border-4 border-white dark:border-slate-800 shadow-xl overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a young man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSVpd6-fc8RDuCLKcUqV7gS2N5vZ4BesztSQVLQ7g8jcDQnbWl4MX-6OLv67JsgGmN1pBY7Em2Z26TJVYxs1czr4yMeDHdnh9nBPKT4JtJHa9zr8xCtV7joG6ayUqMs1cU6JQPjTP_Z77sR1-wBuamRHV7uBGZkpsMUi4sQtHTPpPKima6RLACwAGOiCTpYtkJNpNmqA5xQTELNbZPLkk8okSc3FTUI_6RpO2oz1wCd00RLxX2E0s9Xq5hwqpOmN5BL9g07dyMNas"/>
+</div>
+<div class="absolute -bottom-2 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1 uppercase tracking-wider">
+<span class="material-icons text-xs">school</span>
+                    Casual Learner
+                </div>
+</div>
+<!-- Name & Identity -->
+<div class="text-center">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Tellus</h2>
+<!-- Club Badge -->
+<div class="inline-flex items-center gap-2 bg-white dark:bg-slate-800 px-4 py-2 rounded-full shadow-sm border border-slate-100 dark:border-slate-700 mb-6">
+<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-icons text-primary text-sm">castle</span>
+</div>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-200">Nairobi Kings</span>
+<span class="material-icons text-primary text-lg">verified</span>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="px-6 mb-8">
+<div class="grid grid-cols-3 gap-3">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm flex flex-col items-center text-center">
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 mb-1 uppercase tracking-tight">Meetups</span>
+<span class="text-xl font-bold text-slate-900 dark:text-white">12</span>
+</div>
+<div class="bg-primary/10 p-4 rounded-xl shadow-sm flex flex-col items-center text-center border border-primary/20">
+<span class="text-xs font-medium text-primary mb-1 uppercase tracking-tight">Elo</span>
+<span class="text-xl font-bold text-primary">1520</span>
+</div>
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm flex flex-col items-center text-center">
+<span class="text-xs font-medium text-slate-500 dark:text-slate-400 mb-1 uppercase tracking-tight">Since</span>
+<span class="text-xl font-bold text-slate-900 dark:text-white">2024</span>
+</div>
+</div>
+</section>
+<!-- Bio Section -->
+<section class="px-6 mb-8">
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">Bio</h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-[15px]">
+                Enjoying blitz and coffee in Westlands. Always down for a casual game! 👋☕️
+            </p>
+</section>
+<!-- Play Style Chips -->
+<section class="mb-8">
+<h3 class="px-6 text-sm font-bold text-slate-400 uppercase tracking-widest mb-3">Play Style</h3>
+<div class="flex overflow-x-auto px-6 gap-2 hide-scrollbar">
+<span class="flex-shrink-0 px-5 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold border border-primary/30">Casual/Social</span>
+<span class="flex-shrink-0 px-5 py-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-semibold border border-slate-100 dark:border-slate-700">Rapid</span>
+<span class="flex-shrink-0 px-5 py-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-semibold border border-slate-100 dark:border-slate-700">Café Games</span>
+</div>
+</section>
+<!-- Favorite Venues -->
+<section class="mb-8">
+<div class="px-6 flex justify-between items-center mb-4">
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Favorite Venues</h3>
+<button class="text-primary text-sm font-semibold">See All</button>
+</div>
+<div class="flex overflow-x-auto px-6 gap-4 hide-scrollbar">
+<!-- Venue Card 1 -->
+<div class="flex-shrink-0 w-40">
+<div class="w-40 h-28 rounded-xl overflow-hidden mb-2 relative shadow-md">
+<img alt="Bao Box" class="w-full h-full object-cover" data-alt="Vibrant modern cafe interior with board games" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg8pTyHO36FgrnjKftaP65LNXb8CZDQ2-kvVqmp-e6wA5PJMax00MmN1hynMDadEfJvFPe91iEe_6Xn5v-JN-Yo8cjhiuPiVgUti3ns7phHPB-7fvz9dl8uN5u1U82horFYT9n1ng3pyjBf5S7O9rL-Bl5h4RBXTCqGeFQMw-J5Sx0VgxT3ibw0EBdWoTCFwDkmr9QrIuZoOodK6xKV3YGNP8kd_shWMyFZxf-mrDFDa-tDPX_UFYOeDXdpo7zzIA86SMutfOix0A"/>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-slate-800/90 p-1 rounded-full shadow-sm">
+<span class="material-icons text-primary text-[14px]">favorite</span>
+</div>
+</div>
+<p class="font-bold text-slate-900 dark:text-white text-sm">Bao Box</p>
+<p class="text-xs text-slate-500">Westlands, Nairobi</p>
+</div>
+<!-- Venue Card 2 -->
+<div class="flex-shrink-0 w-40">
+<div class="w-40 h-28 rounded-xl overflow-hidden mb-2 relative shadow-md">
+<img alt="Java House" class="w-full h-full object-cover" data-alt="Cozy coffee shop atmosphere with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd5SdbkAUkwh0dk0sa2Wrwj3CQiLojUTzuEMs_sFw--XYffFsTglAflSaB_F3e6AnCmhEPWUQUB4jLco21B_rIoCDsLVzsYeI58k8Eb-Jwj9L1al9ai59IQ9lIp7PA12WFf31dlRf60RH_iPaKNDMoO3snqUNjFOiluqBSCXrZTZ3AyKNh65zQo83dXtoJIjv370zXTXnL6Bzguzg2lzOkuLQJsmb0BA3QeIqKINw67fY7uXlmFrczjJaQLRbGv3bplDu5TZrmawE"/>
+<div class="absolute top-2 right-2 bg-white/90 dark:bg-slate-800/90 p-1 rounded-full shadow-sm">
+<span class="material-icons text-primary text-[14px]">favorite</span>
+</div>
+</div>
+<p class="font-bold text-slate-900 dark:text-white text-sm">Java House</p>
+<p class="text-xs text-slate-500">ABC Place</p>
+</div>
+<!-- Venue Card 3 -->
+<div class="flex-shrink-0 w-40">
+<div class="w-40 h-28 rounded-xl bg-slate-200 dark:bg-slate-700 flex items-center justify-center mb-2 shadow-inner">
+<span class="material-icons text-slate-400">add_location_alt</span>
+</div>
+<p class="font-bold text-slate-400 text-sm">Add New</p>
+</div>
+</div>
+</section>
+<!-- Bottom Fixed Buttons -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] p-6 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/95 dark:via-background-dark/95 to-transparent z-30">
+<div class="flex gap-4">
+<button class="flex-1 bg-primary text-white font-bold py-4 rounded-full shadow-lg shadow-primary/30 active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-icons text-sm">edit</span>
+                    Edit Profile
+                </button>
+<button class="w-14 h-14 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-full shadow-lg border border-slate-100 dark:border-slate-700 flex items-center justify-center active:scale-95 transition-transform">
+<span class="material-icons">share</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

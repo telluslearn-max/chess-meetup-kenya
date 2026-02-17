@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chess Meetup Kenya - Discovery Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                        "accent-gold": "#d4af37",
+                        "accent-green": "#2ecc71",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display overflow-hidden h-screen w-full">
+<!-- Map Background Wrapper -->
+<div class="absolute inset-0 z-0">
+<img alt="Map view of Nairobi Westlands area" class="w-full h-full object-cover opacity-80 grayscale-[0.2]" data-alt="Modern light-themed map showing Nairobi streets" data-location="Nairobi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF91NbvG7YO1P9ZocS0v7drFgXdjIGLBE-UeBBZDavPQwHyFfBvYObyNbtauWZpCoIpTtV7N62LsWXJkc35ngba4vvXEtinkasj1SofY6ty_HZJya1h7WEtATdVsN2Qt-PS2OaRpL_QQNq50mO-jLuz0LkzQTXuLGMx1Y0O_4T8pPYVmxUzKaWLprdP1ReBjWEFT-NBCJwnrVuxrv625WZtljBYLdVVtObz6nZfb69lU8gvOAG0nQeYWlileQbI5-xTBvauCaDf0I"/>
+<!-- Custom Map Markers Overlay -->
+<!-- Gold Marker (Partner Venue) -->
+<div class="absolute top-[35%] left-[45%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="bg-accent-gold text-white p-2 rounded-full shadow-lg border-2 border-white flex items-center justify-center">
+<span class="material-icons-round text-lg">workspace_premium</span>
+</div>
+<div class="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm mt-1 border border-primary/10">
+<p class="text-[10px] font-bold text-gray-800">Bao Box</p>
+</div>
+</div>
+<!-- Green Marker (Casual) -->
+<div class="absolute top-[55%] left-[60%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="bg-accent-green text-white p-2 rounded-full shadow-lg border-2 border-white flex items-center justify-center">
+<span class="material-icons-round text-lg">person</span>
+</div>
+<div class="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm mt-1 border border-primary/10">
+<p class="text-[10px] font-bold text-gray-800">Java House</p>
+</div>
+</div>
+<!-- More Markers -->
+<div class="absolute top-[42%] left-[25%] -translate-x-1/2 -translate-y-1/2 opacity-60">
+<div class="bg-accent-green text-white p-2 rounded-full shadow-md border-2 border-white flex items-center justify-center">
+<span class="material-icons-round text-[14px]">person</span>
+</div>
+</div>
+<div class="absolute top-[68%] left-[38%] -translate-x-1/2 -translate-y-1/2 opacity-60">
+<div class="bg-accent-green text-white p-2 rounded-full shadow-md border-2 border-white flex items-center justify-center">
+<span class="material-icons-round text-[14px]">person</span>
+</div>
+</div>
+</div>
+<!-- Header: Search Bar -->
+<div class="absolute top-12 left-0 right-0 px-4 z-20">
+<div class="flex items-center bg-white dark:bg-background-dark/95 shadow-xl rounded-full px-4 py-3 border border-gray-100 dark:border-primary/20">
+<span class="material-icons-round text-primary mr-3">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm text-gray-700 dark:text-gray-200 w-full placeholder-gray-400" placeholder="Find casual chess spots..." type="text"/>
+<div class="h-6 w-[1px] bg-gray-200 mx-2"></div>
+<button class="flex items-center justify-center text-gray-500">
+<span class="material-icons-round text-lg">tune</span>
+</button>
+</div>
+</div>
+<!-- Bottom Carousel Section -->
+<div class="absolute bottom-24 left-0 right-0 z-20">
+<div class="flex overflow-x-auto no-scrollbar gap-4 px-4 pb-4">
+<!-- Card 1: Bao Box -->
+<div class="flex-none w-[85vw] max-w-[320px] bg-white dark:bg-background-dark rounded-xl shadow-xl overflow-hidden flex flex-col border border-gray-100 dark:border-primary/10">
+<div class="relative h-32 overflow-hidden">
+<img alt="Bao Box Chess Venue" class="w-full h-full object-cover" data-alt="Interior of a board game cafe with chess tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvypKRZHE-1T0YJOTalp5vaXfQOp289e0kUyplLepIkO8KY6fZ1RnPjtwL7Bm4yuVnGJCdV05Br1yci_bN2iehfevtODMpFHD1eZ5B775OUg7fUx_lDh-LAquBnHeYM_TYStpEGEOzjyuh3A0dNjJA9xOP-Ig8uw7TghPOFaSiD91-11UXlicfI4Wr81DL8zq2QgYvJ_2PihKqt6UG1-DW9mHw1Vtv3Jlc4YDIimnoEVtaXetksmbT3j_FboX1GXNb5DLsYbf14Z8"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-full flex items-center shadow-sm">
+<span class="material-icons-round text-accent-gold text-xs mr-1">star</span>
+<span class="text-xs font-bold text-gray-800">4.8</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-gray-900 dark:text-white">Bao Box Cafe</h3>
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Partner</span>
+</div>
+<div class="flex items-center text-gray-500 text-xs mb-3">
+<span class="material-icons-round text-xs mr-1">location_on</span>
+<span>Westlands, Nairobi</span>
+<span class="mx-2 text-gray-300">•</span>
+<span>0.8km away</span>
+</div>
+<div class="flex items-center">
+<span class="bg-accent-green/10 text-accent-green text-[10px] font-bold px-2 py-1 rounded-full">Beginner Friendly</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Java House -->
+<div class="flex-none w-[85vw] max-w-[320px] bg-white dark:bg-background-dark rounded-xl shadow-xl overflow-hidden flex flex-col border border-gray-100 dark:border-primary/10">
+<div class="relative h-32 overflow-hidden">
+<img alt="Java House Location" class="w-full h-full object-cover" data-alt="Modern coffee shop interior in Nairobi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjkZATfbsbRyvJMWmjdXK_L-vC7IsIEHNTvv6xsl-AFx5lLm24t2JFE6Pc_-2FDdBPQoQleFSls7be-TAJRwtGk8nMm897s2wAr8EV-3nVXRC8haJw3xhCBdIfDFYIBQnx_vQI1vQF1uey2Kppg5HEZjvackQvVK1rpSI3KftufhMpFhsij2NE7c2203RV-2wOiXNx1TrCWiSFvwUZ76acPD7ZfQxmrT83XXT_JqvxDVAnk6n1lmID-bWOwqDA17z6_Yh4sAlfRgI"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2 py-1 rounded-full flex items-center shadow-sm">
+<span class="material-icons-round text-accent-gold text-xs mr-1">star</span>
+<span class="text-xs font-bold text-gray-800">4.5</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-gray-900 dark:text-white">Java House CBD</h3>
+<span class="bg-gray-100 dark:bg-gray-800 text-gray-500 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Casual</span>
+</div>
+<div class="flex items-center text-gray-500 text-xs mb-3">
+<span class="material-icons-round text-xs mr-1">location_on</span>
+<span>Kimathi Street, Nairobi</span>
+<span class="mx-2 text-gray-300">•</span>
+<span>1.2km away</span>
+</div>
+<div class="flex items-center">
+<span class="bg-accent-green/10 text-accent-green text-[10px] font-bold px-2 py-1 rounded-full">Beginner Friendly</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="absolute bottom-0 left-0 right-0 bg-white/90 dark:bg-background-dark/95 backdrop-blur-xl border-t border-gray-100 dark:border-primary/10 px-6 pt-3 pb-8 z-30 flex justify-between items-center rounded-t-xl">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-icons-round">explore</span>
+<span class="text-[10px] font-bold">Explore</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500" href="#">
+<span class="material-icons-round">people</span>
+<span class="text-[10px] font-medium">Meetups</span>
+</a>
+<div class="relative flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500">
+<span class="material-icons-round">chat_bubble</span>
+<span class="text-[10px] font-medium">Messages</span>
+<div class="absolute -top-1 right-0 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></div>
+</div>
+<a class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500" href="#">
+<span class="material-icons-round">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+<!-- Map Zoom/Current Location Controls -->
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-20">
+<button class="bg-white dark:bg-background-dark p-3 rounded-full shadow-lg border border-gray-100 dark:border-primary/10 text-gray-600 dark:text-gray-300">
+<span class="material-icons-round text-xl">my_location</span>
+</button>
+<div class="flex flex-col bg-white dark:bg-background-dark rounded-full shadow-lg border border-gray-100 dark:border-primary/10 overflow-hidden">
+<button class="p-3 text-gray-600 dark:text-gray-300 border-b border-gray-100 dark:border-primary/10">
+<span class="material-icons-round text-xl">add</span>
+</button>
+<button class="p-3 text-gray-600 dark:text-gray-300">
+<span class="material-icons-round text-xl">remove</span>
+</button>
+</div>
+</div>
+</body></html>

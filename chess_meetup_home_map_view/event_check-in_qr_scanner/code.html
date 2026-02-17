@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Check-in QR Scanner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbdbd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .scanner-overlay {
+            background: rgba(16, 34, 34, 0.1);
+        }
+        .scan-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #0fbdbd, transparent);
+            position: absolute;
+            width: 100%;
+            top: 50%;
+        }
+        .iphone-container {
+            max-width: 430px;
+            margin: 0 auto;
+            min-height: 100vh;
+            position: relative;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white">
+<div class="iphone-container bg-white dark:bg-background-dark overflow-hidden flex flex-col">
+<!-- Header -->
+<header class="px-6 pt-14 pb-6 flex justify-between items-center">
+<div>
+<h1 class="text-2xl font-bold tracking-tight">Scan Ticket</h1>
+<p class="text-sm text-slate-500 dark:text-slate-400">Chess Masters 2024</p>
+</div>
+<div class="relative group">
+<img alt="Organizer Profile" class="w-10 h-10 rounded-full border-2 border-primary object-cover" data-alt="Small circular profile photo of an organizer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9YuHZaDLgJFGuz93Q8GyJuXFiBezZ8rPHUMlZZKi_LQqCq1o41hWgKDPwCePTbdQsUanFzDdpGRAJWWNwzk9EeYNy9z0mcc0XX3140JKBm7xh0Revtcu2hUG-r5tYHzIXG8n0tF6LCbfMr_piz9VPayq1yZZAzCUg3lTpUSOQwyYQ1Iq2SkrNWLJvPhW3vrqrkaVOwuVKCahrlmgA5FES1hV_5WMSKK7WatwbhwTFQCEkqugWSv6Ykob0xeWhntmzjwwhKg75kXY"/>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 bg-primary border-2 border-white dark:border-background-dark rounded-full"></div>
+</div>
+</header>
+<!-- Scanner Section -->
+<main class="flex-1 flex flex-col px-6">
+<div class="relative flex-1 min-h-[340px] flex items-center justify-center">
+<!-- Camera Viewfinder Representation -->
+<div class="w-full aspect-square max-w-[300px] relative">
+<!-- The "Camera" Background -->
+<div class="absolute inset-0 rounded-xl overflow-hidden shadow-2xl">
+<img alt="Camera View" class="w-full h-full object-cover" data-alt="Blurred background showing a wooden floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfCyNZnHOr5Q-mvaayFCwTVzHyZGCEbVE-kCEGFhEtJuziOFIk1yVGU8MjSJwdN_ZoUgD-9lOAq_66G1xns6u4BAJ1cYRPQCD2iWzNh-cjhExsE3XO5v2MjmeK3nMx2-KHP5qSni89HKw2woVPRDIeJ49D_hR3QNrk5ufLkzCrkoweSLGmPTsyD6V2AvJHj9yiweVRD3dDi-Rt80iycHEtpnb34kr22FARfimLpCahIs4EX7joGRrVukK3IBKwAgcjjtEqD5lJa4c"/>
+<div class="absolute inset-0 scanner-overlay"></div>
+</div>
+<!-- Scan Corners -->
+<div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-primary rounded-tl-lg"></div>
+<div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-primary rounded-tr-lg"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-primary rounded-bl-lg"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-primary rounded-br-lg"></div>
+<!-- Scanning Animation Placeholder -->
+<div class="scan-line"></div>
+</div>
+<p class="absolute bottom-4 text-sm font-medium text-slate-500 dark:text-slate-400 text-center w-full">
+                    Align QR code within the frame
+                </p>
+</div>
+<!-- Quick Actions -->
+<div class="grid grid-cols-2 gap-4 my-8">
+<button class="flex items-center justify-center gap-2 py-4 px-6 bg-slate-100 dark:bg-slate-800 rounded-xl transition-all active:scale-95">
+<span class="material-icons text-slate-600 dark:text-slate-300">flashlight_on</span>
+<span class="font-semibold text-sm">Flash Off</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-4 px-6 bg-primary/10 border border-primary/20 rounded-xl transition-all active:scale-95">
+<span class="material-icons text-primary">keyboard</span>
+<span class="font-semibold text-sm text-primary">Enter Code</span>
+</button>
+</div>
+<!-- Recent Scans Feed -->
+<section class="pb-8">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-sm font-bold uppercase tracking-wider text-slate-400">Recent Scans</h2>
+<span class="text-xs font-semibold text-primary">View All</span>
+</div>
+<div class="space-y-3">
+<!-- Scan Item 1 -->
+<div class="flex items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<img alt="Player" class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of a male chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ8flcgcw1I-eF7Vj2qLEiu-pm5Nc8_mJjEN7vGKkhPbpI8UNNaI3R_XP8fnLiqlXEiw7FZNSD90HInBBIZUhliCq6E388qTb9XJEjcfs_c1puPkaN1cTAvY2Bkjr3jzLPnr65-6DSz9E8ND7SFz4sqHaxIrKKnmM8RAi6AL64Ruw--S5na8Jjaut4lnI9ovVUkfUDYlv-Ih8TL4uq5RCszq-Vaot1tJuCVvocbNrvvV-AAnsOXLDYitSPZQXN0gVVwV_Ls8lRQZQ"/>
+<div class="ml-3 flex-1">
+<h3 class="text-sm font-bold">Magnus Carlsen</h3>
+<p class="text-xs text-slate-400">Checked in 2m ago</p>
+</div>
+<div class="w-8 h-8 bg-green-100 dark:bg-green-900/30 flex items-center justify-center rounded-full">
+<span class="material-icons text-green-500 text-lg">check_circle</span>
+</div>
+</div>
+<!-- Scan Item 2 -->
+<div class="flex items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<img alt="Player" class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of a female tournament participant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJSSOEcaDpJNJUdb298eCw92ciUSeUymPXEiBJpFaNTa925SR_jzdu2rC9ZTmjfJdalpIrwa2moU_i4r6Yipclr0sghxrkGwYuByVvVxcderiJceIFB8lWeKw9BfXf-vZfkx2jzw5xKXtOMuVafIKAUF-J-09RcqadMwOvfi2l0IwCdgkfxcKMvvVZWMUu2_a6QAPk2j8ddST8WNh7bHEWpGXmT3EtNNDVWvLI489FiTWxfciR5ooKaLyMZ58IJy2r4T4msRNfVik"/>
+<div class="ml-3 flex-1">
+<h3 class="text-sm font-bold">Judit Polgár</h3>
+<p class="text-xs text-slate-400">Checked in 5m ago</p>
+</div>
+<div class="w-8 h-8 bg-green-100 dark:bg-green-900/30 flex items-center justify-center rounded-full">
+<span class="material-icons text-green-500 text-lg">check_circle</span>
+</div>
+</div>
+<!-- Scan Item 3 -->
+<div class="flex items-center p-3 bg-white dark:bg-slate-800/50 rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<img alt="Player" class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of a smiling young man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA5NZA4WKM-nC6dZYUd8_DCHICKGYUZ_DgEhT3cXQR5iVK2Mtp1XJ1FXRdecb9obepBfkRuXa_Lhg0wqWpt4ShoGJFB6-Tr_-CaBM5AI0ScUANBYpGHHT6D2DFRtF8FzVzirIzhm92yr-9JDfaKyvWZF5Pvu62-ovk2q0kou1oeyvIT30zyWj6ioXjtZRW7fm3JuUIv0xNQC0uc6mxqVqvhNqoTn-fA_B8_eFnx2b2i4FdE11XFXkbohWYccHEKnk7zAQyl5sqU8U"/>
+<div class="ml-3 flex-1">
+<h3 class="text-sm font-bold">Fabiano Caruana</h3>
+<p class="text-xs text-slate-400">Checked in 8m ago</p>
+</div>
+<div class="w-8 h-8 bg-green-100 dark:bg-green-900/30 flex items-center justify-center rounded-full">
+<span class="material-icons text-green-500 text-lg">check_circle</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Placeholder (iOS style) -->
+<nav class="pb-10 pt-2 px-6 bg-white dark:bg-background-dark border-t border-slate-100 dark:border-slate-800 flex justify-around">
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">event</span>
+<span class="text-[10px] font-bold mt-1">EVENTS</span>
+</div>
+<div class="flex flex-col items-center text-primary">
+<span class="material-icons">qr_code_scanner</span>
+<span class="text-[10px] font-bold mt-1">SCANNER</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">people</span>
+<span class="text-[10px] font-bold mt-1">ROSTER</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-icons">settings</span>
+<span class="text-[10px] font-bold mt-1">SETTINGS</span>
+</div>
+</nav>
+</div>
+</body></html>

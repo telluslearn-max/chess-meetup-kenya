@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d4d4",
+                        "primary-dark": "#0eafaf",
+                        "deep-teal": "#0d4d4d",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+          min-height: max(884px, 100dvh);
+        }
+        .ios-toggle:checked ~ .toggle-bg {
+            @apply bg-primary;
+        }
+        .ios-toggle:checked ~ .toggle-dot {
+            transform: translateX(24px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 antialiased min-h-screen">
+<div class="max-w-[430px] mx-auto min-h-screen flex flex-col bg-white dark:bg-slate-900 shadow-xl overflow-hidden relative">
+<header class="pt-14 px-6 pb-6 bg-white dark:bg-slate-900 sticky top-0 z-10">
+<div class="flex items-center justify-between mb-6">
+<button class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 active:scale-95 transition-transform">
+<span class="material-icons text-lg">arrow_back_ios_new</span>
+</button>
+<div class="text-xs font-bold tracking-widest text-slate-400 uppercase">Step 4 of 4</div>
+<div class="w-10"></div> 
+</div>
+<h1 class="text-2xl font-extrabold text-slate-900 dark:text-white mb-2">Manage Your Presence</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Boost your venue's visibility and attract more chess players to your space.</p>
+<div class="mt-6 flex gap-1.5 h-1.5 w-full">
+<div class="flex-1 rounded-full bg-primary"></div>
+<div class="flex-1 rounded-full bg-primary"></div>
+<div class="flex-1 rounded-full bg-primary"></div>
+<div class="flex-1 rounded-full bg-primary"></div>
+</div>
+</header>
+<main class="flex-1 px-6 space-y-8 overflow-y-auto pb-40">
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Active Perk</h2>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-primary/10 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-primary-dark font-bold">auto_awesome</span>
+<span class="text-[10px] font-bold text-primary-dark uppercase tracking-wider">High Impact</span>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-700/50 p-5 rounded-2xl">
+<label class="block text-[11px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3">Current Offering</label>
+<div class="relative group">
+<input class="w-full bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-xl py-4 px-4 pr-12 focus:ring-2 focus:ring-primary/20 focus:border-primary text-slate-900 dark:text-white font-semibold transition-all" type="text" value="Free Coffee for Players"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-primary hover:text-primary-dark">
+<span class="material-symbols-outlined">edit_square</span>
+</button>
+</div>
+<div class="mt-4 flex items-start gap-3">
+<div class="mt-0.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Venues offering perks receive <span class="text-primary-dark dark:text-primary font-bold">40% more check-ins</span> on average from the chess community.
+                    </p>
+</div>
+</div>
+</section>
+<section class="p-5 bg-deep-teal/5 dark:bg-white/5 rounded-2xl border border-deep-teal/10 dark:border-white/10 flex items-center justify-between">
+<div class="flex-1 pr-6">
+<div class="flex items-center gap-2 mb-1">
+<h2 class="text-base font-bold text-slate-900 dark:text-white leading-tight">Featured Venue</h2>
+<span class="material-symbols-outlined text-amber-500 text-[18px] fill-amber-500">stars</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-tight">Pin your venue to the top of city search results.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only ios-toggle" type="checkbox"/>
+<div class="toggle-bg w-14 h-8 bg-slate-200 dark:bg-slate-700 rounded-full transition-colors duration-200"></div>
+<div class="toggle-dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full shadow-sm transition-transform duration-200"></div>
+</label>
+</section>
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Venue Gallery</h2>
+<div class="text-[11px] font-bold text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md uppercase tracking-wider">3 / 8 Photos</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square relative rounded-2xl overflow-hidden group shadow-sm">
+<img alt="Cozy interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNMNpKY0lKyC_NuV_7HYHVGI5tGFxKb9HV28PMTACDnmm4ueq9UbkpCR8rfxKtF-FODOU5-gLOyfun2qolFHHBsczpOQ1krWYNGNOXnzba0tJa0ELp0V5aWbqFLkNUIDDsg8Ln3dBdJsu2p-kkxh9Qhp-zaooKQixk02WERcYrKc7O2QSmn7gXkVodnC4JPDKkOrq--6v91Xj-jkVGm58Fpho16F-Pdl4JNEyvGm5UNaiLJapFBG9maByLRnUrpfhlydm0l0d7lXg"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center backdrop-blur-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="aspect-square relative rounded-2xl overflow-hidden group shadow-sm">
+<img alt="Chess players" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPX5W1_o3Z_TzjoCetS7IOi9JSQ0GHSYncEvyuCg14Fbe8Ihm8mkNjh1QfW4VIbLuM0AM2510MoRgtQqSxx_6b0qnCPyT5BSCcjsguf26fHaOFjNfGSfJ13vDo8cg9gJakcFZ5t0JyIgIXlxnqTyEnIxj0oaaH922C0uXkUSdYmotgjCX1TWvlz3Fh_QvV2vhJVLEuejcessxLFXfGQgrQgB9uEXtPuaKzeMmw8uqA5Mi7PApUjyZOaSEH_vER2NBAu1dqpEWaKwA"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center backdrop-blur-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="aspect-square relative rounded-2xl overflow-hidden group shadow-sm">
+<img alt="Outdoor area" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTtPo1jihHpPOWgyfMWWBrR2MHMccZfyJNfbOGAUP0jtD9-lD1g95Gpr3zFTJP7GoFx7uR0I-APYg3ptLqtm4Xrv6_xJmc5W9MmHef0nsFnXNpuYzWbkRKIFy38NrBl6TSpNoU_oqprP2mquoEslm3EK_PPEtv00gPqtkDrGSXFqv3QmlS8XEV8LLgH5E6rkp6J9_HtZHSExsGYZpPPXFNznOR_zdPpdvoBtIRkdm4kM05SoD_-SRwYYVDbXMfJXrVolGqMhNGg9c"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+<button class="absolute top-2 right-2 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center backdrop-blur-md active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<button class="aspect-square border-2 border-dashed border-slate-200 dark:border-slate-700/50 rounded-2xl flex flex-col items-center justify-center gap-2 hover:border-primary/50 hover:bg-primary/5 transition-all group">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">add_a_photo</span>
+</div>
+<span class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tight">Add Photo</span>
+</button>
+</div>
+<p class="text-[11px] text-slate-400 text-center italic mt-2">Recommended: 1080x1080px (JPEG or PNG)</p>
+</section>
+</main>
+<footer class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white via-white to-white/0 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900/0">
+<button class="w-full bg-deep-teal hover:bg-slate-800 text-white py-4.5 rounded-2xl font-bold text-lg shadow-xl shadow-deep-teal/20 flex items-center justify-center gap-3 transition-all active:scale-[0.97] mb-4">
+<span>Save Changes</span>
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</button>
+<div class="flex justify-center">
+<div class="w-32 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full"></div> 
+</div>
+</footer>
+</div>
+
+</body></html>

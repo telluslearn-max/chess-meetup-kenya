@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Become an Organizer - Step 1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0aaab8",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#102122",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 min-h-screen flex items-center justify-center p-0 m-0">
+<!-- iOS Phone Mockup Container -->
+<div class="w-full max-w-[390px] min-h-screen md:min-h-[844px] bg-background-light dark:bg-background-dark md:rounded-[3rem] md:border-[8px] border-slate-900 overflow-hidden relative flex flex-col shadow-2xl">
+<!-- Status Bar -->
+<div class="px-8 pt-12 pb-4 flex justify-between items-center w-full">
+<span class="text-sm font-bold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons text-sm">signal_cellular_alt</span>
+<span class="material-icons text-sm">wifi</span>
+<span class="material-icons text-sm rotate-90">battery_full</span>
+</div>
+</div>
+<!-- Navigation / Progress -->
+<div class="px-6 py-4">
+<div class="flex items-center gap-4 mb-6">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm text-primary">
+<span class="material-icons">arrow_back_ios_new</span>
+</button>
+<div>
+<h2 class="text-xs font-bold uppercase tracking-widest text-primary">Step 1 of 4</h2>
+<div class="flex gap-1 mt-1">
+<div class="h-1.5 w-8 rounded-full bg-primary"></div>
+<div class="h-1.5 w-8 rounded-full bg-primary/20 dark:bg-primary/10"></div>
+<div class="h-1.5 w-8 rounded-full bg-primary/20 dark:bg-primary/10"></div>
+<div class="h-1.5 w-8 rounded-full bg-primary/20 dark:bg-primary/10"></div>
+</div>
+</div>
+</div>
+<h1 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">Become an Organizer</h1>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">Let's check your eligibility to host chess meetups and events.</p>
+</div>
+<!-- Content Area -->
+<div class="flex-1 px-6 py-4 overflow-y-auto">
+<!-- Eligibility Card -->
+<div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-700/50 mb-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-lg">Verification Status</h3>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold">ACTIVE</span>
+</div>
+<div class="space-y-6">
+<!-- Stat Item 1 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons">event_available</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Events Hosted</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Past community meetups</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-sm font-bold text-slate-900 dark:text-white">5/5</span>
+<span class="material-icons text-green-500 text-lg">check_circle</span>
+</div>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-700/50 w-full"></div>
+<!-- Stat Item 2 -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons">verified_user</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Member Status</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Profile verification</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-sm font-bold text-slate-900 dark:text-white">Verified</span>
+<span class="material-icons text-green-500 text-lg">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Success Message Panel -->
+<div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-5 border border-primary/20">
+<div class="flex gap-4">
+<div class="shrink-0">
+<span class="material-icons text-primary">stars</span>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm mb-1">Congratulations!</h4>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-snug">
+                            You're eligible to host <span class="font-bold text-primary">monetized events!</span> You can also host free events immediately.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Visual Decoration -->
+<div class="mt-10 relative overflow-hidden rounded-xl h-32 bg-primary/10">
+<div class="absolute inset-0 opacity-20 dark:opacity-40">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary rounded-full blur-3xl"></div>
+<div class="absolute -left-4 -bottom-4 w-24 h-24 bg-primary rounded-full blur-3xl"></div>
+</div>
+<div class="relative z-10 h-full flex items-center justify-center p-4">
+<img alt="Chess pieces on a board" class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay" data-alt="Strategic chess board with soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoN4b5PtQK08RmGfUYGFs51xkLW2sFO38p9K1IoZH5FPTHYp8-HRN37vuQqPzCx6PeM6PYFIwd2TiZNJ7PnQZeUVSdArQgYpM2MapUvgrh8A7JI004_j8YEuFz6c8CZnBLJHq80Mw-bsA3hUvE1c68JbeK27pOz6S_zQISwNf9aovREcc7JD6CB4gnCel0owAY-iCVDJsj3Ea4r2CJGdS5cmRMZbWwUXmlKs3UOl_PXw4aHunaBa3hYX5hh2EZm495yKspOuj2dX0"/>
+<p class="text-center text-xs font-medium text-slate-500 italic max-w-[200px]">
+                        "Chess is the gymnasium of the mind."
+                    </p>
+</div>
+</div>
+</div>
+<!-- Footer Button -->
+<div class="px-6 pt-4 pb-12 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-colors active:scale-[0.98]">
+<span>Next Step</span>
+<span class="material-icons text-sm">arrow_forward</span>
+</button>
+<div class="mt-4 w-32 h-1.5 bg-slate-900/10 dark:bg-white/10 rounded-full mx-auto"></div>
+</div>
+</div>
+</body></html>

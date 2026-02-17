@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partner Dash Step 2: Equipment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4c025",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- iOS Status Bar Placeholder -->
+<div class="h-12 w-full bg-background-light dark:bg-background-dark flex items-center justify-between px-6 sticky top-0 z-50">
+<span class="text-sm font-bold">9:41</span>
+<div class="flex items-center space-x-1.5">
+<span class="material-icons text-xs">signal_cellular_alt</span>
+<span class="material-icons text-xs">wifi</span>
+<span class="material-icons text-xs rotate-90">battery_full</span>
+</div>
+</div>
+<!-- Navigation Header -->
+<header class="px-6 pt-2 pb-4">
+<div class="flex items-center justify-between mb-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-icons text-slate-600 dark:text-slate-300">chevron_left</span>
+</button>
+<div class="flex flex-col items-center">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary">Step 2 of 4</span>
+<h1 class="text-lg font-extrabold">Partner Dashboard</h1>
+</div>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2"></div>
+</div>
+</header>
+<main class="px-6 pb-32">
+<div class="mt-4 mb-6">
+<h2 class="text-2xl font-extrabold mb-1">Equipment &amp; Boards</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Manage and track your supplied inventory.</p>
+</div>
+<!-- Hero Card: Supplied Inventory -->
+<div class="relative overflow-hidden bg-primary rounded-xl p-6 mb-8 shadow-lg shadow-primary/20">
+<div class="relative z-10">
+<p class="text-slate-900/70 font-bold text-xs uppercase tracking-wider mb-2">Supplied by Chess Meetup KE</p>
+<div class="flex items-end space-x-3">
+<span class="text-5xl font-black text-slate-900 leading-none">10</span>
+<span class="text-slate-800 font-bold text-lg mb-1 leading-tight">Professional<br/>Wooden Boards</span>
+</div>
+</div>
+<!-- Decorative Pattern -->
+<div class="absolute -right-6 -bottom-6 opacity-10">
+<span class="material-icons text-[160px] text-slate-900">grid_on</span>
+</div>
+</div>
+<!-- Status Filter Tabs -->
+<div class="flex space-x-2 mb-6 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-4 py-2 bg-slate-900 dark:bg-primary text-white dark:text-slate-900 rounded-full text-xs font-bold whitespace-nowrap">All Boards</button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-bold whitespace-nowrap">Available (6)</button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-bold whitespace-nowrap">In Use (3)</button>
+<button class="px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-bold whitespace-nowrap">Repair (1)</button>
+</div>
+<!-- Equipment Grid -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Board Item 1 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/50">
+<div class="flex justify-between items-start mb-3">
+<div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+<span class="material-icons text-emerald-600 dark:text-emerald-400 text-xl">grid_4x4</span>
+</div>
+<span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+</div>
+<h3 class="font-bold text-sm">Board #001</h3>
+<p class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-tight">Available</p>
+</div>
+<!-- Board Item 2 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/50">
+<div class="flex justify-between items-start mb-3">
+<div class="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
+<span class="material-icons text-amber-600 dark:text-amber-400 text-xl">grid_4x4</span>
+</div>
+<span class="flex h-2 w-2 rounded-full bg-amber-500"></span>
+</div>
+<h3 class="font-bold text-sm">Board #002</h3>
+<p class="text-[10px] text-amber-600 dark:text-amber-400 font-bold uppercase tracking-tight">In Use</p>
+</div>
+<!-- Board Item 3 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/50">
+<div class="flex justify-between items-start mb-3">
+<div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+<span class="material-icons text-emerald-600 dark:text-emerald-400 text-xl">grid_4x4</span>
+</div>
+<span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+</div>
+<h3 class="font-bold text-sm">Board #003</h3>
+<p class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-tight">Available</p>
+</div>
+<!-- Board Item 4 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/50">
+<div class="flex justify-between items-start mb-3">
+<div class="w-10 h-10 rounded-lg bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center">
+<span class="material-icons text-rose-600 dark:text-rose-400 text-xl">report_problem</span>
+</div>
+<span class="flex h-2 w-2 rounded-full bg-rose-500"></span>
+</div>
+<h3 class="font-bold text-sm">Board #004</h3>
+<p class="text-[10px] text-rose-600 dark:text-rose-400 font-bold uppercase tracking-tight">Repair Needed</p>
+</div>
+<!-- Board Item 5 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/50">
+<div class="flex justify-between items-start mb-3">
+<div class="w-10 h-10 rounded-lg bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+<span class="material-icons text-emerald-600 dark:text-emerald-400 text-xl">grid_4x4</span>
+</div>
+<span class="flex h-2 w-2 rounded-full bg-emerald-500"></span>
+</div>
+<h3 class="font-bold text-sm">Board #005</h3>
+<p class="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-tight">Available</p>
+</div>
+<!-- Board Item 6 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/50">
+<div class="flex justify-between items-start mb-3">
+<div class="w-10 h-10 rounded-lg bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
+<span class="material-icons text-amber-600 dark:text-amber-400 text-xl">grid_4x4</span>
+</div>
+<span class="flex h-2 w-2 rounded-full bg-amber-500"></span>
+</div>
+<h3 class="font-bold text-sm">Board #006</h3>
+<p class="text-[10px] text-amber-600 dark:text-amber-400 font-bold uppercase tracking-tight">In Use</p>
+</div>
+</div>
+</main>
+<!-- Fixed Action Buttons at Bottom -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 p-6 space-y-3">
+<button class="w-full bg-primary hover:bg-primary/90 text-slate-900 font-bold py-4 rounded-xl flex items-center justify-center space-x-2 transition-all">
+<span class="material-icons text-sm">add</span>
+<span>Request More Boards</span>
+</button>
+<button class="w-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold py-4 rounded-xl flex items-center justify-center space-x-2 transition-all">
+<span class="material-icons text-sm">report_problem</span>
+<span>Report Equipment Damage</span>
+</button>
+<!-- iOS Home Indicator -->
+<div class="w-32 h-1.5 bg-slate-300 dark:bg-slate-600 rounded-full mx-auto mt-4"></div>
+</div>
+</body></html>

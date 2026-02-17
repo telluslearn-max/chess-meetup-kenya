@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Onboarding: Welcome to Chess Meetup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1152d4",
+              "background-light": "#f6f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-hidden">
+<!-- iOS Status Bar Placeholder -->
+<div class="h-12 w-full flex items-center justify-between px-8 pt-4">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons text-xs">signal_cellular_alt</span>
+<span class="material-icons text-xs">wifi</span>
+<span class="material-icons text-xs">battery_full</span>
+</div>
+</div>
+<!-- Main Content Container -->
+<main class="flex flex-col h-[calc(100vh-3rem)] max-w-md mx-auto relative px-6">
+<!-- Header Actions -->
+<div class="flex justify-end pt-4 pb-2">
+<button class="text-slate-500 hover:text-primary transition-colors text-sm font-semibold py-2 px-4">
+                Skip
+            </button>
+</div>
+<!-- Image Container -->
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-xl mb-8">
+<img alt="Two people playing chess in a sunlit café" class="w-full h-full object-cover" data-alt="People playing chess at a wooden table in a sunlit Kenyan café" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5sHsVi0_mZpBkvL21S2jQnMH5gPb3Jm2OjboevJACRqa5aCaBqLFgUgFyuzyo2_fqXPpsaH6zj_A7fpDYFOoaHw--Y8ljzCEqzoTdTYEWojCqJnet8ZlWhTQYxuGyLCR0vRvdy3afyDg24CMMx-05lHxQ9hBJPj2SN6cf2znammrwCNNOWfsj9lf6Y90SsoZqb9r2NRNf1xsC9hRNg2wGIiaasg0eMwPd6dEexypZoHNF_hyOfJMiAIZJDmz6VEbnx1DvUuNQPfY"/>
+<!-- Subtle gradient overlay for depth -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col flex-grow">
+<h1 class="text-3xl font-bold leading-tight tracking-tight mb-4 text-slate-900 dark:text-white">
+                Discover chess in <span class="text-primary">Nairobi’s</span> best spots
+            </h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-[90%]">
+                Find casual games in cafés, parks, and hotels near you.
+            </p>
+</div>
+<!-- Bottom Controls -->
+<div class="pb-12 pt-4">
+<!-- Progress Dots -->
+<div class="flex justify-center gap-2 mb-8">
+<div class="h-2 w-6 rounded-full bg-primary"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<!-- Primary Action -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/25 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Next</span>
+<span class="material-icons text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- iOS Home Indicator Placeholder -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+</main>
+<!-- Additional Decorative Element: Soft Background Glow -->
+<div class="fixed -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="fixed top-1/2 -left-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+</body></html>

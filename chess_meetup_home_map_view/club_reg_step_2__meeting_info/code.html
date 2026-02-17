@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Club Reg Step 2: Meeting Info</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0faebd",
+              "background-light": "#f6f8f8",
+              "background-dark": "#102022",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
+<div class="max-w-md mx-auto min-h-screen flex flex-col bg-white dark:bg-slate-900 shadow-xl overflow-hidden relative">
+<!-- Header & Progress -->
+<header class="pt-12 px-6 pb-4 sticky top-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-10">
+<div class="flex items-center justify-between mb-6">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-icons text-xl">arrow_back_ios_new</span>
+</button>
+<div class="flex-1 px-4">
+<div class="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2 rounded-full transition-all duration-500 ease-out"></div>
+</div>
+</div>
+<span class="text-xs font-bold text-primary">2 / 4</span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Where do you meet?</h1>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Set your club's home base and scheduling rules.</p>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 px-6 pb-32 space-y-8 overflow-y-auto hide-scrollbar">
+<!-- Venue Search Section -->
+<section class="mt-4">
+<label class="block text-sm font-semibold mb-3 text-slate-700 dark:text-slate-200">Venue Location</label>
+<div class="relative">
+<span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-slate-50 dark:bg-slate-800 border-0 rounded-full focus:ring-2 focus:ring-primary text-sm placeholder:text-slate-400" placeholder="Search for a cafe, park, or library..." type="text"/>
+</div>
+<div class="mt-4 p-4 rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-800 flex items-center justify-center">
+<button class="flex items-center gap-2 text-primary font-semibold text-sm">
+<span class="material-icons text-lg">add_location_alt</span>
+                        Can't find it? Add new venue
+                    </button>
+</div>
+</section>
+<!-- Membership Type Section -->
+<section>
+<label class="block text-sm font-semibold mb-3 text-slate-700 dark:text-slate-200">Membership Type</label>
+<div class="grid grid-cols-1 gap-3">
+<!-- Option 1: Selected -->
+<label class="relative flex items-center p-4 rounded-xl border-2 border-primary bg-primary/5 cursor-pointer">
+<input checked="" class="hidden" name="membership" type="radio"/>
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-white">
+<span class="material-icons">public</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Open to All</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Anyone can join and see events.</p>
+</div>
+<span class="material-icons ml-auto text-primary">check_circle</span>
+</label>
+<!-- Option 2 -->
+<label class="relative flex items-center p-4 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 cursor-pointer">
+<input class="hidden" name="membership" type="radio"/>
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
+<span class="material-icons">lock</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Invite Only</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Moderator approval required.</p>
+</div>
+<span class="material-icons ml-auto text-slate-200 dark:text-slate-700">radio_button_unchecked</span>
+</label>
+<!-- Option 3 -->
+<label class="relative flex items-center p-4 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 cursor-pointer">
+<input class="hidden" name="membership" type="radio"/>
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
+<span class="material-icons">payments</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Fee-based</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Requires a monthly contribution.</p>
+</div>
+<span class="material-icons ml-auto text-slate-200 dark:text-slate-700">radio_button_unchecked</span>
+</label>
+</div>
+</section>
+<!-- Meeting Times Section -->
+<section>
+<div class="flex items-center justify-between mb-3">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-200">Meeting Days</label>
+<span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Select Multiple</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="h-10 px-5 rounded-full bg-primary text-white text-xs font-bold transition-colors">Mon</button>
+<button class="h-10 px-5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold">Tue</button>
+<button class="h-10 px-5 rounded-full bg-primary text-white text-xs font-bold transition-colors">Wed</button>
+<button class="h-10 px-5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold">Thu</button>
+<button class="h-10 px-5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold">Fri</button>
+<button class="h-10 px-5 rounded-full bg-primary text-white text-xs font-bold transition-colors">Sat</button>
+<button class="h-10 px-5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-xs font-bold">Sun</button>
+</div>
+<div class="mt-6 space-y-4">
+<div class="flex items-center justify-between p-4 rounded-xl bg-slate-50 dark:bg-slate-800">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">Starts</span>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-sm font-medium shadow-sm">18:00</span>
+<span class="text-slate-400 font-bold">PM</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 rounded-xl bg-slate-50 dark:bg-slate-800">
+<span class="text-sm font-bold text-slate-700 dark:text-slate-300">Ends</span>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 text-sm font-medium shadow-sm">21:30</span>
+<span class="text-slate-400 font-bold">PM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Preview (Contextual) -->
+<section class="rounded-xl overflow-hidden relative h-40 bg-slate-200 dark:bg-slate-800">
+<img alt="Map showing meeting location" class="w-full h-full object-cover opacity-60 dark:opacity-40" data-alt="Modern map interface with location pin" data-location="Brooklyn, New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDypXBgiJg2XDcKO-Xpr3qQ119Af5GQ6lN0YCj65KN_er5mYJaXTl1h2iI8nUXhL5WLtetAa-0iJTMem8c41Ob8S4jMP77ANN65srYu7yL10UImDhBTenlm5CQ_jiqNivEdBypTquHRVwex-2QKkileD68flhcwQmLdwVeaX48WT0gfE7NtUZO7KhlDNXZw2ZP5v8JhkzTgIxRUeGjs-w8oxMIhPV8otnLN2JhnPHqiHilpH8Ea6slNucYkVxohrndnEARoFGUrdhI"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white dark:bg-slate-900 p-2 rounded-full shadow-lg">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-icons text-sm">location_on</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Action -->
+<footer class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-white dark:from-slate-900 via-white dark:via-slate-900 to-transparent">
+<button class="w-full py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/30 flex items-center justify-center gap-2 hover:bg-opacity-90 active:scale-[0.98] transition-all">
+                Continue to Step 3
+                <span class="material-icons text-lg">arrow_forward</span>
+</button>
+</footer>
+</div>
+</body></html>

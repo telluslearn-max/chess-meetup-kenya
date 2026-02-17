@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discovery: List View Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cfbf",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112120",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation & Search -->
+<header class="sticky top-0 z-40 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md pb-2">
+<div class="px-4 pt-4">
+<!-- Floating Pill Search Bar -->
+<div class="flex items-center bg-white dark:bg-slate-800 rounded-full shadow-lg border border-slate-100 dark:border-slate-700 px-4 py-3 gap-3">
+<span class="material-icons text-primary">search</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Find casual chess spots...</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Westlands · Any time · 2 guests</p>
+</div>
+<button class="p-2 border-l border-slate-100 dark:border-slate-700">
+<span class="material-icons text-slate-400 text-xl">tune</span>
+</button>
+</div>
+</div>
+<!-- Category Selector -->
+<div class="mt-4 px-4 overflow-x-auto flex gap-6 hide-scrollbar">
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="text-primary">
+<span class="material-icons">grid_view</span>
+</div>
+<span class="text-xs font-semibold whitespace-nowrap">All</span>
+<div class="h-0.5 w-full bg-primary rounded-full"></div>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-50">
+<div class="text-slate-600 dark:text-slate-400 group-hover:text-primary">
+<span class="material-icons">local_cafe</span>
+</div>
+<span class="text-xs font-semibold whitespace-nowrap">Cafés</span>
+<div class="h-0.5 w-full bg-transparent"></div>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-50">
+<div class="text-slate-600 dark:text-slate-400 group-hover:text-primary">
+<span class="material-icons">park</span>
+</div>
+<span class="text-xs font-semibold whitespace-nowrap">Parks</span>
+<div class="h-0.5 w-full bg-transparent"></div>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-50">
+<div class="text-slate-600 dark:text-slate-400 group-hover:text-primary">
+<span class="material-icons">hotel</span>
+</div>
+<span class="text-xs font-semibold whitespace-nowrap">Hotels</span>
+<div class="h-0.5 w-full bg-transparent"></div>
+</div>
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-50">
+<div class="text-slate-600 dark:text-slate-400 group-hover:text-primary">
+<span class="material-icons">emoji_events</span>
+</div>
+<span class="text-xs font-semibold whitespace-nowrap">Tournaments</span>
+<div class="h-0.5 w-full bg-transparent"></div>
+</div>
+</div>
+</header>
+<!-- Main Feed -->
+<main class="px-4 py-6 flex flex-col gap-8 pb-24">
+<!-- Venue Card 1 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-sm">
+<img alt="Bao Box Westlands interior" class="w-full h-full object-cover" data-alt="Interior of a modern board game cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaA5CT9Cwa31V6P-voJJlzpcyFu820T6JUzVIp211UGe7J10clRPZcskdlptnGsqRnfb-KLUNXudT0n0xfMJ-pCRemxrmo6fkMYAwOp90gMk84U1PzbWSllHLLvlXRL4D0csidGUpsxt3U4cnNGBKUJqF8pBaqT-xPp7WUtb0GGH7oSvWTHQgy1EpNiMCSKOalc3APyH_aR_iunJBpLXe2q5WXLuLHkF5upuRQWolvjeqXlE-Aw12cXmeFZVd0wk5Lt2csBfJ5r20"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<div class="bg-primary text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1 uppercase tracking-wider">
+<span class="w-1.5 h-1.5 bg-white rounded-full"></span> Live
+                    </div>
+</div>
+<button class="absolute top-4 right-4 text-white/90">
+<span class="material-icons">favorite_border</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-0.5">
+<h3 class="text-base font-bold text-slate-900 dark:text-white">Bao Box - Westlands</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">0.8 miles away</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-200 mt-1">Next game: <span class="text-primary">Today, 5 PM</span></p>
+<div class="flex gap-2 mt-2">
+<span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-bold px-2 py-0.5 rounded">CASUAL</span>
+<span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-bold px-2 py-0.5 rounded">NO FEE</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-primary text-sm">star</span>
+<span class="text-sm font-semibold">4.9</span>
+</div>
+</div>
+</div>
+<!-- Venue Card 2 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-sm">
+<img alt="The Alchemist Bar courtyard" class="w-full h-full object-cover" data-alt="Outdoor garden area with wooden tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0t2YXhhVFFUoZtGgIUF6cY9ZfD2DzF8te7uu-QxrBpzP2FjzjhAFFRs9vGqKGXmVrGM0Ey98QdDaojAD7v7-zok-HSQO464WKoKRsbH3VR_fQ9AT7Ufvm95kf6xfeWDl7q_F7fp4USqd1RSx63pu1F0CH0TYRShriXMmH-8fPXh3yTp-U2-JXf-RKkmwXKdNue29B2MNDBc0pRNt3jQL6pGsGmaMNhBdMcw2axEL_iqJetq3qgD1xIQpo-EVk1ezjYolzb2UPPWQ"/>
+<button class="absolute top-4 right-4 text-white/90">
+<span class="material-icons">favorite_border</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-0.5">
+<h3 class="text-base font-bold text-slate-900 dark:text-white">The Alchemist Bar</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">1.2 miles away</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-200 mt-1">Next game: <span class="text-primary">Tomorrow, 2 PM</span></p>
+<div class="flex gap-2 mt-2">
+<span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-bold px-2 py-0.5 rounded">CASUAL</span>
+<span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-bold px-2 py-0.5 rounded">DRINK MIN.</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-primary text-sm">star</span>
+<span class="text-sm font-semibold">4.8</span>
+</div>
+</div>
+</div>
+<!-- Venue Card 3 -->
+<div class="flex flex-col gap-3 group">
+<div class="relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-sm">
+<img alt="Karura Forest Park" class="w-full h-full object-cover" data-alt="Sunlit forest path with public benches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdBilQlA4tKJaLwVUDFm7mbCUtszgcMqB2JP4NRJETOoqE9jy_96waZv5zGgIH7LuaW2h5wdW3aiMC4UlPftgu86kUsuNOnWWfzOE7GuJfM51u70oI1H1SERkTLYfzwNjgf948IBL3JSsrabOLt1K1eQ2lZqrAitNOp7fuueKTbi32R9HDwlj6fDVLFXA-SwTa1ohin9dXoOgqPQvwaXzetHV5HzOQe_JA4jl_Yvcdwe08vdE63NuoPOChqsJFU7pZ7e8fAKjiPjQ"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<div class="bg-primary text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1 uppercase tracking-wider">
+<span class="w-1.5 h-1.5 bg-white rounded-full"></span> Live
+                    </div>
+</div>
+<button class="absolute top-4 right-4 text-white/90">
+<span class="material-icons">favorite_border</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-0.5">
+<h3 class="text-base font-bold text-slate-900 dark:text-white">Karura Forest - Gate A</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">2.5 miles away</p>
+<p class="text-sm font-semibold text-slate-900 dark:text-slate-200 mt-1">Next game: <span class="text-primary">Sun, 10 AM</span></p>
+<div class="flex gap-2 mt-2">
+<span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-bold px-2 py-0.5 rounded">OUTDOORS</span>
+<span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-[11px] font-bold px-2 py-0.5 rounded">PARK ENTRY</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons text-primary text-sm">star</span>
+<span class="text-sm font-semibold">4.7</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Map Toggle Button -->
+<div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+<button class="bg-slate-900 dark:bg-primary text-white px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition-transform duration-200">
+<span class="text-sm font-bold">Map</span>
+<span class="material-icons text-xl">map</span>
+</button>
+</div>
+<!-- iOS Tab Bar (Aesthetic placeholder) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 px-8 py-3 flex justify-between items-center z-40">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons text-2xl">search</span>
+<span class="text-[10px] font-bold">Explore</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons text-2xl">favorite_border</span>
+<span class="text-[10px] font-bold">Wishlist</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons text-2xl">chat_bubble_outline</span>
+<span class="text-[10px] font-bold">Messages</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons text-2xl">person_outline</span>
+<span class="text-[10px] font-bold">Profile</span>
+</div>
+</nav>
+</body></html>

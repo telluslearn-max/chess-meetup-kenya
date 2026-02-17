@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Chess Events Discovery - Kenya</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d4d4",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                        "neutral-soft": "#e0e7e7",
+                        "neutral-dark": "#1f3a3a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior-y: contain;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-neutral-dark dark:text-white">
+<!-- Phone Container Mockup -->
+<div class="max-w-[430px] mx-auto min-h-screen relative flex flex-col bg-white dark:bg-background-dark shadow-2xl overflow-hidden">
+<!-- Status Bar Space (iOS) -->
+<div class="h-12 w-full flex items-center justify-between px-8 pt-4 shrink-0">
+<span class="text-sm font-bold">9:41</span>
+<div class="flex items-center gap-1.5">
+<span class="material-icons-round text-base">signal_cellular_alt</span>
+<span class="material-icons-round text-base">wifi</span>
+<span class="material-icons-round text-base">battery_full</span>
+</div>
+</div>
+<!-- Header -->
+<header class="px-6 pt-4 pb-2">
+<h1 class="text-3xl font-extrabold tracking-tight mb-4">Discover Chess</h1>
+<!-- Search & Filter -->
+<div class="flex gap-3 items-center">
+<div class="relative flex-1 group">
+<span class="material-icons-round absolute left-4 top-1/2 -translate-y-1/2 text-neutral-dark/40 dark:text-white/40">search</span>
+<input class="w-full bg-neutral-soft/30 dark:bg-neutral-dark/30 border-none rounded-xl py-3.5 pl-12 pr-4 focus:ring-2 focus:ring-primary/50 placeholder:text-neutral-dark/40 dark:placeholder:text-white/40 transition-all" placeholder="Search events in Kenya..." type="text"/>
+</div>
+<button class="bg-primary/10 dark:bg-primary/20 p-3.5 rounded-xl text-primary flex items-center justify-center">
+<span class="material-icons-round">tune</span>
+</button>
+</div>
+</header>
+<!-- Segmented Tab Control -->
+<div class="px-6 py-4">
+<div class="bg-neutral-soft/30 dark:bg-neutral-dark/40 p-1.5 rounded-xl flex">
+<button class="flex-1 py-2.5 px-4 rounded-lg bg-white dark:bg-primary text-neutral-dark dark:text-white shadow-sm font-semibold text-sm transition-all">
+                    Casual Meetups
+                </button>
+<button class="flex-1 py-2.5 px-4 rounded-lg text-neutral-dark/60 dark:text-white/60 font-semibold text-sm transition-all hover:bg-white/50 dark:hover:bg-neutral-dark/50">
+                    Tournaments
+                </button>
+</div>
+</div>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto px-6 pb-24 hide-scrollbar">
+<!-- Section Header -->
+<div class="flex items-center justify-between mb-4 mt-2">
+<h2 class="font-bold text-lg">Upcoming in Nairobi</h2>
+<button class="text-primary font-semibold text-sm">See All</button>
+</div>
+<!-- Event Card 1 -->
+<div class="bg-white dark:bg-neutral-dark/20 rounded-2xl border border-neutral-soft/50 dark:border-white/5 overflow-hidden shadow-sm mb-5">
+<div class="relative h-44 w-full">
+<img class="w-full h-full object-cover" data-alt="People playing chess in a modern cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD150KQdpuScaVOZ6jO-vHL6WbGapdsOUZDnYJKf7XN0zRixxf-c1oOnVrvl1B1TQeAAFw4BUxKS8qavzdcAwHIEGhBaCbGDPCUZQGAeV-h-jomxhJIJKddGgRpg8MWuFGFMufVqbWGkUoLX4_yMPllOR8pXv4SIGSed23snB6KOWiNnnoH952dPG79LxC_PXG8x0B1_lAwCjEfEtHeQ_KVXupBa3UJkeBH3_xmeYylIS3AQLRnEw_iwXqvY-VwYz87mxvO-vJbP7U"/>
+<div class="absolute top-4 right-4 bg-white/95 dark:bg-background-dark/95 backdrop-blur px-3 py-1.5 rounded-full shadow-lg">
+<span class="text-xs font-bold text-primary tracking-wide">FREE ENTRY</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold leading-tight flex-1 pr-4">Westlands Blitz Social</h3>
+<div class="bg-primary/10 dark:bg-primary/20 text-primary px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">WEEKLY</div>
+</div>
+<div class="space-y-2.5 mb-6">
+<div class="flex items-center gap-2 text-neutral-dark/60 dark:text-white/60">
+<span class="material-icons-round text-sm text-primary">location_on</span>
+<span class="text-sm font-medium">Bao Box, Westlands</span>
+</div>
+<div class="flex items-center gap-2 text-neutral-dark/60 dark:text-white/60">
+<span class="material-icons-round text-sm text-primary">schedule</span>
+<span class="text-sm font-medium">Sat, 14 Oct • 4:00 PM</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-white dark:border-background-dark object-cover" data-alt="Avatar of chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhqJMM2ARCFNzEJkI9P8tf0nsvzwvYGk3LXLZqNOeKQ2uuMxLPkOO_IFMkmw_PuNhLlpuRYanCb8y3nBVZbr_sxXkmug2sYJ9TG0ODrwEnmQUmzigA_RRVsfRcQvustjyb3jwo_iR401kkENfCZRwvVw26KI0ucwwLzO0_OuJuw23u7-TDjUptXfZDdV9otvG0geOFzR6VeFNQz7nYkON4BDephMyDEjXG-q6gcnXqT9fMTC2VzE6vFLphQLrAY_qvc8Q8gQJmMDI"/>
+<img class="w-8 h-8 rounded-full border-2 border-white dark:border-background-dark object-cover" data-alt="Avatar of chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXVBvS90jn-_opJVCFY2rK4CVR7v-TqScqe3wb2MDwUt_hR7PxXznVJIvVeiT4K9FWN4QJhqo4bOiy2eLzkeuH3umAxDBfobCwnasD3-1HXf1sitEqS4eOAezthW169M4uY5N-9Rq6mCNsorPnVKphoEyPIRJ7yfs1mN6Z-Wco4MIIlICnuJxPCjRdcK95G9yO5on_bLNUvARpTidTm4ggwDM8rM01ia7Hwad8VlUfE6ysFNdB6RPi83GYqKFGT2bxGWYHK7w_rGs"/>
+<img class="w-8 h-8 rounded-full border-2 border-white dark:border-background-dark object-cover" data-alt="Avatar of chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkFbkHlAaz5UPNfXxmfGP9yb2uZ6BdSzGaiPXC55P53bsjWpcHsePpkPAyfK9Ffk4uBlOoYq1nYX2txy58p2l-_v1rI4NvVOmO2L2DUNBx_vAD_ZFZG7v3zuCmcmHrTjdwap_Ey0W0-TRHcabNCNOB-HqRC2OFE7yBvWI9ek0uPAYgMOYVPoYQ938KSNRZQiFOpJJX4LzRTiNvqxmhafPZNZCfcnACe3xlS6Zsozp62EAM4LeeArB_RaJiPARLgQ4G3LdLNo27I9U"/>
+<div class="w-8 h-8 rounded-full bg-neutral-soft/50 dark:bg-neutral-dark/50 flex items-center justify-center text-[10px] font-bold border-2 border-white dark:border-background-dark">+12</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-2.5 px-8 rounded-xl transition-all shadow-md shadow-primary/20">
+                            Join
+                        </button>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-white dark:bg-neutral-dark/20 rounded-2xl border border-neutral-soft/50 dark:border-white/5 overflow-hidden shadow-sm mb-5">
+<div class="relative h-44 w-full">
+<img class="w-full h-full object-cover" data-alt="Professional chess tournament setup in hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPvzkgPT1aPLWEIbqvhEI93v_wGlMeyyqyxz-EHq93q185ZcEhS0ssfAdHfSwX8o9r_HyDADNtUwqH918a7ePK47ZdTWsJuuQvqb1-r-t5lcD3wQvVzZF2kXWl68F1sUNtFXPD1_RhHKuGKTgdeNwZNheeAhaBgOoQKeoEkanM9CojJJl6s-bwot9dLglRFM5QjnfXgpf5wNL0WX50LP_ue08hvtPD0VXXKJl1Z4c0i-8-BcIOjiaTRRld6SN6Yeu3Cxsnq7WWZCM"/>
+<div class="absolute top-4 right-4 bg-white/95 dark:bg-background-dark/95 backdrop-blur px-3 py-1.5 rounded-full shadow-lg">
+<span class="text-xs font-bold text-neutral-dark dark:text-white tracking-wide">KSh 1,000</span>
+</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold leading-tight flex-1 pr-4">Nairobi Open 2023</h3>
+<div class="bg-orange-500/10 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-widest">RATED</div>
+</div>
+<div class="space-y-2.5 mb-6">
+<div class="flex items-center gap-2 text-neutral-dark/60 dark:text-white/60">
+<span class="material-icons-round text-sm text-primary">location_on</span>
+<span class="text-sm font-medium">Sarit Center, Westlands</span>
+</div>
+<div class="flex items-center gap-2 text-neutral-dark/60 dark:text-white/60">
+<span class="material-icons-round text-sm text-primary">calendar_today</span>
+<span class="text-sm font-medium">Oct 20 - Oct 22 • 9:00 AM</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-xs font-semibold text-neutral-dark/50 dark:text-white/50">
+<span class="material-icons-round text-sm">groups</span>
+<span>48/64 Players</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold py-2.5 px-8 rounded-xl transition-all shadow-md shadow-primary/20">
+                            Register
+                        </button>
+</div>
+</div>
+</div>
+<!-- Event Card 3 (Half visible to suggest scroll) -->
+<div class="bg-white dark:bg-neutral-dark/20 rounded-2xl border border-neutral-soft/50 dark:border-white/5 overflow-hidden shadow-sm mb-5 opacity-80">
+<div class="p-5">
+<h3 class="text-xl font-bold mb-1">Kasarani Blitz Series</h3>
+<p class="text-sm text-neutral-dark/60 dark:text-white/60">Kasarani Stadium Hall</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (iOS Style) -->
+<nav class="absolute bottom-0 w-full h-20 bg-white/80 dark:bg-background-dark/80 ios-blur border-t border-neutral-soft dark:border-white/5 px-8 flex items-center justify-between pb-4">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons-round">explore</span>
+<span class="text-[10px] font-bold">Discover</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-neutral-dark/40 dark:text-white/40">
+<span class="material-icons-round">emoji_events</span>
+<span class="text-[10px] font-bold">Leagues</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center -mt-8 shadow-lg shadow-primary/30 border-4 border-white dark:border-background-dark">
+<span class="material-icons-round text-white">add</span>
+</div>
+<span class="text-[10px] font-bold text-neutral-dark/40 dark:text-white/40">Host</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-neutral-dark/40 dark:text-white/40">
+<span class="material-icons-round">forum</span>
+<span class="text-[10px] font-bold">Chat</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-neutral-dark/40 dark:text-white/40">
+<span class="material-icons-round">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</div>
+</nav>
+<!-- Home Indicator -->
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-neutral-dark/10 dark:bg-white/10 rounded-full"></div>
+</div>
+</body></html>

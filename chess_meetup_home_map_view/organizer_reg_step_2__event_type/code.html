@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Organizer Registration - Event Type</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0aaab8",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#102122",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 20px -2px rgba(10, 170, 184, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<!-- Mobile Container -->
+<div class="max-w-[430px] mx-auto min-h-screen bg-white dark:bg-background-dark relative flex flex-col">
+<!-- Header & Progress -->
+<header class="pt-12 px-6 pb-4 sticky top-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<div class="flex items-center justify-between mb-6">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-icons">arrow_back</span>
+</button>
+<div class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Step 2 of 4</div>
+<button class="text-sm font-semibold text-primary">Save</button>
+</div>
+<div class="w-full h-1.5 bg-primary/10 rounded-full overflow-hidden">
+<div class="w-1/2 h-full bg-primary transition-all duration-500"></div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 px-6 pt-4 pb-32">
+<h1 class="text-3xl font-extrabold mb-2">Event Type</h1>
+<p class="text-slate-500 dark:text-slate-400 mb-8">Decide how you want to host your chess gathering.</p>
+<!-- Selection Cards -->
+<div class="space-y-4 mb-10">
+<!-- Free Event Option -->
+<label class="relative block group cursor-pointer">
+<input checked="" class="peer hidden" name="event-type" type="radio"/>
+<div class="p-5 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 peer-checked:border-primary peer-checked:bg-primary/5 transition-all duration-200">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons">volunteer_activism</span>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-lg">Free Event</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">No approval needed. Open to everyone.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700 peer-checked:border-primary flex items-center justify-center group-hover:border-primary/50 transition-colors">
+<div class="w-3 h-3 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+</div>
+</div>
+</label>
+<!-- Monetized Event Option -->
+<label class="relative block group cursor-pointer">
+<input class="peer hidden" id="monetized-toggle" name="event-type" type="radio"/>
+<div class="p-5 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 peer-checked:border-primary peer-checked:bg-primary/5 transition-all duration-200">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons">payments</span>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-lg">Monetized Event</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Charge entry fees. Requires verification.</p>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:border-primary/50 transition-colors">
+<!-- Radio indicator logic handled by Tailwind peer -->
+</div>
+</div>
+</div>
+</label>
+</div>
+<!-- Conditional Approval Section (Simulated visibility through peer logic if possible, otherwise displayed for design) -->
+<div class="space-y-6" id="approval-section">
+<div class="flex items-center gap-2 mb-4">
+<div class="h-px flex-1 bg-slate-200 dark:bg-slate-800"></div>
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Choose Approval Path</span>
+<div class="h-px flex-1 bg-slate-200 dark:bg-slate-800"></div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary text-center">
+<span class="material-icons mb-2">verified_user</span>
+<span class="text-sm font-bold leading-tight">Admin Approval</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 text-center">
+<span class="material-icons mb-2">groups</span>
+<span class="text-sm font-bold leading-tight">Club Endorsement</span>
+</button>
+</div>
+<!-- Club Search -->
+<div class="space-y-4">
+<div class="relative">
+<span class="material-icons absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/50 outline-none transition-all" placeholder="Search for a club (e.g. Nairobi Kings)..." type="text"/>
+</div>
+<!-- Club List -->
+<div class="space-y-2">
+<div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-lg object-cover" data-alt="Close up of chess pieces on board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzR_9Mgam65mGL2FtlT73GWZmJ_v4Vb7qxB3bBptNqCtPEvy_AAwRmLR1mUt_87-hHCOQJ9CwnpJzwHQAqe40_elp9-PAnzODcKT8Lf0QkWkYTUdpagOByMarwaRM4VPpepJJbRXlLeJYJAG7tIpi9JbE1JUtZdPJqSqrVqt_MUOclrNd7jyX39Fv3mBx--taAx8WfDw3X218aQoDgle_QJp2ovWsF3DwKH2DVYoK4rjPYuKWt9l8Dg8umiWTQ8jXsZcLgmGTqLb4"/>
+<div>
+<div class="font-bold text-sm">Nairobi Kings</div>
+<div class="text-xs text-slate-500">1.2k Members • Active</div>
+</div>
+</div>
+<button class="text-xs font-bold text-primary px-3 py-1 rounded-full bg-primary/10">Request</button>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-icons text-slate-400">token</span>
+</div>
+<div>
+<div class="font-bold text-sm">Checkmate Society</div>
+<div class="text-xs text-slate-500">450 Members • Open</div>
+</div>
+</div>
+<button class="text-xs font-bold text-primary px-3 py-1 rounded-full bg-primary/10">Request</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Action -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] p-6 bg-gradient-to-t from-white via-white/90 to-transparent dark:from-background-dark dark:via-background-dark/90 pb-8">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/25 transition-all active:scale-[0.98]">
+                Continue to Details
+            </button>
+<div class="mt-4 flex justify-center">
+<div class="w-32 h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+</div>
+</div>
+</div>
+</body></html>

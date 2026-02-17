@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chess Meetup Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#17cfbf",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112120",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .ios-blur { backdrop-filter: blur(10px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex items-center justify-center p-4">
+<!-- iPhone Mockup Container -->
+<div class="w-full max-w-[390px] h-[844px] bg-white dark:bg-slate-900 rounded-[3rem] shadow-2xl relative overflow-hidden border-[8px] border-slate-900 dark:border-slate-800 flex flex-col">
+<!-- Status Bar -->
+<div class="h-11 flex items-center justify-between px-8 pt-2">
+<span class="text-xs font-semibold">9:41</span>
+<div class="flex items-center gap-1">
+<span class="material-icons-outlined text-[14px]">signal_cellular_alt</span>
+<span class="material-icons-outlined text-[14px]">wifi</span>
+<span class="material-icons-outlined text-[14px]">battery_full</span>
+</div>
+</div>
+<!-- Header -->
+<header class="px-6 py-4 flex items-center justify-between bg-white/80 dark:bg-slate-900/80 ios-blur sticky top-0 z-10">
+<h1 class="text-2xl font-bold tracking-tight">Notifications</h1>
+<button class="text-primary text-sm font-semibold hover:opacity-80 transition-opacity">Mark all as read</button>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto pb-24 px-4 space-y-6">
+<!-- Section: New Game Alerts -->
+<section class="space-y-4 pt-2">
+<div class="flex items-center justify-between px-2">
+<h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500">New Game Alerts</h2>
+<span class="bg-primary/10 text-primary px-2 py-0.5 rounded-full text-[10px] font-bold">1 NEW</span>
+</div>
+<!-- Featured Game Card -->
+<div class="relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/10 dark:bg-primary/20 rounded-xl"></div>
+<div class="relative p-5 space-y-4">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg shadow-primary/30">
+<span class="material-icons-outlined text-white">grid_view</span>
+</div>
+<div>
+<h3 class="font-bold text-lg leading-tight">Rooftop Rapid Chess</h3>
+<div class="flex items-center text-slate-500 dark:text-slate-400 text-sm gap-1">
+<span class="material-icons-outlined text-[14px]">location_on</span>
+<span>Skyline Lounge • 1.2 mi</span>
+</div>
+</div>
+</div>
+<span class="bg-white dark:bg-slate-800 px-3 py-1 rounded-full text-xs font-bold shadow-sm border border-slate-100 dark:border-slate-700">
+                                In 15m
+                            </span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 object-cover" data-alt="User profile picture of a chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDI7bPtJp3ZRx_gXSQU4Cc_fagdKCmlwbdqUZ6zwSGp8U1AaOY_RHUsFm3M-aFwC7yBAB3nDExiH_PLr0lwaP1s4ZkTi7yyY_89DbtFbVTUZDvGwzRjb0Lh8FkGsr6MKxKJ0AvYnSKOyk8h3PjiIS1JvdCsAvg29o__W5L4M3QvaexSAgH7863Ioel7bgQFTUT7qj9JBYQrit0iLuzgVOqVlUC77fbgE7auKwXAhBYeDWyZTGn8hVmXGuzizJdPC5pinV_p06ZcLk"/>
+<img class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800 object-cover" data-alt="User profile picture of another chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBATCb3NMxRu-bWSUbfVlGUbrqJ-zwSQNZyTiAsShwEVDtzAebAlKLaR-H9RQZUO3QQfmMZQXUTI6Cg3tmjEGrzL94eBvC3PzDP_MgZqeMrHOZKMi8ttdjg3k7K1EYp_lrqluggyp8yCOxu0hvXWPyl7j-d0T5JnGu2k_CR-u9trfYrtUk49Bsn_nCDiU8q2ETnGqIJHvdduTX3x-zOYCaaPISizFyAEPhkhgvgw943S3232XOjnTksaKgDWCtCshQys_jJNcw20G4"/>
+<div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-[10px] font-bold border-2 border-white dark:border-slate-800">+12</div>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400">8 players already joined</p>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-xl hover:brightness-105 transition-all active:scale-[0.98]">
+                            Join Tournament
+                        </button>
+</div>
+</div>
+</section>
+<!-- Section: Social Activity -->
+<section class="space-y-4">
+<div class="px-2">
+<h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500">Social Activity</h2>
+</div>
+<!-- Notification List -->
+<div class="space-y-2">
+<!-- Notification 1: Like -->
+<div class="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group relative">
+<div class="absolute right-3 top-3 w-2 h-2 bg-primary rounded-full"></div>
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Profile picture of Amara" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUhk88pxFrBnz0R-rqZbhiPar7QfIqPYKpBokQacsWHIvxmCQfMckPWV-540Xe_iMzvdRqOprJIB99R25OeghVtykzjrDw2WZskP9k5Tr-tmzJmt2lB4PcOqwYZ56HG8El5MK3iiUOMMDdpptAW7i5BlDvyH7xZ6khaRAkvUhObCOOUl8bXvBUeANqXOkVpg0EYKz55XrEuWSAZf7drSmlIh4LPSD4ur_JFZeEpvlITE01Ra3XIw6939O7tozN3Zcj0AxPSi-0ZjM"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-pink-500 rounded-full border-2 border-white dark:border-slate-900 flex items-center justify-center">
+<span class="material-icons-outlined text-white text-[12px]">favorite</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-[15px] leading-snug">
+<span class="font-bold">Amara</span> liked your review of <span class="text-primary font-semibold">Java House</span>
+</p>
+<span class="text-xs text-slate-400 mt-1 block">2h ago</span>
+</div>
+</div>
+<!-- Notification 2: Group Joined -->
+<div class="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="relative">
+<div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center">
+<span class="material-icons-outlined text-indigo-600 dark:text-indigo-400 text-2xl">group_add</span>
+</div>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-indigo-500 rounded-full border-2 border-white dark:border-slate-900 flex items-center justify-center text-white text-[10px] font-bold">2+</div>
+</div>
+<div class="flex-1">
+<p class="text-[15px] leading-snug">
+<span class="font-bold">2 new people</span> joined the <span class="font-semibold underline decoration-primary/30">Saturday Social</span> meetup
+                            </p>
+<span class="text-xs text-slate-400 mt-1 block">4h ago</span>
+</div>
+</div>
+<!-- Notification 3: Star Rating -->
+<div class="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Profile picture of Leo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZpcBkC04Co1AMi_1SqDb-8ltBNmzaIyddhj698NyeTngg_s_a3l8M__-1NeEzvrKKfrp2RS7acU2wbPls64lqlf4QyL37ONhOxlguKuTxnMkKOu2SCBHgzfJZTgzRTdZ1Q3K9gjZN4s7VFUvEaCGmu0thyMc0T1iQE2yiF_7X8qXijdvD4SwnVmoJ3rfo6kTyn9GMzHZQUqs9MPSdkzxV6zReqQOvIw6EaAAkoIPbF5qz7c6bx3j6c4BIZ-zFIvfcAljNEYnzU9g"/>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-amber-400 rounded-full border-2 border-white dark:border-slate-900 flex items-center justify-center">
+<span class="material-icons-outlined text-white text-[12px]">star</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-[15px] leading-snug">
+<span class="font-bold">New Review:</span> Your game with <span class="font-semibold">Leo</span> was rated 5 stars
+                            </p>
+<span class="text-xs text-slate-400 mt-1 block">Yesterday</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Yesterday Divider -->
+<div class="flex items-center gap-4 px-2">
+<div class="h-px flex-1 bg-slate-100 dark:bg-slate-800"></div>
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Yesterday</span>
+<div class="h-px flex-1 bg-slate-100 dark:bg-slate-800"></div>
+</div>
+<!-- More Social Notifications -->
+<div class="space-y-2 opacity-70">
+<div class="flex items-start gap-4 p-3 rounded-xl">
+<div class="relative">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-icons-outlined text-primary text-2xl">emoji_events</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="text-[15px] leading-snug">
+                            Weekly rankings updated! You moved up <span class="font-bold text-primary">3 spots</span>.
+                        </p>
+<span class="text-xs text-slate-400 mt-1 block">1d ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="absolute bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 ios-blur border-t border-slate-100 dark:border-slate-800 px-8 pb-8 pt-3 flex justify-between items-center">
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-outlined">explore</span>
+<span class="text-[10px] font-medium">Explore</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<div class="relative">
+<span class="material-icons-outlined">notifications</span>
+<span class="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full border border-white dark:border-slate-900"></span>
+</div>
+<span class="text-[10px] font-bold">Alerts</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</div>
+</nav>
+<!-- Home Indicator -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-slate-200 dark:bg-slate-700 rounded-full"></div>
+</div>
+</body></html>

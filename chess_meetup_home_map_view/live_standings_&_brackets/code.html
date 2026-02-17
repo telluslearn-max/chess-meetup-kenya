@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Live Standings &amp; Brackets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11d4d4",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen">
+<!-- iOS Status Bar Spacer -->
+<div class="h-12 w-full bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex justify-between items-center px-6 pt-4">
+<span class="text-sm font-bold">9:41</span>
+<div class="flex gap-1.5">
+<span class="material-icons text-xs">signal_cellular_alt</span>
+<span class="material-icons text-xs">wifi</span>
+<span class="material-icons text-xs">battery_full</span>
+</div>
+</div>
+</div>
+<!-- Main Container -->
+<main class="max-w-md mx-auto pb-24">
+<!-- Header Section -->
+<header class="px-6 py-4">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h1 class="text-2xl font-extrabold tracking-tight">Masters Invitational</h1>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider border border-primary/20">Live</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">Round 4 of 7 • Zurich</span>
+</div>
+</div>
+<button class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-sm flex items-center justify-center border border-slate-100 dark:border-slate-700">
+<span class="material-icons text-slate-600 dark:text-slate-300">share</span>
+</button>
+</div>
+<!-- Segmented Control Toggle -->
+<div class="bg-slate-200/50 dark:bg-slate-800/50 p-1 rounded-xl flex items-center mb-4">
+<button class="flex-1 bg-white dark:bg-slate-700 py-2 rounded-lg shadow-sm text-sm font-bold text-slate-900 dark:text-white transition-all">
+                    Standings
+                </button>
+<button class="flex-1 py-2 rounded-lg text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
+                    Brackets
+                </button>
+</div>
+</header>
+<!-- Current Standings List -->
+<section class="px-6">
+<div class="flex items-center justify-between mb-4 px-1">
+<h2 class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Rankings</h2>
+<span class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Points</span>
+</div>
+<div class="space-y-3">
+<!-- Rank 1 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl flex items-center gap-4 border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="w-8 flex justify-center">
+<span class="text-lg font-extrabold text-primary">1</span>
+</div>
+<img alt="Player 1" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary/20" data-alt="Professional portrait of a male chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6DGOoNf2rx8WLyTZLdBipuTTRQOI6NWZX1_lESozgKyCBIBuSKUP7HF_Xt7XXGukDWhOO_TddcdWUThGhTji8SEF1MC7iemmimpT9-1JNMKjt19FsgCy84wazSvCmzLjkH0x_FJseZGamD8VOs6AN279F0skjRUtxo17U189ztdV-bCFzZMMtyD-UqUQucYxRXl2P4n_w9hR0eb9qo3Vk1mENd75hg4wSA5zPNxm8q0jPZCmOzRaioMnGKsP1hTvMV6A3iBnWNx4"/>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-white">Magnus Carlsen</h3>
+<div class="flex items-center gap-1.5">
+<span class="material-icons text-[10px] text-primary">circle</span>
+<span class="text-[10px] font-bold text-primary uppercase">Active</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-lg font-extrabold">3.5</span>
+</div>
+</div>
+<!-- Rank 2 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl flex items-center gap-4 border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="w-8 flex justify-center">
+<span class="text-lg font-extrabold text-slate-400">2</span>
+</div>
+<img alt="Player 2" class="w-10 h-10 rounded-full object-cover" data-alt="Professional portrait of a female chess player" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4us_dDhnR9ARh3aCTrIqoKVh2sYn-XL5ZEmWzX7UoElQ7i3EDmbNXNH04HiY9UMOcqhBHdj15nwOuj_T0ejv8NYYc8o_FAkV80vBNE_WpHKb_4RLdI-zxnkpR8wK_83RtDwcSw4wNWlci3-IFtFc0cIW-E3UcueqkofPdXiuylHi3sOy1ml79luh8tYhVlSniXFXb8BB3MHaTT4rW6AAO-4mdDyt-bWxtNvvJHzdRltFlDO54aARD2JYa7M8jPwdkOE_RgfidzcY"/>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-white">Hou Yifan</h3>
+<span class="text-[10px] font-bold text-slate-400 uppercase">Waiting</span>
+</div>
+<div class="text-right">
+<span class="text-lg font-extrabold">3.0</span>
+</div>
+</div>
+<!-- Rank 3 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl flex items-center gap-4 border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="w-8 flex justify-center">
+<span class="text-lg font-extrabold text-slate-400">3</span>
+</div>
+<img alt="Player 3" class="w-10 h-10 rounded-full object-cover" data-alt="Male grandmaster profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoVOHjLxzaTZpstXwi1LUdNmO78sy4ff7HGkPbPZyI0KjqUhoZPvI1o3aywB4gOTFJ9UfKvlaPjR1kKHh5axmwGRWGaO_YVcsVTDr2teBux9XBq5udXWO36tuOyJD2Me4pK8a5qrRqUInDktWX4m8lDR47rKAx-hzLrifBlcauf1g_YL0MnRiGmupuDl5j2FmxBDrbdSL6SVuop8e6GTCejKM7vZ5etzGPGMVgmCrC9CRXqByJNCpdOipCITh1JEcCwmzv1YDRIws"/>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-white">Fabiano Caruana</h3>
+<div class="flex items-center gap-1.5">
+<span class="material-icons text-[10px] text-primary">circle</span>
+<span class="text-[10px] font-bold text-primary uppercase">Active</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-lg font-extrabold">2.5</span>
+</div>
+</div>
+<!-- Rank 4 -->
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl flex items-center gap-4 border border-slate-100 dark:border-slate-700 shadow-sm opacity-80">
+<div class="w-8 flex justify-center">
+<span class="text-lg font-extrabold text-slate-400">4</span>
+</div>
+<img alt="Player 4" class="w-10 h-10 rounded-full object-cover" data-alt="Female grandmaster profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-6Fn20Zaf2qd9bNq_I_qgnqAyQY8-7mv67-OIHaxnN-5QIr2rn9R5-m2k5Dy1-i7X4AfwuUT3ZrT7MHyQYrt7GkZtW0X_v37LS2uv35U8ugfhFLP0wsTvbJk-pn0OaRVDCuPbyRh4V0nAl_e2y62-ByrV6Cr_HYZd2sqFE2CU_w_U56owYwYUU-QpKVsJ1w68DCXUdtCxhavPw9WoIdMLb4XUCsqnbsXC-3Gfm8On64VcnI_ij8xT8Cu_0dJVBp_3RKUqoTE9u38"/>
+<div class="flex-1">
+<h3 class="font-bold text-slate-900 dark:text-white">Alireza Firouzja</h3>
+<span class="text-[10px] font-bold text-slate-400 uppercase">Eliminated</span>
+</div>
+<div class="text-right">
+<span class="text-lg font-extrabold">1.5</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bracket Preview Section (Horizontal Scroll) -->
+<section class="mt-10 overflow-hidden">
+<div class="px-6 flex items-center justify-between mb-4">
+<h2 class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">Knockout Bracket</h2>
+<button class="text-primary text-xs font-bold flex items-center gap-1 uppercase tracking-wider">
+                    Fullscreen <span class="material-icons text-sm">open_in_full</span>
+</button>
+</div>
+<div class="flex overflow-x-auto gap-8 px-6 pb-8 hide-scrollbar">
+<!-- Quarter Finals -->
+<div class="min-w-[200px] flex flex-col gap-6">
+<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">Quarter-Finals</div>
+<!-- Match 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-slate-700 shadow-sm overflow-hidden relative">
+<div class="p-3 flex items-center justify-between border-b border-slate-50 dark:border-slate-700/50">
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Carlsen</span>
+<span class="text-xs font-bold text-primary">1.0</span>
+</div>
+<div class="p-3 flex items-center justify-between">
+<span class="text-xs font-medium text-slate-400">Nakamura</span>
+<span class="text-xs font-bold text-slate-400">0.0</span>
+</div>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-1/2 bg-primary rounded-l-full"></div>
+</div>
+<!-- Match 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-lg border border-slate-100 dark:border-slate-700 shadow-sm overflow-hidden">
+<div class="p-3 flex items-center justify-between border-b border-slate-50 dark:border-slate-700/50">
+<span class="text-xs font-medium text-slate-400">Ding Liren</span>
+<span class="text-xs font-bold text-slate-400">0.5</span>
+</div>
+<div class="p-3 flex items-center justify-between">
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Nepo</span>
+<span class="text-xs font-bold text-primary">0.5</span>
+</div>
+<div class="absolute right-[-4px] top-1/2 -translate-y-1/2 flex items-center">
+<div class="w-1 h-4 bg-primary rounded-full animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Connectors Visual (Pseudo) -->
+<div class="min-w-[40px] flex flex-col justify-center gap-12 py-10 opacity-30">
+<div class="h-[2px] w-full bg-primary/40 relative">
+<div class="absolute right-0 -top-6 h-12 w-[2px] bg-primary/40"></div>
+</div>
+</div>
+<!-- Semi Finals -->
+<div class="min-w-[200px] flex flex-col justify-center gap-12">
+<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center">Semi-Finals</div>
+<div class="bg-white dark:bg-slate-800 rounded-lg border-2 border-primary/40 shadow-lg relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-[8px] px-2 py-0.5 rounded-full font-bold">LIVE</div>
+<div class="p-3 flex items-center justify-between border-b border-slate-50 dark:border-slate-700/50">
+<span class="text-xs font-bold text-slate-900 dark:text-white">Carlsen</span>
+<span class="text-xs font-black text-primary">0.0</span>
+</div>
+<div class="p-3 flex items-center justify-between">
+<span class="text-xs font-bold text-slate-900 dark:text-white">Nepo</span>
+<span class="text-xs font-black text-primary">0.0</span>
+</div>
+</div>
+</div>
+<!-- Finals -->
+<div class="min-w-[200px] flex flex-col justify-center">
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest text-center mb-6">Grand Finals</div>
+<div class="bg-slate-100 dark:bg-slate-800/40 rounded-lg border border-dashed border-slate-300 dark:border-slate-600 p-8 flex flex-center flex-col items-center">
+<span class="material-icons text-slate-300 dark:text-slate-600 mb-2">emoji_events</span>
+<span class="text-[10px] font-bold text-slate-400 uppercase">TBD</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Match Highlights Card -->
+<section class="px-6 mb-8">
+<div class="bg-slate-900 dark:bg-primary/10 rounded-2xl p-5 relative overflow-hidden">
+<!-- Abstract Gradient Background -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl -mr-10 -mt-10"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-center mb-4">
+<span class="text-white/60 dark:text-primary/60 text-xs font-bold uppercase tracking-widest">Featured Game</span>
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+<span class="text-white dark:text-primary text-[10px] font-extrabold uppercase tracking-wider">4.2k Watching</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-4">
+<div class="text-center">
+<img alt="Magnus" class="w-14 h-14 rounded-full border-2 border-white/20 mx-auto mb-2 object-cover" data-alt="Close up of a chess master" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl7wRQSkSJVOEVSW5ATDObwPwIleDGI7xosvKsiojWlieYymp9cQsJ6VHAAXJ4sspdrtzjyvjG-rfMzuYrR4VIbNw7ithlY0mFsY-NUcsbwSL7QaJ24RPkJR24-F33nmi2oPJLwFamT00Sdxd6WmEO7bC6_R-XLX4j1trucQJFgz9E3Zr6HIdiv2kWo5qlqlW6Bgpygc9ZAlW90YU4k2BfCpn-RiGi-v4NWydL0TDZhLr8yOC8OjBnCGLl1z-1DVeQ2TfrFhHuBLM"/>
+<p class="text-white font-bold text-sm">Carlsen</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="text-white/40 text-xs font-black mb-1 italic">VS</span>
+<div class="bg-white/10 px-3 py-1 rounded-full">
+<span class="text-primary font-black text-xl tracking-tighter">18:42</span>
+</div>
+</div>
+<div class="text-center">
+<img alt="Fabiano" class="w-14 h-14 rounded-full border-2 border-white/20 mx-auto mb-2 object-cover" data-alt="Close up of a chess master profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA163-YXWsKuOvVnut1SsJeFvVBcUf761H1cUIWPQKf9x1tlv7sQ8VHRwFQCoo1RStbp5QlRKKsb68D9GPJ0GJKREE3__tSVqF478KzQa2NH9stssYDstzu6zv1JNY21y_rF6BrfXJpjCD09-jKaqApvpWoKYc7qbx0WQB8RuZP_RHkwvTqsu3e48x_60HNJKLMbMIetKtKK3zidXyQ2fmKatuPx8oEbN92157L8CeXb3pamrO7wp0HdfFQnNP4fXRSYkG8IuZjqgI"/>
+<p class="text-white font-bold text-sm">Caruana</p>
+</div>
+</div>
+<button class="w-full mt-5 bg-primary py-3 rounded-xl text-slate-900 font-extrabold text-sm shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+                        Watch Live Stream
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Bar (iOS Style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 px-8 pb-8 pt-4 z-50">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">home</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons">leaderboard</span>
+<span class="text-[10px] font-bold uppercase">Standings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">play_circle</span>
+<span class="text-[10px] font-bold uppercase">Watch</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons">person</span>
+<span class="text-[10px] font-bold uppercase">Profile</span>
+</button>
+</div>
+</nav>
+</body></html>

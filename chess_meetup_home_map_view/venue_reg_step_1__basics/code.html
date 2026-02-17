@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Venue Registration - Step 1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Material+Icons&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0faebd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102022",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 6px -1px rgba(15, 174, 189, 0.05), 0 2px 4px -1px rgba(15, 174, 189, 0.03);
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #0faebd;
+            ring-color: #0faebd;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex justify-center items-start">
+<!-- Mobile Container (iPhone Pro Max roughly) -->
+<div class="w-full max-w-[430px] min-h-screen bg-white dark:bg-slate-900 relative flex flex-col shadow-2xl overflow-hidden">
+<!-- Status Bar Spacer (iOS Style) -->
+<div class="h-12 w-full flex justify-between items-center px-6">
+<span class="text-sm font-semibold dark:text-white">9:41</span>
+<div class="flex gap-1.5">
+<span class="material-icons text-[18px] dark:text-white">signal_cellular_alt</span>
+<span class="material-icons text-[18px] dark:text-white">wifi</span>
+<span class="material-icons text-[18px] dark:text-white rotate-90">battery_full</span>
+</div>
+</div>
+<!-- Header & Progress -->
+<header class="px-6 pt-2 pb-6">
+<div class="flex items-center justify-between mb-6">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-icons">arrow_back_ios_new</span>
+</button>
+<div class="flex items-center gap-1">
+<span class="text-xs font-bold text-primary">STEP 1</span>
+<span class="text-xs font-medium text-slate-400">OF 4</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full mb-8 overflow-hidden">
+<div class="h-full bg-primary w-[25%] rounded-full"></div>
+</div>
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Partner with us</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Let's start with some basic information about your venue to help chess players find you.</p>
+</header>
+<!-- Form Section -->
+<main class="flex-1 px-6 space-y-6 overflow-y-auto pb-32">
+<!-- Venue Name -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300" for="venue-name">
+                    Venue Name
+                </label>
+<input class="w-full px-4 py-3.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all ios-shadow" id="venue-name" placeholder="e.g., Artcaffe" type="text"/>
+</div>
+<!-- Street Address -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300" for="address">
+                    Street Address
+                </label>
+<div class="relative">
+<input class="w-full px-4 py-3.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all ios-shadow" id="address" placeholder="123 Chess Avenue" type="text"/>
+<span class="material-icons absolute right-4 top-1/2 -translate-y-1/2 text-slate-400">location_on</span>
+</div>
+</div>
+<!-- City -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300" for="city">
+                    City
+                </label>
+<input class="w-full px-4 py-3.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all ios-shadow" id="city" placeholder="Nairobi" type="text"/>
+</div>
+<!-- Venue Type -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300" for="venue-type">
+                    Venue Type
+                </label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-3.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all ios-shadow" id="venue-type">
+<option disabled="" selected="" value="">Select type</option>
+<option value="cafe">Café</option>
+<option value="park">Park</option>
+<option value="hotel">Hotel</option>
+<option value="club">Club</option>
+</select>
+<span class="material-icons absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Visual Support/Illustration -->
+<div class="pt-4 flex justify-center">
+<div class="relative w-full h-40 rounded-xl overflow-hidden shadow-inner bg-primary/5 dark:bg-primary/10 flex items-center justify-center border border-primary/10">
+<img alt="Venue Atmosphere" class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale" data-alt="Modern cozy cafe interior with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCe8QzAofMOgKoLGg3yHrSuwOlCUwmSio81TX6o-2of4WsDM84IoOfDk-PP9RBFLLjDEEO_v9yU1LkBfQD93dqHYlTdhHdaRexXoe-3Fw2uIB2OSnFJmDvW4AznQ7z-j_zDueOQFMTguIXXwBZPqvOsvoAGH-ozWOUodlnQ_7to1sPcOUrWRnSP8sPJEbjLNdwjet9Cd7oVIJn1oyD3g53Otjj7ZDacuiDcVbrv8ZOc1RjSJTLn6k1yCTfVuDWGBB5KLqFng9pw3M"/>
+<div class="relative z-10 flex flex-col items-center text-center px-8">
+<span class="material-icons text-primary text-4xl mb-2">storefront</span>
+<p class="text-xs font-medium text-slate-500 dark:text-slate-400">Join 500+ venues hosting chess meetups worldwide.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Action Bar -->
+<footer class="absolute bottom-0 left-0 w-full p-6 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-100 dark:border-slate-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/25 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+                Next
+                <span class="material-icons text-[20px]">arrow_forward</span>
+</button>
+<div class="w-32 h-1 bg-slate-200 dark:bg-slate-700 rounded-full mx-auto mt-6"></div>
+</footer>
+</div>
+</body></html>

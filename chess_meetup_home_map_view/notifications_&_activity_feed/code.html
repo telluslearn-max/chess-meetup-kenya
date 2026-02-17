@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chess Meetup Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#17cfbf",
+                "background-light": "#f6f8f8",
+                "background-dark": "#112120",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-md mx-auto min-h-screen shadow-2xl bg-white dark:bg-background-dark relative overflow-hidden">
+<!-- Status Bar Mockup -->
+<div class="flex justify-between items-center px-6 py-4">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons text-sm">signal_cellular_alt</span>
+<span class="material-icons text-sm">wifi</span>
+<span class="material-icons text-sm">battery_full</span>
+</div>
+</div>
+<!-- Header -->
+<header class="px-6 py-2">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h1 class="text-3xl font-bold tracking-tight">Activity</h1>
+<p class="text-slate-500 text-sm mt-1">You have 3 unread updates</p>
+</div>
+<button class="text-primary font-medium text-sm flex items-center gap-1 hover:opacity-80 transition-opacity">
+<span class="material-icons text-base">done_all</span>
+                    Mark all
+                </button>
+</div>
+<!-- Segmented Control (Tabs) -->
+<div class="bg-slate-100 dark:bg-slate-800 p-1 rounded-full flex gap-1 mb-8">
+<button class="flex-1 py-2 text-sm font-semibold rounded-full bg-white dark:bg-slate-700 shadow-sm text-slate-900 dark:text-white">
+                    All
+                </button>
+<button class="flex-1 py-2 text-sm font-medium rounded-full text-slate-500 hover:text-slate-700 transition-colors">
+                    Games
+                </button>
+<button class="flex-1 py-2 text-sm font-medium rounded-full text-slate-500 hover:text-slate-700 transition-colors">
+                    Social
+                </button>
+</div>
+</header>
+<!-- Feed List -->
+<div class="space-y-1">
+<!-- Unread: New Game Nearby -->
+<div class="bg-primary/5 px-6 py-5 flex gap-4 border-l-4 border-primary transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-icons text-white">explore</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-slate-900 dark:text-white text-base">New Game Nearby</h3>
+<span class="text-[11px] font-medium text-primary uppercase tracking-wider">10m ago</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 mb-3">
+                        A <span class="font-semibold">Central Park</span> meetup was posted. 4 boards available.
+                    </p>
+<button class="bg-primary text-white px-4 py-1.5 rounded-full text-xs font-bold hover:brightness-95 transition-all">
+                        View Details
+                    </button>
+</div>
+<div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+</div>
+<!-- Unread: Join Request -->
+<div class="bg-primary/5 px-6 py-5 flex gap-4 border-l-4 border-primary transition-colors cursor-pointer">
+<div class="relative shrink-0">
+<img alt="Sarah" class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a young woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0dTprQM4kG_m_0G7LudeA9GsgQOXwjOtirBADAV0XVTkDu6JYKEROHlCgGO1yKGWcD7XdFeDArv4bFncG5q-9grj5LZazlJoWdHU9jbrzGZ6jUqbleh-2mn0qsosjE1RJ97bOQ9MBVVrNWX-jMif6mBqU03g0PaEX7krzQiJp-tYL9Uiu0Gpkr6JMeKMizshV-QyFwuY9uFh9DbU-N0XyLA2wr5qKQqebg7TBAtMfSio0Aom8YtA20oxJx-ukYcuiD7xWNpGB0YQ"/>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-slate-800 rounded-full p-1 border border-slate-100">
+<span class="material-icons text-[12px] text-primary">person_add</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-slate-900 dark:text-white text-base">Join Request</h3>
+<span class="text-[11px] font-medium text-primary uppercase tracking-wider">25m ago</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 mb-3">
+<span class="font-bold text-slate-900 dark:text-white">Sarah</span> wants to join your Casual Blitz at Java House.
+                    </p>
+<div class="flex gap-2">
+<button class="bg-primary text-white px-5 py-1.5 rounded-full text-xs font-bold hover:brightness-95 transition-all">
+                            Accept
+                        </button>
+<button class="bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 px-5 py-1.5 rounded-full text-xs font-bold hover:brightness-95 transition-all">
+                            Decline
+                        </button>
+</div>
+</div>
+<div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+</div>
+<!-- Unread: Message -->
+<div class="bg-primary/5 px-6 py-5 flex gap-4 border-l-4 border-primary transition-colors cursor-pointer">
+<div class="relative shrink-0">
+<img alt="David" class="w-12 h-12 rounded-full object-cover" data-alt="Close up of a man smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1vTALB8TsQKdnUuW0LnnE8XDUXvBgbu8a3KeaH2XObXPv2_oOn3YGthWAaa8Zs2LowZgCGemmDBjmfYzB7GpIQ7Ai1td0x3w08YHv1VmI9pRU_0SkHA7ZJCurC-HfLrAOfL4sF1OAht05BwyIzpcTzkTH2r1vMDtQGnf1UWW25Xu20vcrT__MmTvEZFu3A-EfAHNRLf8rTAswnP1HPOdqPeU81Xy85mX319u0aeqVLUkiPmCWdMuHOMPJudcXIAXiha0jLAcup18"/>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-slate-800 rounded-full p-1 border border-slate-100">
+<span class="material-icons text-[12px] text-primary">chat_bubble</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-slate-900 dark:text-white text-base">Message</h3>
+<span class="text-[11px] font-medium text-primary uppercase tracking-wider">1h ago</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 italic">
+                        "David sent a message in Bao Box group: Hey everyone, I'm bringing my tournament clock today!"
+                    </p>
+</div>
+<div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+</div>
+<!-- Read: System -->
+<div class="bg-white dark:bg-background-dark px-6 py-5 flex gap-4 transition-colors cursor-pointer border-b border-slate-50 dark:border-slate-800">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0">
+<span class="material-icons text-emerald-500">check_circle</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-slate-900 dark:text-white text-base">System Update</h3>
+<span class="text-[11px] font-medium text-slate-400 uppercase tracking-wider">2h ago</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400">
+                        Your check-in at <span class="font-semibold">Bao Box</span> was successful! Don't forget to report your results after the game.
+                    </p>
+</div>
+</div>
+<!-- Read: Previous Game Nearby -->
+<div class="bg-white dark:bg-background-dark px-6 py-5 flex gap-4 transition-colors cursor-pointer border-b border-slate-50 dark:border-slate-800">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center shrink-0">
+<span class="material-icons text-slate-400">explore</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-slate-900 dark:text-white text-base text-slate-400">Nearby Game Filled</h3>
+<span class="text-[11px] font-medium text-slate-400 uppercase tracking-wider">4h ago</span>
+</div>
+<p class="text-sm text-slate-400">
+                        The Union Square meetup is now at capacity.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Navigation Mockup -->
+<nav class="absolute bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-slate-100 dark:border-slate-800 px-8 py-4 flex justify-between items-center">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">home</span>
+</button>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">search</span>
+</button>
+<button class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg -mt-10 border-4 border-white dark:border-background-dark">
+<span class="material-icons">add</span>
+</button>
+<button class="text-primary transition-colors relative">
+<span class="material-icons">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border border-white"></span>
+</button>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-icons">person</span>
+</button>
+</nav>
+<!-- Map Background Ornament (Subtle) -->
+<div class="absolute -z-10 top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
+<img alt="Map Pattern" class="w-full h-full object-cover grayscale" data-location="New York City" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFpC4qajtF3tYOFwwuRzAOyMHwvhbtFgVtwdf2z8p--B4qEV925isPSeUfrsIblTZ21H2t7eY-M84XpelcrWkEMyEqp1n_hlu5-Y4KpY0WUSiUGI3ro5DFtR88SYmv63MFIWvwZGig2XtuTojzuMYPraSwBmQzoUVWrSc46kk1XKtjQyXMy1AkAAF3FNQTGtI_4mcQf5SZdIT0JHvGEKFQaC3faoaYi3sW8RvP7-b7Bd_jgt3anwAWSSgx5yDnYCvK53xDVFR639w"/>
+</div>
+</div>
+</body></html>

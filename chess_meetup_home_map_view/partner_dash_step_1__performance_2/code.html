@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Partner Dash Step 1: Performance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0ab3c2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#102122",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(10, 179, 194, 0.05), 0 8px 10px -6px rgba(10, 179, 194, 0.05);
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex justify-center items-start">
+<!-- Mobile Container -->
+<div class="w-full max-w-[430px] min-h-screen bg-background-light dark:bg-background-dark relative flex flex-col pb-32">
+<!-- Top Status Bar Mockup -->
+<div class="px-8 pt-4 flex justify-between items-center w-full">
+<span class="text-sm font-bold">9:41</span>
+<div class="flex gap-1.5 items-center">
+<span class="material-icons-round text-sm">signal_cellular_alt</span>
+<span class="material-icons-round text-sm">wifi</span>
+<span class="material-icons-round text-sm">battery_full</span>
+</div>
+</div>
+<!-- Progress Header -->
+<header class="px-6 pt-8 pb-4">
+<div class="flex items-center justify-between mb-6">
+<button class="w-10 h-10 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm">
+<span class="material-icons-round text-primary">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<div class="w-8 h-1.5 rounded-full bg-primary"></div>
+<div class="w-8 h-1.5 rounded-full bg-primary/20 dark:bg-primary/10"></div>
+<div class="w-8 h-1.5 rounded-full bg-primary/20 dark:bg-primary/10"></div>
+<div class="w-8 h-1.5 rounded-full bg-primary/20 dark:bg-primary/10"></div>
+</div>
+<div class="w-10"></div> <!-- Spacer -->
+</div>
+<h1 class="text-3xl font-extrabold tracking-tight mb-1">Your Venue Overview</h1>
+<p class="text-slate-500 dark:text-slate-400 font-medium">Step 1 of 4: Business performance</p>
+</header>
+<!-- Main Content Area -->
+<main class="px-6 space-y-6">
+<!-- Venue Info & Stats Card -->
+<div class="bg-white dark:bg-slate-800 rounded-[24px] p-6 card-shadow border border-primary/5">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-16 h-16 rounded-2xl overflow-hidden bg-primary/10 flex-shrink-0">
+<img alt="Bao Box Cafe Interior" class="w-full h-full object-cover" data-alt="Modern cozy cafe interior with wooden tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_o-d1CKopxivlApzcCEmhqWqpeWlLEceuzjPTkCRbU8uemoORo6m6dmao5KcfpFYbOm0oTcxBx4gmdew_gc8679M_1-xn6Oq6wFOffebxx9miC4pyFmqLvuntKDjdFbN4vcx_N5Aj3HaCYEv-8XPp9Cl-TlfyfqB4RVuzDJe-occ_JGB5-TklBdXhpZZwHYaYQ-d0_8Oxldi46SbbV2G8SdZK8w-toDEt4CNYuhgkA2UwjHFEWAH8s8qkbqiQvPvf_3cGmHa3v14"/>
+</div>
+<div>
+<h2 class="text-xl font-bold">Bao Box</h2>
+<div class="flex items-center text-primary text-sm font-semibold">
+<span class="material-icons-round text-xs mr-1">location_on</span>
+                            Westlands, Nairobi
+                        </div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<!-- Revenue Stat -->
+<div class="bg-primary/5 dark:bg-primary/10 rounded-2xl p-5 border border-primary/10">
+<div class="flex justify-between items-start mb-2">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Total Revenue Shared</span>
+<span class="material-icons-round text-primary">payments</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold tracking-tight">KSh 12,500</span>
+<span class="text-xs font-bold text-emerald-500 flex items-center bg-emerald-100 dark:bg-emerald-500/20 px-1.5 py-0.5 rounded">
+<span class="material-icons-round text-xs">trending_up</span> 12%
+                            </span>
+</div>
+<p class="text-[10px] uppercase tracking-wider font-bold text-slate-400 mt-2">Current Month-to-date</p>
+</div>
+<!-- Footfall Stat -->
+<div class="bg-primary/5 dark:bg-primary/10 rounded-2xl p-5 border border-primary/10">
+<div class="flex justify-between items-start mb-2">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Chess Footfall</span>
+<span class="material-icons-round text-primary">groups</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold tracking-tight">142</span>
+<span class="text-slate-500 dark:text-slate-400 font-bold text-sm tracking-tight">players</span>
+</div>
+<div class="mt-3 flex -space-x-2">
+<img class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-800 object-cover" data-alt="User profile photo avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVZG4rDMqA3c8XeOA55pN799e0Ba8swDvrB99kUhm7XWKUp8cTklN2A743VM4QdIgc1g8Pp8UIEzGeWhXyG_2w2ZT5O3L9MIwY7Ejzn2Qa8ElPgDvmnHBZNnAt7H4B3V3i7bTSWke5G7sciS7xIXX4nAz8GQTTqQ7dfUyvUujOfelE-jtpu8RgGQPUMuYDlJMUx4y1kvTt3C_F4I3rqYfv7fXwWLp8-X1RrnJgCej7IHsRA7X_YKHv__NzN2WWeL5X2jK9ihMEMno"/>
+<img class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-800 object-cover" data-alt="User profile photo avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMxPaR2bUOv2yTGaoSKM3oN7zhF3wTpNdB--aRgzy7_pzFxCmmT0gIWq9pNwH1VxI9lRruT3v58y1nkgZGU6PtX6d7Gt6zkgrFDikl9AafIjfmxPFZvJH2f5zUEAkEUwO_JLbcoeRFr4khBFUpgPhxscuE50qSLE709vFTyja63wHlvyZ2TtWWk_85Ohz_wCevPrm6ptc9zg__IR-NMDAkiwQjoeR39MNAY8kIo7q3C8mBQJCK7U4_r9yBHwPGKZDPnZjHY9TJkUo"/>
+<img class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-800 object-cover" data-alt="User profile photo avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_6pj4NY1TgCPg-9RjVeUdK4rHljPc87UJZSrhYOxhV2n_wPHTHnoI0zKjfyLgxA_8zVsKs5rDzvxy_9z4sii4949Mlr3XBLtbpdHM4eTIp-Ltz261nS5CC0ZstZMvbDTcV65zN6Q1pwOUlW2BgAtu7W0yJfTkqBk8nneGkPEeFSk47ZfaWYo1EUBh_SmE-zC70lE4F2ecUmsqt88LAYtM5gYS2KRoLLtrnfB0F3XnGuIm2CYDzBpr9PRZ8udWGEKX752pYl2dmnE"/>
+<div class="w-6 h-6 rounded-full border-2 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-700 flex items-center justify-center text-[8px] font-bold">+139</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Meetups Card -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Live Meetups</h3>
+<div class="flex items-center gap-1.5 bg-rose-100 dark:bg-rose-500/20 px-3 py-1 rounded-full">
+<div class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></div>
+<span class="text-[10px] font-black uppercase tracking-widest text-rose-600 dark:text-rose-400">Live Now</span>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-[24px] overflow-hidden card-shadow border border-primary/5">
+<div class="p-5 flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-icons-round text-primary text-3xl">sports_esports</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-sm">Main Hall Blitz Session</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">3 tables active • 6 players</p>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-primary">Active</p>
+<p class="text-[10px] text-slate-400">Since 4:30 PM</p>
+</div>
+</div>
+<div class="bg-slate-50 dark:bg-slate-700/50 px-5 py-3 flex justify-between items-center">
+<span class="text-[10px] font-bold text-slate-400">PARTNER COMMISSION: KSh 450</span>
+<button class="text-xs font-bold text-primary flex items-center">
+                            View Details <span class="material-icons-round text-sm ml-1">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto px-6 pb-10 pt-4 ios-blur bg-white/80 dark:bg-background-dark/80 border-t border-slate-200/50 dark:border-slate-800/50">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-extrabold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/30 transition-all">
+<span>Next: Insights Deep Dive</span>
+<span class="material-icons-round">arrow_forward</span>
+</button>
+<nav class="flex justify-around items-center mt-6">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-icons-round">dashboard</span>
+<span class="text-[10px] font-bold">Overview</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">analytics</span>
+<span class="text-[10px] font-bold">Analytics</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">calendar_today</span>
+<span class="text-[10px] font-bold">Schedule</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-icons-round">settings</span>
+<span class="text-[10px] font-bold">Settings</span>
+</button>
+</nav>
+</div>
+</div>
+</body></html><!-- All colors neutral to #0ab3c2:
+Primary: #0ab3c2
+Light Tint: #e7f7f9 (primary/5 or primary/10)
+Neutrals: Slate-900 (dark mode body), Slate-500 (light mode secondary text)
+All borders: 1rem or specific 24px as requested for cards
+Font: Manrope
+-->

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chess Meetup - Filter Step 1</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0ac2b3",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#102221",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .ios-shadow {
+            box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-0 md:p-8">
+<!-- Phone Mockup Container (iOS feel) -->
+<div class="relative w-full max-w-[430px] h-[932px] bg-white dark:bg-zinc-900 overflow-hidden shadow-2xl rounded-[3rem] border-[8px] border-zinc-200 dark:border-zinc-800">
+<!-- Status Bar Mockup -->
+<div class="h-12 w-full flex justify-between items-center px-8 pt-4">
+<span class="text-sm font-bold dark:text-white">9:41</span>
+<div class="flex gap-1">
+<span class="material-icons-round text-sm dark:text-white">signal_cellular_alt</span>
+<span class="material-icons-round text-sm dark:text-white">wifi</span>
+<span class="material-icons-round text-sm dark:text-white">battery_full</span>
+</div>
+</div>
+<!-- Background Content (Simulating a map behind the bottom sheet) -->
+<div class="absolute inset-0 z-0">
+<img alt="City map background" class="w-full h-full object-cover opacity-40 grayscale" data-alt="A stylized overhead map of Nairobi Westlands area" data-location="Nairobi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs9hqoyB-Nfd2LzG0SzItspuCSw0jL5nHWowdzhLz6u2AtcLT2AmcxHwMAXLo3tr-tMIr6gRMoWy3in1SKcnKpKt7SoZUKWkKQybIX6BOCE6OAsty8XxRoi_uGQpyBNoUnFfXMiirxBsxCg7kIvIFEF7hAhcUOfYka_EN865bsJwLGAm_60NMKpEoRp_EnfNulwoxK7FAsXP6uyd5vPGCwPBUJqOxEyZa8r3oBiqyEuP5jN7M0rbUc_I8hJuGV_dVa1wWcY4xdfDc"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/20"></div>
+</div>
+<!-- Bottom Sheet (The Filter UI) -->
+<div class="absolute bottom-0 left-0 right-0 bg-white dark:bg-zinc-900 rounded-t-xl ios-shadow z-10 h-[85%] flex flex-col">
+<!-- Handle -->
+<div class="w-full flex justify-center py-3">
+<div class="w-12 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+</div>
+<!-- Progress Bar -->
+<div class="px-6 mt-2 flex gap-1.5 h-1">
+<div class="flex-1 bg-primary rounded-full"></div>
+<div class="flex-1 bg-zinc-100 dark:bg-zinc-800 rounded-full"></div>
+<div class="flex-1 bg-zinc-100 dark:bg-zinc-800 rounded-full"></div>
+<div class="flex-1 bg-zinc-100 dark:bg-zinc-800 rounded-full"></div>
+</div>
+<div class="flex-1 overflow-y-auto px-6 py-6 custom-scrollbar">
+<!-- Header -->
+<div class="mb-8">
+<span class="text-primary font-bold text-sm tracking-wider uppercase mb-2 block">Step 1 of 4</span>
+<h1 class="text-4xl font-extrabold text-zinc-900 dark:text-white font-display">Where to play?</h1>
+</div>
+<!-- Search Input -->
+<div class="relative mb-10 group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-icons-round text-zinc-400 group-focus-within:text-primary">search</span>
+</div>
+<input class="w-full pl-12 pr-4 py-4 bg-zinc-50 dark:bg-zinc-800/50 border-none rounded-full text-zinc-900 dark:text-white font-medium focus:ring-2 focus:ring-primary/50 transition-all" placeholder="Search city or neighborhood..." type="text" value="Westlands, Nairobi"/>
+</div>
+<!-- Vibe Selection Section -->
+<div class="mb-6">
+<h2 class="text-lg font-bold text-zinc-900 dark:text-white mb-4">Choose your vibe</h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Option 1: Social Café -->
+<div class="relative group cursor-pointer">
+<input checked="" class="peer hidden" id="vibe-social" name="vibe" type="radio"/>
+<label class="block p-5 bg-white dark:bg-zinc-800 border-2 border-zinc-100 dark:border-zinc-700 rounded-lg transition-all peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50" for="vibe-social">
+<div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-full flex items-center justify-center mb-4">
+<span class="material-icons-round text-2xl">local_cafe</span>
+</div>
+<h3 class="font-bold text-zinc-900 dark:text-white">Social Café</h3>
+<p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Lively, coffee &amp; casual games</p>
+</label>
+<div class="absolute top-3 right-3 opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-icons-round text-primary text-xl">check_circle</span>
+</div>
+</div>
+<!-- Option 2: Quiet Park -->
+<div class="relative group cursor-pointer">
+<input class="peer hidden" id="vibe-park" name="vibe" type="radio"/>
+<label class="block p-5 bg-white dark:bg-zinc-800 border-2 border-zinc-100 dark:border-zinc-700 rounded-lg transition-all peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50" for="vibe-park">
+<div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mb-4">
+<span class="material-icons-round text-2xl">park</span>
+</div>
+<h3 class="font-bold text-zinc-900 dark:text-white">Quiet Park</h3>
+<p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Peaceful, fresh air &amp; focus</p>
+</label>
+<div class="absolute top-3 right-3 opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-icons-round text-primary text-xl">check_circle</span>
+</div>
+</div>
+<!-- Option 3: Premium Hotel -->
+<div class="relative group cursor-pointer">
+<input class="peer hidden" id="vibe-hotel" name="vibe" type="radio"/>
+<label class="block p-5 bg-white dark:bg-zinc-800 border-2 border-zinc-100 dark:border-zinc-700 rounded-lg transition-all peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50" for="vibe-hotel">
+<div class="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 rounded-full flex items-center justify-center mb-4">
+<span class="material-icons-round text-2xl">star_outline</span>
+</div>
+<h3 class="font-bold text-zinc-900 dark:text-white">Premium Hotel</h3>
+<p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Elegant, quiet &amp; lounge seating</p>
+</label>
+<div class="absolute top-3 right-3 opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-icons-round text-primary text-xl">check_circle</span>
+</div>
+</div>
+<!-- Option 4: Competitive Club -->
+<div class="relative group cursor-pointer">
+<input class="peer hidden" id="vibe-club" name="vibe" type="radio"/>
+<label class="block p-5 bg-white dark:bg-zinc-800 border-2 border-zinc-100 dark:border-zinc-700 rounded-lg transition-all peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50" for="vibe-club">
+<div class="w-12 h-12 bg-zinc-100 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300 rounded-full flex items-center justify-center mb-4">
+<span class="material-icons-round text-2xl">timer</span>
+</div>
+<h3 class="font-bold text-zinc-900 dark:text-white">Competitive Club</h3>
+<p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Timed matches &amp; ranked play</p>
+</label>
+<div class="absolute top-3 right-3 opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-icons-round text-primary text-xl">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="p-6 bg-white dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-5 rounded-full text-lg shadow-lg shadow-primary/20 transition-all active:scale-[0.98]">
+                    Next
+                </button>
+</div>
+<!-- Safe Area Bottom (iOS) -->
+<div class="h-8 w-full bg-white dark:bg-zinc-900"></div>
+</div>
+<!-- Home Indicator -->
+<div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-zinc-900 dark:bg-white rounded-full z-20"></div>
+</div>
+</body></html>

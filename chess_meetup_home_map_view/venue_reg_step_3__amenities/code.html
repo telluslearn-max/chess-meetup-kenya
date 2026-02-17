@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Venue Registration - Step 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0faebd",
+                "background-light": "#f6f8f8",
+                "background-dark": "#102022",
+              },
+              fontFamily: {
+                "display": ["Plus Jakarta Sans"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+<!-- Mobile Container (iPhone Pro Size) -->
+<div class="w-full max-w-[393px] h-[852px] bg-white dark:bg-zinc-900 rounded-[3rem] overflow-hidden flex flex-col relative ios-shadow border-8 border-zinc-200 dark:border-zinc-800">
+<!-- Status Bar Mock -->
+<div class="h-12 w-full flex justify-between items-center px-8 pt-4">
+<span class="text-sm font-bold dark:text-white">9:41</span>
+<div class="flex space-x-2">
+<span class="material-icons text-sm dark:text-white">signal_cellular_alt</span>
+<span class="material-icons text-sm dark:text-white">wifi</span>
+<span class="material-icons text-sm dark:text-white">battery_full</span>
+</div>
+</div>
+<!-- Header / Progress Area -->
+<div class="px-6 pt-6 pb-2">
+<div class="flex justify-between items-center mb-4">
+<button class="p-2 -ml-2 text-zinc-500">
+<span class="material-icons">arrow_back_ios_new</span>
+</button>
+<span class="text-xs font-semibold uppercase tracking-widest text-zinc-400">Step 3 of 4</span>
+<div class="w-10"></div> <!-- Spacer -->
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-zinc-100 dark:bg-zinc-800 h-2 rounded-full overflow-hidden mb-8">
+<div class="bg-primary h-full w-3/4 rounded-full"></div>
+</div>
+<h1 class="text-2xl font-bold text-zinc-900 dark:text-white mb-2">Offerings &amp; Perks</h1>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Select the amenities available at your venue to attract more players.</p>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto px-6 py-4 space-y-8">
+<!-- Amenity Grid -->
+<div>
+<h2 class="text-sm font-bold text-zinc-900 dark:text-white uppercase tracking-wider mb-4">Available Amenities</h2>
+<div class="grid grid-cols-2 gap-3">
+<!-- Amenity Item (Selected) -->
+<div class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary">
+<span class="material-icons text-3xl mb-2">grid_on</span>
+<span class="text-xs font-bold text-center">Boards Provided</span>
+</div>
+<!-- Amenity Item -->
+<div class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/50 text-zinc-600 dark:text-zinc-400">
+<span class="material-icons text-3xl mb-2">wifi</span>
+<span class="text-xs font-bold text-center">WiFi</span>
+</div>
+<!-- Amenity Item -->
+<div class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/50 text-zinc-600 dark:text-zinc-400">
+<span class="material-icons text-3xl mb-2">power</span>
+<span class="text-xs font-bold text-center">Power Outlets</span>
+</div>
+<!-- Amenity Item (Selected) -->
+<div class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary">
+<span class="material-icons text-3xl mb-2">coffee</span>
+<span class="text-xs font-bold text-center">Coffee</span>
+</div>
+<!-- Amenity Item -->
+<div class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/50 text-zinc-600 dark:text-zinc-400">
+<span class="material-icons text-3xl mb-2">deck</span>
+<span class="text-xs font-bold text-center">Outdoor Seating</span>
+</div>
+<!-- Amenity Item -->
+<div class="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/50 text-zinc-600 dark:text-zinc-400">
+<span class="material-icons text-3xl mb-2">volume_off</span>
+<span class="text-xs font-bold text-center">Quiet Zone</span>
+</div>
+</div>
+</div>
+<!-- Perks Input Section -->
+<div class="space-y-4">
+<h2 class="text-sm font-bold text-zinc-900 dark:text-white uppercase tracking-wider">Perks for Players</h2>
+<div class="relative">
+<textarea class="w-full bg-zinc-50 dark:bg-zinc-800/50 border-none rounded-xl p-4 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 focus:ring-2 focus:ring-primary" placeholder="e.g. 10% off drinks, Free water refills for participants, or reserved seating..." rows="4"></textarea>
+<div class="absolute bottom-3 right-3">
+<span class="text-[10px] font-bold text-zinc-400">Optional</span>
+</div>
+</div>
+<p class="text-[11px] text-zinc-400 leading-tight px-1 italic">
+                    Tip: Players are 3x more likely to choose venues with specific "Chess Member" discounts.
+                </p>
+</div>
+<!-- Image placeholder for visual flair -->
+<div class="w-full h-32 rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Modern cafe interior with chess boards on wooden tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3D0aeohpI21H9XSIoV4c4vpKoi61Rq_WhTlqZ9pb8o150FSeFl2K4PLsHcf4NDcQW6JYWK6-c4wuFVKJAQY_OUZcJsfZdWr0RFhb2gx1s4pS0aq66-T-lhHaCmoXCDpS9D6p3-DAhc0sKk9YXIqHIJNEb4BOmbzEX27rBX7Y8ROj0LlDYLL2C9d_iheBlcNccG-6OcVhTlqwG7vvqJ7mvv5XgVEzkHnY5A7LHeg3qsoiqX-bsmrR5YA53G1YwjBiAOZVMFSjroBE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+<span class="text-white text-[10px] font-semibold">Attract more players by highlighting your atmosphere.</span>
+</div>
+</div>
+</div>
+<!-- Fixed Footer Action -->
+<div class="p-6 bg-white dark:bg-zinc-900 border-t border-zinc-100 dark:border-zinc-800">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-full transition-all active:scale-95 shadow-lg shadow-primary/20">
+                Next
+            </button>
+</div>
+<!-- Home Indicator -->
+<div class="h-8 flex justify-center items-center">
+<div class="w-32 h-1.5 bg-zinc-200 dark:bg-zinc-700 rounded-full"></div>
+</div>
+</div>
+</body></html>

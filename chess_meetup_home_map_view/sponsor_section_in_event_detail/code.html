@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Sponsors - Chess Meetup App</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbdbd",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .sponsor-ring {
+            box-shadow: 0 0 0 2px #0fbdbd;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 antialiased min-h-screen">
+<!-- Screen Container (iOS Phone Frame Context) -->
+<div class="max-w-md mx-auto min-h-screen bg-white dark:bg-slate-900 shadow-xl overflow-hidden flex flex-col">
+<!-- Top Nav Placeholder (Contextual) -->
+<div class="px-6 py-4 flex items-center justify-between border-b border-slate-100 dark:border-slate-800">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 dark:bg-slate-800">
+<span class="material-icons text-slate-600 dark:text-slate-300">arrow_back_ios_new</span>
+</button>
+<h1 class="text-sm font-semibold uppercase tracking-wider text-slate-500">Event Details</h1>
+<div class="w-10"></div>
+</div>
+<!-- Content Area -->
+<div class="flex-1 overflow-y-auto">
+<!-- Context Placeholder (Event Header) -->
+<div class="p-6">
+<span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full mb-3">GRAND TOURNAMENT</span>
+<h2 class="text-2xl font-bold leading-tight mb-2">Winter Invitational 2024</h2>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-icons text-xs">location_on</span>
+<span>The Rook Cafe, Greenwich Village</span>
+</div>
+</div>
+<!-- SPONSORS SECTION (The Task) -->
+<section class="mt-4 pb-8">
+<!-- Section Header -->
+<div class="px-6 mb-5 flex items-center justify-between">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Official Partners &amp; Sponsors</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Supporting our chess community</p>
+</div>
+<a class="text-sm font-semibold text-primary flex items-center hover:opacity-80 transition-opacity" href="#">
+                        View All
+                        <span class="material-icons text-sm ml-0.5">chevron_right</span>
+</a>
+</div>
+<!-- Horizontal Scroll Container -->
+<div class="flex overflow-x-auto no-scrollbar gap-5 px-6 pb-2">
+<!-- Main Club Sponsor -->
+<div class="flex-shrink-0 flex flex-col items-center w-24">
+<div class="relative mb-3">
+<div class="w-20 h-20 rounded-full bg-white dark:bg-slate-800 p-0.5 sponsor-ring flex items-center justify-center overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover rounded-full" data-alt="Modern geometric emblem for a chess club" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Vii3dVY3-xcKCgyyx7XC62c-0or2LtUBhR3UqhBKRQRZs2j7v56wEnogpQMuvPYMVQId8647MpFFKxj7-38o301LgRc387PFYVvKm1wb-7h-iTLbl0T_gB4WG4Mm5m7gLeHOeNQo32tdogwL3oITLjBH6MKmctPwhL7YzKA1TlsmEVfOleWKuXlVu2GzAd5oSLXSufBUqdPpwCopYYZfvQxckdy9oWK5uEZoBUkxV3OVDkzfD1xOfkyhjh5v74Us7TctGkYsJjU"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center border-2 border-white dark:border-slate-900">
+<span class="material-icons text-[12px]">verified</span>
+</div>
+</div>
+<span class="text-[11px] font-bold text-primary uppercase tracking-tighter mb-0.5">Main Club</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300 text-center line-clamp-1">Grandmaster Circle</span>
+</div>
+<!-- Venue Host -->
+<div class="flex-shrink-0 flex flex-col items-center w-24">
+<div class="mb-3">
+<div class="w-20 h-20 rounded-full bg-white dark:bg-slate-800 flex items-center justify-center overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
+<img class="w-full h-full object-cover rounded-full" data-alt="Minimalist cafe interior logo or icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADQMStu2SvD7purXY6k9Od6iC5ke17MikjOmCdhRWKry-o9SDrc7zW4lrAI135nlDXu_Lup139EWWdM6J8WZT5C38lPkJWiuEErbI2gPDqWfu5ftxJ8eOG5d_8tBFGUybAAWuDLUCX0otGZWwlM0iOsOHKOv6Dy6kHQYVRLpHDEGO_MmUZtJ4svu6BqTOCczg1EVTtWjy_2AekrBKDi1MTSRkHsksl8H1IEWhFxpnQ6uy4dZbcT8xHM_q50OZVfYrwx5kFCFv5hcA"/>
+</div>
+</div>
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-tighter mb-0.5">Venue Host</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300 text-center line-clamp-1">The Rook Cafe</span>
+</div>
+<!-- Brand Sponsor 1 -->
+<div class="flex-shrink-0 flex flex-col items-center w-24">
+<div class="mb-3">
+<div class="w-20 h-20 rounded-full bg-white dark:bg-slate-800 p-4 flex items-center justify-center overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
+<img class="w-full h-full object-contain" data-alt="Clean corporate technology company logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE-L1ArulwgxxWqmVA4RbHBWaWx705j2-aDjxLPBEn83JbryzsnkBPlfHBKAbadZJADCsbkF8gpRz-1hmuZABDV13FsMWiTpCBfHXaSJ06G62-fqHlH4FKDPsfJeAJeh7SXUQZpKqKFFamGrVbHGdGKGAtSXvaeCsNscF0sSyfhgKS3taegQeVQqFdtoZYYBp-lC0te3EUaeGPzj9Vpx6irbWvpoF_2FT49PcRQd4T-SSx5FqDdype9NY74lvucXdC70Jwz71Jkxw"/>
+</div>
+</div>
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-tighter mb-0.5">Brand Partner</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300 text-center line-clamp-1">Logitech G</span>
+</div>
+<!-- Brand Sponsor 2 -->
+<div class="flex-shrink-0 flex flex-col items-center w-24">
+<div class="mb-3">
+<div class="w-20 h-20 rounded-full bg-white dark:bg-slate-800 p-4 flex items-center justify-center overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
+<img class="w-full h-full object-contain" data-alt="Chess online platform platform logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMdEdlW2-zQOZ3fF1ig-qBlkhC2sPtu3feD7D27vgEGaU9Mw0VGDj62c8HzsmEJRNbuVrzJNXWDCkViymldLv2XYSNP4lp3-172zpTNElxhxsv0dumfpNSN7iimnC8W8FKwmkTUtgJSUPVQNn0JefMZ1XvHcnmuBkbD0RE4y8XhPEZVMjfY67xE_K1AGR3-XXaZ6HNbSN7hpzkgBC2285CbNK_OrhoTVtJbiP-156EV-X2yEEAId8xroOgBHOuHT5zH-B12kVaf1g"/>
+</div>
+</div>
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-tighter mb-0.5">Sponsor</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300 text-center line-clamp-1">Chess.com</span>
+</div>
+<!-- Peek Item (Indicating scroll) -->
+<div class="flex-shrink-0 flex flex-col items-center w-24 opacity-40">
+<div class="mb-3">
+<div class="w-20 h-20 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+<span class="material-icons text-slate-300">business</span>
+</div>
+</div>
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-tighter mb-0.5">Sponsor</span>
+<span class="text-xs font-medium text-slate-700 dark:text-slate-300">Strategist</span>
+</div>
+</div>
+</section>
+<!-- Bottom Divider -->
+<div class="mx-6 border-t border-slate-100 dark:border-slate-800"></div>
+<!-- Call to Action -->
+<div class="p-6">
+<div class="bg-background-light dark:bg-slate-800/50 rounded-xl p-5 border border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="max-w-[70%]">
+<h4 class="font-bold text-slate-900 dark:text-white">Become a Sponsor</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Get your brand in front of 200+ active chess players.</p>
+</div>
+<button class="bg-primary text-white p-3 rounded-full shadow-lg shadow-primary/20">
+<span class="material-icons">mail</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Navigation Bar Context (iOS) -->
+<div class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 px-8 py-4 flex justify-between items-center">
+<div class="text-center text-slate-400">
+<span class="material-icons">event</span>
+<p class="text-[10px] mt-0.5">Details</p>
+</div>
+<div class="text-center text-primary">
+<span class="material-icons">emoji_events</span>
+<p class="text-[10px] mt-0.5 font-bold">Partners</p>
+</div>
+<div class="text-center text-slate-400">
+<span class="material-icons">groups</span>
+<p class="text-[10px] mt-0.5">Players</p>
+</div>
+<div class="text-center text-slate-400">
+<span class="material-icons">map</span>
+<p class="text-[10px] mt-0.5">Venue</p>
+</div>
+</div>
+</div>
+</body></html>
